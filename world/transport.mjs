@@ -31,6 +31,13 @@ export const ROADS = [
     [47.6, 59.8], [49.6, 60.3], [51.6, 60.6], [53.2, 60.6],
   ] },
 
+  // ---- Calder arterials ---------------------------------------------------------
+  { id: 'bay-avenue', name: 'Bay Avenue', ref: 'Bay Ave', cls: 'arterial', pts: [[31.2, 61.0], [32.6, 61.9], [34.4, 62.3], [36.0, 62.5], [37.4, 62.4], [38.8, 62.5], [40.0, 62.2], [40.8, 61.4]] },
+  { id: 'harbor-boulevard', name: 'Harbor Boulevard', ref: 'Harbor Blvd', cls: 'arterial', pts: [[40.8, 61.4], [41.1, 60.2], [41.0, 59.6], [40.8, 58.4], [40.8, 57.2], [40.0, 56.2]] },
+  { id: 'heights-avenue', name: 'Heights Avenue', ref: 'Heights Ave', cls: 'arterial', pts: [[37.2, 62.4], [37.0, 61.2], [36.4, 60.0], [35.8, 59.0], [35.6, 57.8], [35.8, 56.6], [36.2, 55.8]] },
+  { id: 'south-shore-drive', name: 'South Shore Drive', ref: 'S Shore Dr', cls: 'arterial', pts: [[31.4, 57.2], [32.6, 56.4], [34.4, 56.0], [36.2, 55.8], [38.2, 55.8], [40.0, 56.2]] },
+  { id: 'west-shore-drive', name: 'West Shore Drive', ref: 'W Shore Dr', cls: 'arterial', pts: [[31.2, 61.0], [30.9, 59.6], [31.0, 58.2], [31.4, 57.2]] },
+
   // ---- Halcomb Island ---------------------------------------------------------
   { id: 'sr-73', name: 'Gap Road', ref: 'SR 73', cls: 'state', box: 4, pts: [
     [26.4, 67.6], [26.8, 68.6], [27.2, 72.0, 'r'], [27.4, 75.2, 'r'], [27.3, 79.7, 'r'], [26.4, 88.4, 'r'],
@@ -80,7 +87,7 @@ export const ROADS = [
 
   // ---- Coastal highway, Calder to the Keys ------------------------------------
   { id: 'sr-17', name: 'Coastal Highway', ref: 'SR 17', cls: 'highway', lanes: 4, pts: [
-    [46.6, 59.4], [47.6, 57.8], [48.4, 56.6], [49.0, 55.6], [49.4, 53.8], [50.4, 52.0], [51.6, 50.4], [53.0, 49.2],
+    [46.6, 59.55], [47.6, 57.8], [48.4, 56.6], [49.0, 55.6], [49.4, 53.8], [50.4, 52.0], [51.6, 50.4], [53.0, 49.2],
     [54.2, 48.6], [53.6, 46.8], [52.6, 45.0], [51.6, 43.0], [50.8, 41.0], [50.2, 39.0], [49.6, 37.0], [49.4, 35.0],
     [49.6, 32.6], [50.6, 29.6, 'r'], [54.0, 24.6, 'r'], [59.2, 23.0, 'r'],
   ] },
@@ -95,7 +102,7 @@ export const ROADS = [
     [39.4, 17.4], [36.6, 17.2], [33.8, 17.0], [31.0, 16.8], [28.2, 16.8], [25.8, 17.2], [24.4, 17.4], [21.6, 17.6],
     [20.4, 17.4], [18.4, 17.0], [16.4, 16.6], [14.4, 16.4], [12.0, 16.4], [9.6, 16.6], [7.6, 16.6], [6.4, 16.6],
   ] },
-  { id: 'tarrow-road', name: 'Tarrow Landing Road', ref: 'CR 31', cls: 'county', pts: [[60.0, 13.4], [61.4, 13.6], [62.8, 13.6]] },
+  { id: 'tarrow-road', name: 'Tarrow Landing Road', ref: 'CR 31', cls: 'county', pts: [[60.0, 13.4], [61.1, 13.6]] },
 
   // ---- Bellamy and Mirabel ------------------------------------------------------
   { id: 'sr-40', name: 'Cross-Island Highway', ref: 'SR 40', cls: 'state', pts: [
@@ -181,7 +188,7 @@ export const AIRPORTS = [
     runways: [{ id: '05/23', a: [26.6, 44.6], b: [28.9, 47.1], w: 0.06 }, { id: '18/36', a: [30.4, 44.6], b: [30.4, 47.4], w: 0.046 }],
     terminal: [29.2, 45.4] },
   { id: 'hfy', name: 'Hickory Tableland Airport', code: 'HKT', island: 'halcomb', kind: 'regional',
-    runways: [{ id: '15/33', a: [6.05, 75.22], b: [5.15, 76.78], w: 0.03 }], terminal: [6.3, 76.3] },
+    runways: [{ id: '06/24', a: [6.02, 74.35], b: [7.58, 75.25], w: 0.03 }], terminal: [6.55, 75.2] },
   { id: 'hvr', name: 'Haversham Regional Airport', code: 'HVR', island: 'saint-ambrose', kind: 'regional',
     runways: [{ id: '04/22', a: [42.4, 46.2], b: [44.0, 47.6], w: 0.03 }], terminal: [43.6, 46.6] },
   { id: 'msr', name: 'Mirabel–Bellamy Regional Airport', code: 'MBR', island: 'bellamy', kind: 'regional',
@@ -200,7 +207,7 @@ export const HELIPADS = [
   { name: 'Ledford Dome Ranger Pad', at: [28.4, 80.0], note: 'gravel pad beside the summit lot' },
   { name: 'Fallon Coast Guard Station', at: [77.0, 88.4], note: 'ground pad' },
   { name: 'Whitlock Fire Base', at: [56.2, 83.0], note: 'seasonal fire helibase' },
-  { name: 'Tarrow Landing Seaplane Base', at: [63.2, 13.6], note: 'seaplane ramp' },
+  { name: 'Tarrow Landing Seaplane Base', at: [61.4, 13.5], note: 'seaplane ramp' },
 ];
 
 export const PORTS = [
@@ -211,7 +218,7 @@ export const PORTS = [
   { id: 'riverside-barge', name: 'Riverside Barge Terminal', kind: 'river barges', depth: 4, berth: [[37.8, 64.6], [38.6, 64.4]] },
   { id: 'haversham-docks', name: 'Haversham Shrimp Docks', kind: 'fishing harbor', depth: 5, berth: [[55.1, 48.8], [55.2, 47.6]] },
   { id: 'fallon-harbor', name: 'Fallon Harbor', kind: 'fishing harbor', depth: 6, berth: [[76.8, 88.5], [77.3, 88.6]] },
-  { id: 'merrin-harbor', name: 'Merrin Harbor', kind: 'fishing harbor', depth: 3, berth: [[82.4, 9.8], [82.8, 9.9]] },
+  { id: 'merrin-harbor', name: 'Merrin Harbor', kind: 'fishing harbor', depth: 3, berth: [[82.2, 10.85], [82.5, 11.0]] },
   { id: 'sabal-fishhouse', name: 'Sabal Fish House', kind: 'fishing dock', depth: 2, berth: [[44.6, 1.6], [44.9, 1.7]] },
   { id: 'port-serena-marina', name: 'Port Serena Marina', kind: 'marina', depth: 3, berth: [[5.6, 28.4], [5.8, 29.0]] },
   { id: 'calder-yacht-basin', name: 'Calder Yacht Basin', kind: 'marina', depth: 4, berth: [[30.8, 58.0], [30.8, 58.8]] },
@@ -223,7 +230,7 @@ export const FERRIES = [
   { id: 'graystone-ferry', name: 'Graystone–Calder Ferry', kind: 'vehicle ferry', knots: 16, pts: [[64.2, 67.4], [60.0, 66.0], [54.0, 64.8], [48.0, 64.0], [43.0, 63.5], [40.4, 63.2]] },
   { id: 'wickham-ferry', name: 'Wickham Ferry', kind: 'cable ferry', knots: 6, pts: [[13.0, 25.6], [12.9, 23.4], [12.7, 21.2]] },
   { id: 'rockfish-ferry', name: 'Rockfish Inlet Ferry', kind: 'free vehicle ferry', knots: 9, pts: [[79.4, 5.9], [78.9, 5.4], [78.3, 5.2]] },
-  { id: 'tarrow-ferry', name: 'Tarrow Sound Ferry', kind: 'vehicle ferry', knots: 12, pts: [[63.2, 13.4], [65.6, 10.4], [68.0, 6.8], [70.6, 3.8]] },
+  { id: 'tarrow-ferry', name: 'Tarrow Sound Ferry', kind: 'vehicle ferry', knots: 12, pts: [[61.6, 13.4], [65.6, 10.4], [68.0, 6.8], [70.6, 3.8]] },
   { id: 'serena-ferry', name: 'Serena Bay Seasonal Ferry', kind: 'passenger fast ferry', knots: 26, pts: [[30.6, 58.6], [26.0, 57.0], [18.0, 55.4], [10.0, 55.0], [7.4, 53.6], [6.8, 49.0], [6.2, 45.4]] },
 ];
 

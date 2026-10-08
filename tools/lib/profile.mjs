@@ -9,6 +9,7 @@ export const DESIGN = {
   highway: { grade: 0.06, width: 0.032, tunnelCut: 35, viaductFill: 16, speed: 90 },
   state: { grade: 0.085, width: 0.014, tunnelCut: 40, viaductFill: 22, speed: 75 },
   parkway: { grade: 0.08, width: 0.012, tunnelCut: 35, viaductFill: 20, speed: 60 },
+  arterial: { grade: 0.1, width: 0.018, tunnelCut: 40, viaductFill: 16, speed: 45 },
   county: { grade: 0.13, width: 0.01, tunnelCut: 45, viaductFill: 16, speed: 65 },
   rail: { grade: 0.022, width: 0.012, tunnelCut: 25, viaductFill: 14, speed: 80 },
   'rail-abandoned': { grade: 0.06, width: 0.008, tunnelCut: 25, viaductFill: 12, speed: 0 },

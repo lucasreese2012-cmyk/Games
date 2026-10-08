@@ -102,7 +102,7 @@ export const SETTLEMENTS = [
   // ---- Ossahatchee Island ------------------------------------------------
   { id: 'ossahatchee', name: 'Ossahatchee', island: 'ossahatchee', at: [59.2, 23.0], r: 0.6, form: 'town', pop: 2600,
     why: 'Dry ground at the north end of Long Ridge where the coastal highway lands from Ketch Sound and the Trail turns west into the swamp.' },
-  { id: 'tarrow-landing', name: 'Tarrow Landing', island: 'ossahatchee', at: [62.8, 13.6], r: 0.35, form: 'village', pop: 450,
+  { id: 'tarrow-landing', name: 'Tarrow Landing', island: 'ossahatchee', at: [61.1, 13.6], r: 0.35, form: 'village', pop: 450,
     why: 'Ferry and seaplane landing where Long Ridge comes closest to Tarrow Sound.' },
   { id: 'tolar', name: 'Tolar', island: 'ossahatchee', at: [53.2, 18.8], r: 0.25, form: 'hamlet', pop: 120,
     why: 'Remnant sawmill hamlet on a pine island along the Trail.' },

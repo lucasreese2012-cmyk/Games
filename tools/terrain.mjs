@@ -324,10 +324,14 @@ export function buildTerrain(log = () => {}, debugPts = null) {
         }
         case 'seaisland': {
           let zz = 0.75 + 0.35 * nz.fbm(x * 1.7, y * 1.7, 3);
+          // Live-oak hammocks: scattered low rises of Pleistocene sand in the marsh.
+          const ham = nz2.fbm(x * 0.9 + 21, y * 0.9 - 5, 4);
+          if (ham > 0.16) zz = Math.max(zz, 1.4 + (ham - 0.16) * 14);
+          const wx = x + 0.6 * nz.fbm(x * 0.7 + 5, y * 0.7, 3), wy = y + 0.6 * nz.fbm(x * 0.7, y * 0.7 + 5, 3);
           for (const u of uplands) {
             const b = u.box;
-            if (x < b[0] || x > b[2] || y < b[1] || y > b[3]) continue;
-            const di = polyInsideDist(x, y, u.poly);
+            if (wx < b[0] || wx > b[2] || wy < b[1] || wy > b[3]) continue;
+            const di = polyInsideDist(wx, wy, u.poly);
             if (di <= -0.05) continue;
             let v;
             if (u.dune) {
@@ -864,6 +868,56 @@ export function buildTerrain(log = () => {}, debugPts = null) {
     for (let i = 0; i < N; i++) if (best[i] < 1e8) h[i] = lerp(h[i], target[i], blendW[i]);
   }
   log('infrastructure grading done');
+
+  // ---- 10. Drainage enforcement ----------------------------------------------
+  // Priority-flood with a tiny gradient so every pit on the mountain, farm and
+  // city islands drains to the sea or a lake. Swamp, karst, marsh and dune
+  // swales keep their natural closed hollows (those are real wetlands).
+  {
+    const fillK = new Set(ISLANDS.map((s, k) => (['mountain', 'plain', 'urban', 'delta', 'mainland'].includes(s.base.kind) ? k + 1 : 0)).filter(Boolean));
+    const done = new Uint8Array(N);
+    const hk = [], hv = [];
+    const push = (k, v) => { hk.push(k); hv.push(v); let i = hk.length - 1; while (i > 0) { const q = (i - 1) >> 1; if (hk[q] <= hk[i]) break; [hk[q], hk[i]] = [hk[i], hk[q]]; [hv[q], hv[i]] = [hv[i], hv[q]]; i = q; } };
+    const pop = () => { const v = hv[0]; const lk = hk.pop(), lv = hv.pop(); if (hk.length) { hk[0] = lk; hv[0] = lv; let i = 0; for (;;) { let m = i; const l = 2 * i + 1, r2 = l + 1; if (l < hk.length && hk[l] < hk[m]) m = l; if (r2 < hk.length && hk[r2] < hk[m]) m = r2; if (m === i) break; [hk[m], hk[i]] = [hk[i], hk[m]]; [hv[m], hv[i]] = [hv[i], hv[m]]; i = m; } } return v; };
+    // Seeds: every cell that is water or not on a fill island.
+    for (let i = 0; i < N; i++) {
+      if (!island[i] || water[i] || !fillK.has(island[i])) {
+        const c = i % g.nx;
+        // only boundary cells matter; push those adjacent to fill-island land
+        const nb = [c > 0 ? i - 1 : -1, c < g.nx - 1 ? i + 1 : -1, i - g.nx, i + g.nx];
+        done[i] = 1;
+        if (nb.some((j) => j >= 0 && j < N && island[j] && !water[j] && fillK.has(island[j]))) push(water[i] === W.LAKE ? surface[i] : h[i], i);
+      }
+    }
+    let raised = 0;
+    while (hk.length) {
+      const i = pop();
+      const base = water[i] === W.LAKE ? surface[i] : h[i];
+      const c = i % g.nx;
+      const nb = [c > 0 ? i - 1 : -1, c < g.nx - 1 ? i + 1 : -1, i - g.nx, i + g.nx];
+      for (const j of nb) {
+        if (j < 0 || j >= N || done[j]) continue;
+        done[j] = 1;
+        if (h[j] <= base) { h[j] = base + 0.01; raised++; }
+        push(h[j], j);
+      }
+    }
+    log(`drainage: raised ${raised} cells`);
+  }
+
+  // ---- 11. Summits are the local high ground. ---------------------------------
+  for (const p of peakFix) {
+    const R = 0.4;
+    forBox(g, p.at[0] - R, p.at[1] - R, p.at[0] + R, p.at[1] + R, (i, x, y) => {
+      if (!island[i] || water[i]) return;
+      const d = Math.hypot(x - p.at[0], y - p.at[1]);
+      if (d < 0.03 || d > R) return;
+      const cap = p.z - 4 - 55 * d;
+      if (h[i] > cap) h[i] = cap;
+    });
+    const ci = g.row(p.at[1]) * g.nx + g.col(p.at[0]);
+    h[ci] = p.z;
+  }
 
   return {
     g, h, island, water, surface, region, lakeId, dLand, dSea, dOpen,
