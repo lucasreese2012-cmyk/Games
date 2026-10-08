@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Cassena Islands</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;800&family=Overpass+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: full-bleed map/3D stage, a slim top bar, and a side panel (bottom sheet on phones). */
+:root {
+  --paper: #eef1ea;
+  --panel: rgba(250, 251, 247, 0.94);
+  --ink: #1c2725;
+  --muted: #5b6965;
+  --line: #d3dad2;
+  --shield: #1f58a3;
+  --route: #c4402a;
+  --forest: #3e6a3b;
+  --chip: #e2e8df;
+  --shadow: 0 6px 24px rgba(20, 30, 28, 0.18);
+  --f-sign: "Overpass", "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "Overpass Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0d1416; --panel: rgba(16, 24, 26, 0.94); --ink: #e2eae6; --muted: #93a39e; --line: #29393a;
+    --shield: #6ea6ff; --route: #ff7c5f; --forest: #8fc286; --chip: #1d2a2c; --shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0d1416; --panel: rgba(16, 24, 26, 0.94); --ink: #e2eae6; --muted: #93a39e; --line: #29393a;
+  --shield: #6ea6ff; --route: #ff7c5f; --forest: #8fc286; --chip: #1d2a2c; --shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}
+html, body { height: 100%; }
+body { background: var(--paper); color: var(--ink); font-family: var(--f-sign); font-size: 14px; overflow: hidden; }
+button, input, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--shield); outline-offset: 2px; }
+
+#app { position: fixed; inset: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px) 0; display: grid; grid-template-rows: auto 1fr; }
+.bar { display: flex; align-items: center; gap: 12px; padding: 8px 16px; background: var(--panel); border-bottom: 1px solid var(--line); z-index: 5; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: 0.02em; font-size: 17px; white-space: nowrap; }
+.brand svg { width: 26px; height: 28px; flex: none; }
+.tabs { display: flex; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.tabs button { background: transparent; border: 0; padding: 6px 14px; font-weight: 600; }
+.tabs button[aria-pressed="true"] { background: var(--shield); color: #fff; }
+.spacer { flex: 1; }
+.roam-only { display: none; align-items: center; gap: 10px; flex-wrap: wrap; }
+body.roam .roam-only { display: flex; }
+.seg { display: flex; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+.seg button { background: transparent; border: 0; padding: 5px 10px; font-size: 13px; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.clock { display: flex; align-items: center; gap: 8px; font-family: var(--f-mono); font-size: 13px; }
+.clock input { width: 120px; accent-color: var(--route); }
+.iconbtn { background: transparent; border: 1px solid var(--line); border-radius: 6px; padding: 5px 9px; }
+.iconbtn[aria-pressed="true"] { background: var(--route); border-color: var(--route); color: #fff; }
+
+.stage { position: relative; min-height: 0; }
+#atlas, #roam { position: absolute; inset: 0; }
+#map, #gl { display: block; width: 100%; height: 100%; touch-action: none; }
+#roam { display: none; }
+body.roam #roam { display: block; }
+body.roam #atlas { display: none; }
+
+/* Side panel */
+#panel { position: absolute; top: 12px; left: 12px; bottom: 12px; width: 360px; max-width: calc(100% - 24px); display: flex; flex-direction: column; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); z-index: 4; min-height: 0; backdrop-filter: blur(6px); }
+body.roam #panel { display: none; }
+.search { padding: 12px 12px 8px; display: flex; flex-direction: column; gap: 8px; border-bottom: 1px solid var(--line); }
+.search input { width: 100%; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; background: transparent; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips button { border: 1px solid var(--line); background: transparent; border-radius: 999px; padding: 3px 10px; font-size: 12px; }
+.chips button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.list { overflow: auto; min-height: 0; flex: 1; }
+.item { display: grid; grid-template-columns: 22px 1fr; gap: 8px; padding: 8px 12px; border-bottom: 1px solid var(--line); cursor: pointer; align-items: start; }
+.item:hover, .item:focus-visible { background: var(--chip); }
+.item .t { font-weight: 600; line-height: 1.25; }
+.item .s { color: var(--muted); font-size: 12px; }
+.glyph { width: 18px; height: 18px; border-radius: 4px; display: grid; place-items: center; font-size: 11px; font-weight: 800; color: #fff; margin-top: 1px; }
+.count { color: var(--muted); font-size: 12px; padding: 6px 12px; }
+
+.card { overflow: auto; min-height: 0; flex: 1; padding: 14px 16px 18px; display: none; }
+#panel.detail .card { display: block; }
+#panel.detail .list, #panel.detail .count { display: none; }
+.card h2 { font-size: 22px; line-height: 1.15; margin: 6px 0 4px; font-weight: 800; text-wrap: balance; }
+.card .kicker { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; font-size: 12px; color: var(--muted); }
+.tag { border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; text-transform: uppercase; letter-spacing: 0.06em; font-size: 10px; font-weight: 600; color: var(--ink); }
+.card .where { color: var(--muted); margin: 6px 0 10px; }
+.facts { display: grid; grid-template-columns: auto 1fr; gap: 3px 12px; font-size: 13px; margin: 8px 0 12px; padding: 8px 10px; background: var(--chip); border-radius: 6px; }
+.facts dt { color: var(--muted); }
+.facts dd { margin: 0; font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.card h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 14px 0 4px; }
+.card p { margin: 0; line-height: 1.5; max-width: 62ch; }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0 4px; }
+.btn { border: 1px solid var(--shield); background: var(--shield); color: #fff; border-radius: 6px; padding: 6px 12px; font-weight: 600; }
+.btn.ghost { background: transparent; color: var(--shield); }
+.back { border: 0; background: transparent; color: var(--shield); padding: 0; font-weight: 600; }
+.seen { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+.layers { border-top: 1px solid var(--line); padding: 8px 12px 10px; display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12px; }
+.layers label { display: flex; gap: 5px; align-items: center; }
+
+/* Atlas overlays */
+.legend { position: absolute; right: 12px; bottom: 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; font-family: var(--f-mono); font-size: 11px; display: flex; gap: 10px; align-items: center; z-index: 3; }
+.scalebar { height: 6px; border: 1.5px solid var(--ink); border-top: 0; }
+.tooltip { position: absolute; pointer-events: none; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 4px 8px; font-size: 12px; box-shadow: var(--shadow); z-index: 6; white-space: nowrap; }
+
+/* Roam HUD */
+.hud { position: absolute; left: 12px; top: 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; z-index: 3; max-width: calc(100% - 24px); }
+.hud .place { font-weight: 800; font-size: 15px; }
+.hud .sub { color: var(--muted); font-size: 12px; font-family: var(--f-mono); }
+.compass { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); background: var(--panel); border: 1px solid var(--line); border-radius: 999px; padding: 3px 14px; font-family: var(--f-mono); font-weight: 600; z-index: 3; }
+#minimap { position: absolute; right: 12px; top: 12px; width: 180px; height: 164px; border-radius: 8px; border: 1px solid var(--line); box-shadow: var(--shadow); z-index: 3; background: var(--paper); }
+.help { position: absolute; right: 12px; bottom: 12px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; font-size: 12px; z-index: 3; line-height: 1.6; max-width: 260px; }
+.help kbd { font-family: var(--f-mono); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 0 4px; font-size: 11px; }
+.labels { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 2; }
+.lbl { position: absolute; transform: translate(-50%, -100%); white-space: nowrap; font-weight: 600; font-size: 12px; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.85), 0 0 6px rgba(0,0,0,0.5); padding-bottom: 6px; }
+.lbl::after { content: ""; position: absolute; left: 50%; bottom: 0; width: 1px; height: 6px; background: rgba(255,255,255,0.8); }
+.lbl.town { font-size: 13px; font-weight: 800; letter-spacing: 0.03em; }
+.lbl.primary { color: #ffe9a8; }
+.lbl small { font-family: var(--f-mono); font-weight: 400; opacity: 0.85; margin-left: 4px; }
+.vplist { position: absolute; left: 12px; bottom: 12px; z-index: 3; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 6px; display: flex; gap: 6px; align-items: center; }
+.vplist select { max-width: 220px; padding: 4px 6px; border: 1px solid var(--line); border-radius: 6px; background: transparent; }
+
+/* Touch controls */
+.touch { display: none; }
+body.roam.coarse .touch { display: block; }
+.stick { position: absolute; left: 24px; bottom: 90px; width: 120px; height: 120px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.6); background: rgba(0,0,0,0.18); z-index: 4; touch-action: none; }
+.stick i { position: absolute; left: 35px; top: 35px; width: 50px; height: 50px; border-radius: 50%; background: rgba(255,255,255,0.75); }
+.updown { position: absolute; right: 18px; bottom: 100px; display: flex; flex-direction: column; gap: 10px; z-index: 4; }
+.updown button { width: 54px; height: 54px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.6); background: rgba(0,0,0,0.25); color: #fff; font-size: 20px; font-weight: 800; touch-action: none; }
+body.coarse .help { display: none; }
+
+#loading { position: fixed; inset: 0; display: grid; place-items: center; background: var(--paper); z-index: 20; }
+#loading .box { width: min(420px, calc(100% - 32px)); }
+#loading h1 { font-size: 26px; font-weight: 800; margin: 0 0 6px; }
+#loading p { color: var(--muted); margin: 0 0 14px; line-height: 1.5; }
+.progress { height: 6px; background: var(--chip); border-radius: 3px; overflow: hidden; }
+.progress i { display: block; height: 100%; width: 0; background: var(--route); transition: width 0.2s; }
+#loading .step { font-family: var(--f-mono); font-size: 12px; color: var(--muted); margin-top: 8px; }
+
+@media (max-width: 720px) {
+  .bar { padding: 6px 12px; gap: 8px; }
+  .brand span { display: none; }
+  #panel { top: auto; left: 8px; right: 8px; bottom: 8px; width: auto; height: 44%; }
+  #panel.min { height: auto; }
+  #panel.min .list, #panel.min .card, #panel.min .count, #panel.min .layers, #panel.min .chips { display: none; }
+  #minimap { width: 120px; height: 110px; top: auto; bottom: 230px; }
+  .hud { right: 12px; }
+  .compass { top: auto; bottom: 230px; left: 12px; transform: none; }
+  .vplist { bottom: 12px; left: 12px; right: 12px; }
+  .vplist select { flex: 1; max-width: none; }
+  .clock input { width: 90px; }
+  .legend { display: none; }
+  .help { display: none; }
+  .roam-only { gap: 6px; }
+  .seg button { padding: 4px 8px; }
+}
+@media (prefers-reduced-motion: reduce) { .progress i { transition: none; } }
+</style>
+
+<div id="loading" role="status" aria-live="polite">
+  <div class="box">
+    <h1>Cassena Islands</h1>
+    <p>Loading 4,600 km² of generated terrain, 1,000 km of engineered roads and 412 surveyed places.</p>
+    <div class="progress"><i id="loadbar"></i></div>
+    <div class="step" id="loadstep">Fetching world data…</div>
+  </div>
+</div>
+
+<div id="app">
+  <header class="bar">
+    <div class="brand">
+      <svg viewBox="0 0 26 28" aria-hidden="true"><path d="M13 1 C8 3 4 3 1 2 L1 13 C1 20 6 25 13 27 C20 25 25 20 25 13 L25 2 C22 3 18 3 13 1 Z" fill="var(--shield)"/><path d="M4 7 H22" stroke="var(--route)" stroke-width="3"/><text x="13" y="21" text-anchor="middle" font-family="Overpass, Arial" font-weight="800" font-size="11" fill="#fff">C</text></svg>
+      <span>Cassena Islands</span>
+    </div>
+    <div class="tabs" role="group" aria-label="View">
+      <button id="tab-atlas" aria-pressed="true">Atlas</button>
+      <button id="tab-roam" aria-pressed="false">Free roam</button>
+    </div>
+    <div class="roam-only">
+      <div class="seg" role="group" aria-label="Movement">
+        <button data-move="fly" aria-pressed="true">Fly</button>
+        <button data-move="drive" aria-pressed="false">Drive</button>
+        <button data-move="walk" aria-pressed="false">Walk</button>
+      </div>
+      <button class="iconbtn" id="cruise" aria-pressed="false" title="Follow the nearest road">Cruise road</button>
+      <label class="clock"><span id="clocktxt">16:30</span><input id="clock" type="range" min="0" max="24" step="0.05" value="16.5" aria-label="Time of day"></label>
+    </div>
+    <div class="spacer"></div>
+  </header>
+
+  <div class="stage">
+    <div id="atlas">
+      <canvas id="map" aria-label="Map of the Cassena Islands"></canvas>
+      <div class="legend"><span id="scaletxt">10 km</span><div class="scalebar" id="scalebar" style="width:80px"></div></div>
+      <div class="tooltip" id="tip" hidden></div>
+    </div>
+
+    <div id="roam">
+      <canvas id="gl" aria-label="3D view of the Cassena Islands"></canvas>
+      <div class="labels" id="labels"></div>
+      <div class="hud"><div class="place" id="hudplace">—</div><div class="sub" id="hudsub">—</div></div>
+      <div class="compass" id="compass">N 0°</div>
+      <canvas id="minimap" width="360" height="328" aria-label="Position on the map"></canvas>
+      <div class="vplist"><label for="vpsel" class="sub" style="font-size:12px">Go to</label><select id="vpsel"></select></div>
+      <div class="help" id="help">
+        <kbd>W A S D</kbd> move · drag to look<br>
+        <kbd>R</kbd>/<kbd>F</kbd> up/down · <kbd>Shift</kbd> faster<br>
+        <kbd>1</kbd> fly <kbd>2</kbd> drive <kbd>3</kbd> walk · <kbd>C</kbd> cruise road<br>
+        <kbd>M</kbd> atlas · <kbd>[</kbd> <kbd>]</kbd> time of day
+      </div>
+      <div class="touch">
+        <div class="stick" id="stick"><i></i></div>
+        <div class="updown"><button id="up" aria-label="Up">▲</button><button id="down" aria-label="Down">▼</button></div>
+      </div>
+    </div>
+
+    <aside id="panel" aria-label="Places">
+      <div class="search">
+        <input id="q" type="search" placeholder="Search 460 places — towns, peaks, beaches…" aria-label="Search places" autocomplete="off">
+        <div class="chips" id="chips"></div>
+      </div>
+      <div class="count" id="count"></div>
+      <div class="list" id="list" role="listbox" aria-label="Results"></div>
+      <div class="card" id="card"></div>
+      <div class="layers" id="layers"></div>
+    </aside>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

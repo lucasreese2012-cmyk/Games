@@ -203,13 +203,13 @@ Graystone is a tilted slab of granite. Its northern two-thirds are a cool, rolli
 | Cover | Share | km² |
 |---|---|---|
 | Pine–hardwood forest | 35.7% | 241.3 |
-| Cove hardwood and rhododendron | 29.9% | 202.1 |
+| Cove hardwood and rhododendron | 30.0% | 202.3 |
 | Pasture and hay | 10.2% | 68.8 |
-| Oak–hickory forest | 9.4% | 63.8 |
+| Oak–hickory forest | 9.5% | 63.9 |
 | Cropland | 5.1% | 34.5 |
-| Northern hardwoods | 3.9% | 26.4 |
+| Northern hardwoods | 4.0% | 26.7 |
 | Bare rock and cliff | 3.8% | 25.4 |
-| Suburban | 0.8% | 5.4 |
+| Suburban | 0.8% | 5.3 |
 
 **Settlements**
 

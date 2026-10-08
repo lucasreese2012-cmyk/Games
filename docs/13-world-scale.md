@@ -9,7 +9,7 @@ All figures on this page are measured on the generated world: a 110 × 100 km fr
 
 | Island | Type | Land (km²) | Inland water (km²) | Sea coast (km) | Length (km) | Highest point (m) | Mean elevation (m) | Land below 3 m | Slopes over 40% | Population |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Halcomb Island | Appalachian highland | 978 | 17.4 | 181 | 45.2 | Ledford Dome, 2,047 | 465 | 0% | 30% | 105,430 |
+| Halcomb Island | Appalachian highland | 978 | 17.4 | 181 | 45.2 | Ledford Dome, 2,047 | 465 | 0% | 31% | 105,430 |
 | Graystone Island | Mountainous escarpment | 675 | 7.2 | 161 | 37.2 | Whitlock Mountain, 1,724 | 439 | 0% | 30% | 27,900 |
 | Calder Island | Dense urban | 74 | 0.5 | 36 | 10.9 | Calder Heights, 92 | 18 | 6% | 0% | 362,000 |
 | Corliss Island | Industrial | 66 | 0.5 | 32 | 12.5 | unnamed, 48 | 4 | 23% | 0% | 14,000 |
@@ -93,7 +93,7 @@ Lengths and grades are of the routed, graded alignment (each road is engineered 
 | Route | Name | Class | Length (km) | Steepest grade | Deepest cut (m) | Highest fill (m) |
 |---|---|---|---|---|---|---|
 | Parkway | Balsam Crest Parkway | parkway | 93.7 | 8.0% | 19 | 47 |
-| I-21 | Interstate 21 | interstate | 85.7 | 5.0% | 16 | 16 |
+| I-21 | Interstate 21 | interstate | 85.7 | 5.0% | 15 | 15 |
 | CR 107 | Highlands Road | county | 68.2 | 13.0% | 10 | 10 |
 | SR 14 | Banks Highway | state | 63.0 | 8.5% | 0 | 0 |
 | SR 29 | The Trail | state | 54.4 | 2.1% | 0 | 0 |
@@ -124,7 +124,7 @@ Lengths and grades are of the routed, graded alignment (each road is engineered 
 | CR 40 | Rice Hope Road | county | 11.9 | 2.7% | 0 | 0 |
 | CR 19 | Sweetwater Road | county | 11.7 | 1.1% | 0 | 0 |
 | SR 14 | Pennick Road | county | 10.5 | 0.9% | 0 | 0 |
-| Bay Ave | Bay Avenue | arterial | 10.3 | 10.0% | 3 | 3 |
+| Bay Ave | Bay Avenue | arterial | 10.3 | 10.0% | 2 | 2 |
 | CR 17 | Oyster Point Road | county | 9.2 | 3.8% | 0 | 0 |
 | S Shore Dr | South Shore Drive | arterial | 9.0 | 3.0% | 0 | 0 |
 | Heights Ave | Heights Avenue | arterial | 7.1 | 5.5% | 0 | 0 |
@@ -132,7 +132,7 @@ Lengths and grades are of the routed, graded alignment (each road is engineered 
 | Harbor Blvd | Harbor Boulevard | arterial | 5.6 | 1.0% | 0 | 0 |
 | CR 12 | Dogwood Point Road | county | 4.3 | 13.0% | 1 | 1 |
 | CR 35 | Ferry Landing Road | county | 4.3 | 1.0% | 0 | 0 |
-| W Shore Dr | West Shore Drive | arterial | 3.9 | 5.2% | 0 | 0 |
+| W Shore Dr | West Shore Drive | arterial | 3.9 | 4.4% | 0 | 0 |
 | Corliss Ave | Corliss Avenue | arterial | 3.3 | 0.2% | 0 | 0 |
 | CR 41 | Airport Road (Mirabel) | county | 3.3 | 2.4% | 0 | 0 |
 | Spur | Ledford Dome Road | parkway | 2.8 | 8.0% | 11 | 11 |
@@ -144,7 +144,7 @@ Totals: 105 km interstate, 712 km state highways and parkway, 320 km county road
 
 | Line | Status | Use | Length (km) | Ruling grade |
 |---|---|---|---|---|
-| Mainland Main Line | active | freight + passenger | 97.1 | 2.2% |
+| Mainland Main Line | active | freight + passenger | 97.3 | 2.2% |
 | Corliss Freight Line | active | freight | 20.3 | 2.2% |
 | Calder Passenger Branch | active | passenger | 4.5 | 2.2% |
 | Bellamy & Southern Railway | active | freight | 54.3 | 2.2% |
@@ -179,8 +179,8 @@ Every water crossing over 120 m on the routed network. Named bridges carry their
 | Calloway Lake Bridge | SR 28 Cove Road | 1,850 | low concrete trestle | 4 |
 | SR 1 crossing | SR 1 Keys Highway | 1,825 | girder or trestle | — |
 | SR 1 crossing | SR 1 Keys Highway | 1,775 | girder or trestle | — |
+| Mainland Main Line crossing | Mainland Main Line | 1,600 | girder or trestle | — |
 | Bonnet Inlet Bridge | SR 14 Banks Highway | 1,575 | concrete girder | 9 |
-| Mainland Main Line crossing | Mainland Main Line | 1,575 | girder or trestle | — |
 | Calloway Lake Bridge | SR 28 Cove Road | 1,500 | low concrete trestle | 4 |
 | Sawpit Pass Bridge | SR 29 The Trail | 1,450 | steel swing span on timber approaches | 3 |
 | Market Street Bridge | Calder Passenger Branch | 1,400 | double-deck vertical lift | 11 |
@@ -206,6 +206,7 @@ Every water crossing over 120 m on the routed network. Named bridges carry their
 | SR 17 crossing | SR 17 Coastal Highway | 175 | girder or trestle | — |
 | SR 17 crossing | SR 17 Coastal Highway | 175 | girder or trestle | — |
 | SR 14 crossing | SR 14 Banks Highway | 175 | girder or trestle | — |
+| Mainland Main Line crossing | Mainland Main Line | 175 | girder or trestle | — |
 | Mainland Main Line crossing | Mainland Main Line | 125 | girder or trestle | — |
 
 ## Tunnels and viaducts
@@ -264,15 +265,15 @@ Every water crossing over 120 m on the routed network. Named bridges carry their
 | Corliss Container Terminal | container port | 15.5 | 15.5 |
 | Corliss Bulk & Tank Berths | bulk and petroleum | 14.0 | 14.0 |
 | Corliss Shipyard | shipyard and drydocks | 11.0 | 11.0 |
-| Calder Wharves and Cruise Terminal | cruise and breakbulk | 12.0 | 25.0 |
-| Riverside Barge Terminal | river barges | 4.0 | 27.3 |
+| Calder Wharves and Cruise Terminal | cruise and breakbulk | 12.0 | 27.1 |
+| Riverside Barge Terminal | river barges | 4.0 | 27.4 |
 | Haversham Shrimp Docks | fishing harbor | 5.0 | 5.0 |
 | Fallon Harbor | fishing harbor | 6.0 | 6.0 |
 | Merrin Harbor | fishing harbor | 3.0 | 3.0 |
 | Sabal Fish House | fishing dock | 2.0 | 2.0 |
 | Port Serena Marina | marina | 3.0 | 3.0 |
-| Calder Yacht Basin | marina | 4.0 | 10.1 |
-| Cutstone Stone Wharf | stone barge wharf | 5.0 | 6.1 |
+| Calder Yacht Basin | marina | 4.0 | 4.0 |
+| Cutstone Stone Wharf | stone barge wharf | 5.0 | 9.6 |
 | Calloway Marina | lake marina | 8.0 | 30.4 |
 | Oyster Point Docks | fishing harbor | 3.0 | 3.0 |
 

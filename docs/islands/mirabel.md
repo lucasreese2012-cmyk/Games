@@ -171,12 +171,12 @@ The resort is a linear city: Condo Row on the beach side, the Strip along Beach 
 
 | Cover | Share | km² |
 |---|---|---|
-| Maritime live-oak forest | 43.0% | 36.7 |
-| Sand-pine and oak scrub | 19.0% | 16.2 |
-| Dunes and sea oats | 9.8% | 8.4 |
+| Maritime live-oak forest | 43.3% | 37.0 |
+| Sand-pine and oak scrub | 19.1% | 16.3 |
+| Dunes and sea oats | 11.4% | 9.8 |
 | Slash-pine flatwoods | 9.2% | 7.8 |
-| Urban | 7.7% | 6.6 |
-| Suburban | 7.6% | 6.4 |
+| Suburban | 6.9% | 5.9 |
+| Urban | 6.3% | 5.4 |
 | Beach sand | 2.4% | 2.1 |
 | Freshwater marsh and wet prairie | 0.9% | 0.8 |
 

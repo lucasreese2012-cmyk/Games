@@ -183,15 +183,15 @@ Saint Ambrose has no primary landmark of its own: on a flat island the eye goes 
 | Cover | Share | km² |
 |---|---|---|
 | Salt marsh (cordgrass, needlerush) | 52.4% | 400.2 |
-| Maritime live-oak forest | 22.1% | 168.8 |
+| Maritime live-oak forest | 22.1% | 169.0 |
 | Pine–hardwood forest | 5.2% | 40.1 |
 | Pasture and hay | 4.6% | 35.4 |
 | Pine plantation | 4.6% | 35.0 |
 | Cropland | 3.1% | 23.7 |
 | Freshwater marsh and wet prairie | 2.9% | 22.4 |
-| Dunes and sea oats | 2.0% | 15.6 |
+| Dunes and sea oats | 2.1% | 16.3 |
 | Slash-pine flatwoods | 1.4% | 10.9 |
-| Suburban | 0.6% | 4.5 |
+| Suburban | 0.5% | 4.1 |
 
 **Settlements**
 

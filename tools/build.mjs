@@ -62,6 +62,9 @@ if (!args.includes('--no-images')) {
 
 if (!args.includes('--no-game')) {
   exportGame(T, A, path.join(ROOT, 'game/data'));
+  // game/page.html is the page body (as published); index.html wraps it for local use.
+  const page = fs.readFileSync(path.join(ROOT, 'game/page.html'), 'utf8');
+  fs.writeFileSync(path.join(ROOT, 'game/index.html'), `<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>\n</head>\n<body>\n${page}\n</body>\n</html>\n`);
   for (const f of fs.readdirSync(path.join(ROOT, 'game/data'))) log(`game/data/${f} ${(fs.statSync(path.join(ROOT, 'game/data', f)).size / 1e6).toFixed(2)} MB`);
 }
 log('build complete');

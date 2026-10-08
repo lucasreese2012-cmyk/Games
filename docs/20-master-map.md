@@ -18,7 +18,7 @@ The complete overview: every island at a glance, the transport network, the natu
 | Saint Ambrose Island | 764 km² | Salt marsh (cordgrass, needlerush) (52%), Maritime live-oak forest (22%) | 9 m | 44 /km² | Tidal marsh and live-oak sea islands | Haversham (28,000) | Haversham Steeples over the marsh |
 | Wickham Island | 440 km² | Slash-pine flatwoods (28%), Longleaf pine savanna (26%) | 76 m (Scrub Hill) | 1 /km² | Longleaf sandhills, scrub and springs | Wickham (280) | Wickham Spring |
 | Ossahatchee Island | 754 km² | Cypress–tupelo swamp (42%), Freshwater marsh and wet prairie (19%) | 44 m (Highpine Knoll) | 5 /km² | Cypress swamp and prairies | Ossahatchee (2,600) | Big Water |
-| The Gannet Banks | 34 km² | Sand-pine and oak scrub (42%), Dunes and sea oats (33%) | 28 m (Kestrel Hill) | 106 /km² | Atlantic barrier, dunes and cape | Kestrel (2,000) | Cape Merrin Lighthouse |
+| The Gannet Banks | 34 km² | Sand-pine and oak scrub (41%), Dunes and sea oats (36%) | 28 m (Kestrel Hill) | 106 /km² | Atlantic barrier, dunes and cape | Kestrel (2,000) | Cape Merrin Lighthouse |
 | The Sabal Keys | 26 km² | Black and red mangrove (87%), Maritime live-oak forest (10%) | 2 m | 29 /km² | Mangrove and limestone keys | Sabal (600) | Sabal Bridges |
 
 ## Transportation network
@@ -68,7 +68,7 @@ The complete overview: every island at a glance, the transport network, the natu
 
 | Line | Status | Length |
 |---|---|---|
-| Mainland Main Line | active | 97.1 km |
+| Mainland Main Line | active | 97.3 km |
 | Corliss Freight Line | active | 20.3 km |
 | Calder Passenger Branch | active | 4.5 km |
 | Bellamy & Southern Railway | active | 54.3 km |
@@ -128,8 +128,8 @@ The complete overview: every island at a glance, the transport network, the natu
 - **Rivers:** 38 named rivers; the longest: Ocosta River 24.1 km, Thunderhole River 21.6 km, Little Black River 21.6 km, Coldwater River 20.4 km, Tennalee River 19.8 km, Bright Water River 19.3 km.
 - **Lakes:** 50 lakes and ponds; the largest: Calloway Lake 13.7 km², Lake Whitlock 5.4 km², Clearwater Bay 3.0 km², Lake Ocosta 1.7 km², Tar Kiln Bay 1.7 km², The Rice Reserve 1.4 km².
 - **Wetlands:** 551 km² of salt marsh, 166 km² of freshwater marsh, 521 km² of swamp and wet forest, 37 km² of mangrove.
-- **Forests:** 50 named forests; 2,483 km² of upland forest and scrub in total.
-- **Beaches:** 50 named beaches; 51 km² of beach and dune.
+- **Forests:** 50 named forests; 2,485 km² of upland forest and scrub in total.
+- **Beaches:** 50 named beaches; 54 km² of beach and dune.
 <!-- END GENERATED -->
 
 ## Environmental progression

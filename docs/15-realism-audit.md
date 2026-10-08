@@ -153,13 +153,13 @@ What each primary landmark sees of the other primaries and the high summits — 
 
 | Route | Class | Steepest grade | Deepest cut (m) | Highest fill (m) | Structures |
 |---|---|---|---|---|---|
-| I-21 Interstate 21 | interstate | 5.0% | 16 | 16 | bridge 1,250 m, bridge 2,100 m, bridge 3,475 m |
+| I-21 Interstate 21 | interstate | 5.0% | 15 | 15 | bridge 1,250 m, bridge 2,100 m, bridge 3,475 m |
 | I-121 Interstate 121 (Port Spur) | interstate | 3.9% | 0 | 0 | bridge 1,850 m |
-| Bay Ave Bay Avenue | arterial | 10.0% | 3 | 3 | — |
+| Bay Ave Bay Avenue | arterial | 10.0% | 2 | 2 | — |
 | Harbor Blvd Harbor Boulevard | arterial | 1.0% | 0 | 0 | — |
 | Heights Ave Heights Avenue | arterial | 5.5% | 0 | 0 | — |
 | S Shore Dr South Shore Drive | arterial | 3.0% | 0 | 0 | — |
-| W Shore Dr West Shore Drive | arterial | 5.2% | 0 | 0 | — |
+| W Shore Dr West Shore Drive | arterial | 4.4% | 0 | 0 | — |
 | SR 73 Gap Road | state | 8.5% | 32 | 56 | viaduct 925 m, viaduct 300 m, viaduct 850 m, viaduct 3,100 m |
 | SR 2 Narrows Road | state | 8.5% | 2 | 2 | — |
 | Parkway Balsam Crest Parkway | parkway | 8.0% | 19 | 47 | viaduct 100 m, viaduct 500 m, viaduct 350 m, viaduct 100 m, viaduct 125 m, viaduct 175 m, viaduct 175 m, viaduct 100 m, viaduct 775 m |
@@ -198,9 +198,9 @@ What each primary landmark sees of the other primaries and the high summits — 
 | CR 35 Ferry Landing Road | county | 1.0% | 0 | 0 | — |
 | CR 17 Oyster Point Road | county | 3.8% | 0 | 0 | — |
 | CR 40 Rice Hope Road | county | 2.7% | 0 | 0 | — |
-| Mainland Main Line | active | 2.2% | 11 | 11 | bridge 2,025 m, bridge 325 m, bridge 1,575 m, bridge 100 m, bridge 100 m, bridge 125 m, bridge 100 m |
+| Mainland Main Line | active | 2.2% | 12 | 12 | bridge 2,025 m, bridge 325 m, bridge 1,600 m, bridge 175 m, bridge 100 m, bridge 100 m, bridge 125 m, bridge 100 m |
 | Corliss Freight Line | active | 2.2% | 12 | 12 | bridge 5,225 m |
-| Calder Passenger Branch | active | 2.2% | 8 | 25 | bridge 1,400 m |
+| Calder Passenger Branch | active | 2.2% | 8 | 26 | bridge 1,400 m |
 | Bellamy & Southern Railway | active | 2.2% | 0 | 0 | bridge 2,850 m, bridge 1,100 m, bridge 200 m |
 | Haversham Branch | active | 2.2% | 0 | 0 | — |
 | Coldwater Quarry Spur | active | 2.2% | 2 | 2 | bridge 300 m |

@@ -1,7 +1,7 @@
 // Land-cover classification for the Cassena Islands.
 // Biomes follow elevation, aspect, slope, curvature (coves vs. ridges),
 // drainage, salt exposure and land use; boundaries are never arbitrary.
-import { ISLANDS, PEAKS, LAKES, RIVERS, WATERS } from '../world/geography.mjs';
+import { ISLANDS, PEAKS, LAKES, RIVERS, WATERS, DOMES } from '../world/geography.mjs';
 import { SETTLEMENTS } from '../world/settlements.mjs';
 import { AIRPORTS, POWER, UTILITIES } from '../world/transport.mjs';
 import { W } from './terrain.mjs';
@@ -219,7 +219,7 @@ export function classify(T, zones = {}) {
   for (const s of SETTLEMENTS) {
     const R = s.r * (s.form === 'city' ? 1.15 : 1.05);
     paint(s.at[0], s.at[1], R * 1.2, (i, u0, x, y) => {
-      if (out[i] === C['salt-marsh'] || out[i] === C.beach || out[i] === C.rock) return;
+      if (out[i] === C['salt-marsh'] || out[i] === C.beach || out[i] === C.rock || out[i] === C.dune) return;
       const u = u0 * 1.2 * (1 + 0.28 * nz.fbm(x * 1.6 + s.at[0], y * 1.6, 3));
       if (u > 1) return;
       if (s.form === 'city') {
@@ -228,11 +228,18 @@ export function classify(T, zones = {}) {
       } else if (s.form === 'town' || s.form === 'suburb') {
         out[i] = u < 0.35 ? C.urban : u < 0.9 ? C.suburban : out[i];
       } else if (s.form === 'resort') {
-        out[i] = u < 0.6 ? C.urban : C.suburban;
+        if (s.pop > 8000) out[i] = u < 0.6 ? C.urban : C.suburban;
+        else out[i] = u < 0.8 ? C.suburban : out[i];
       } else if (s.form === 'village') {
         out[i] = u < 0.55 ? C.suburban : out[i];
       } else if (u < 0.6 && nz2.fbm(x * 6, y * 6, 2) > -0.1) out[i] = C.suburban;
     });
+  }
+  // Migrating dunes stay bare sand.
+  for (const dm of DOMES) {
+    if (dm.shape !== 'dune') continue;
+    const at = dm.peak ? PEAKS[dm.peak].at : dm.at;
+    paint(at[0], at[1], dm.r, (i) => { if (h[i] > 5) out[i] = C.dune; });
   }
   // Calder island is built out shore to shore, with parks.
   const calderK = islandIdx.calder, corlissK = islandIdx.corliss;

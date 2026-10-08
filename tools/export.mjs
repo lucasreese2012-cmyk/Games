@@ -44,7 +44,7 @@ export function exportGame(T, A, outDir) {
     grid: { x0: g.x0, y0: g.y0, x1: g.x1, y1: g.y1, cell: g.c, nx: g.nx, ny: g.ny, encoding: '(z + 100) * 10, 16-bit big-endian in R,G' },
     cover: LC.map((c) => ({ key: c.key, name: c.name, color: c.color })),
     islands: ISLANDS.filter((s) => !s.offworld).map((s, k) => ({ id: s.id, index: ISLANDS.indexOf(s) + 1, name: s.name, type: s.type, partOf: s.partOf || null, stats: A.stats[s.id] ? { landKm2: r1(A.stats[s.id].landKm2), coastKm: r1(A.stats[s.id].coastKm), maxZ: r1(A.stats[s.id].maxZ), lengthKm: r1(A.stats[s.id].lengthKm), meanZ: r1(A.stats[s.id].meanZ) } : null })),
-    waters: WATERS.map((w) => ({ id: w.id, name: w.name, kind: w.kind, label: w.label, maxDepth: w.maxDepth })),
+    waters: WATERS.map((w) => ({ id: w.id, name: w.name, kind: w.kind, label: w.label, maxDepth: w.maxDepth, poly: w.poly ? w.poly.map((q) => [r3(q[0]), r3(q[1])]) : null })),
     peaks: Object.entries(PEAKS).map(([id, p]) => ({ id, name: p.name, island: p.island, at: p.at, z: p.z })),
     rivers: T.riverProfiles.map((rp) => {
       const def = RIVERS.find((r) => r.id === rp.id);
@@ -63,7 +63,7 @@ export function exportGame(T, A, outDir) {
     landmarks: LANDMARKS.map((l) => ({ id: l.id, name: l.name, island: l.island, at: l.at, tier: l.tier, kind: l.kind, h: l.h || 0, ground: ground('landmark', l.id), where: locate(l.at), share: A.viewshed.find((v) => v.id === l.id)?.share ?? null, ...txt(l) })),
     viewpoints: A.viewpoints.map((v) => ({ id: v.id, name: v.name, island: v.island, at: v.at, eye: v.eye || 2, facing: v.facing, ground: v.ground == null ? null : r1(Math.max(0, v.ground)), where: locate(v.at), seen: v.seen.map((s) => ({ name: s.name, tier: s.tier, dist: r1(s.dist) })), ...txt(v) })),
     beaches: A.beaches.map((b) => ({ id: b.id, name: b.name, island: b.island, at: b.snapped, len: b.len, sand: b.sand, where: locate(b.snapped), ...txt(b) })),
-    lakes: A.lakes.map((l) => ({ id: l.id, name: l.name, island: l.island, at: l.at.map(r3), type: l.type || l.kind, where: l.where, level: l.level == null ? null : r1(l.level), area: r3(l.areaKm2), depth: r1(l.maxDepth), ...txt(l) })),
+    lakes: A.lakes.map((l) => { const info = T.lakeInfo.find((q) => q.id === l.id) || {}; return { id: l.id, name: l.name, island: l.island, at: l.at.map(r3), type: l.type || l.kind, where: l.where, level: l.level == null ? null : r1(l.level), area: r3(l.areaKm2), depth: r1(l.maxDepth), dam: info.dam || null, crest: info.crest ?? null, ...txt(l) }; }),
     forests: FORESTS.map((f) => ({ id: f.id, name: f.name, island: f.island, at: f.at, rx: f.rx, ry: f.ry, rot: f.rot, cover: f.cover, where: locate(f.at), ...txt(f) })),
     mountains: A.mountains.map((m) => ({ id: m.id, name: m.name, island: m.island, at: m.at, z: m.z, kind: m.kind, where: m.where, relief: Math.round(m.relief3km), ...txt(m) })),
     districts: DISTRICTS.map((d) => ({ id: d.id, name: d.name, island: d.island, at: d.at, r: d.r, form: d.form, bldg: d.bldg || null, where: locate(d.at), ...txt(d) })),

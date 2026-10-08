@@ -232,7 +232,7 @@ The measured shares are in the table at the end of this profile.
 | Highest point | Ledford Dome, 2,047 m |
 | Mean elevation | 465 m |
 | Land below 3 m | 0% |
-| Slopes steeper than 40% | 30% |
+| Slopes steeper than 40% | 31% |
 | Population | 105,430 |
 | Longest drive | Upper Cove – Pigeonroost, 92.3 km, 1 h 23 min |
 | Register entries | 27 landmarks, 14 viewpoints, 5 beaches, 8 lakes, 13 forests, 26 summits, 7 districts |
@@ -241,14 +241,14 @@ The measured shares are in the table at the end of this profile.
 
 | Cover | Share | km² |
 |---|---|---|
-| Pine–hardwood forest | 38.9% | 380.8 |
+| Pine–hardwood forest | 39.0% | 381.6 |
 | Cove hardwood and rhododendron | 22.7% | 222.4 |
 | Oak–hickory forest | 12.5% | 122.0 |
-| Pasture and hay | 10.1% | 98.3 |
-| Cropland | 4.9% | 47.6 |
+| Pasture and hay | 10.1% | 98.6 |
+| Cropland | 4.9% | 47.7 |
 | Northern hardwoods | 3.6% | 35.0 |
 | Bare rock and cliff | 3.5% | 33.9 |
-| Suburban | 1.8% | 17.9 |
+| Suburban | 1.8% | 18.0 |
 | Spruce–fir | 0.9% | 8.3 |
 
 **Settlements**

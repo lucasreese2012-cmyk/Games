@@ -38,7 +38,7 @@
 | Dogwood Mountain | Halcomb Island | 1,050 | 1,022 | mountain |
 | Wolfpen Mountain | Graystone Island | 1,050 | 916 | mountain |
 | Pinnacle Knob | Halcomb Island | 820 | 768 | knob |
-| Chestnut Knob | Halcomb Island | 780 | 722 | knob |
+| Chestnut Knob | Halcomb Island | 780 | 723 | knob |
 | Copperhead Knob | Halcomb Island | 690 | 692 | knob |
 | The Hogback | Halcomb Island | 640 | 603 | ridge |
 | Lookoff Mountain | Graystone Island | 640 | 605 | mountain |
@@ -335,7 +335,7 @@
 - **Island:** Halcomb Island
 - **Location:** Foothills between Hominy and Ledford — 3.3 km NW of Ledford
 - **Elevation:** 780 m (surveyed terrain 780 m)
-- **Local relief:** 722 m within 3 km
+- **Local relief:** 723 m within 3 km
 - **Form:** knob
 - **Description:** A foothill knob with sprouting American chestnut stumps among oaks, and a cell tower on its summit.
 - **Geographic justification:** Dry, acidic ridge soils once dominated by chestnut.

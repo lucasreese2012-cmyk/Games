@@ -162,13 +162,12 @@ Houses only where the island is wide enough to have stable ground behind the dun
 
 | Cover | Share | km² |
 |---|---|---|
-| Sand-pine and oak scrub | 41.8% | 14.3 |
-| Dunes and sea oats | 32.9% | 11.2 |
+| Sand-pine and oak scrub | 41.3% | 14.1 |
+| Dunes and sea oats | 35.7% | 12.2 |
 | Maritime live-oak forest | 8.7% | 3.0 |
 | Beach sand | 8.0% | 2.7 |
-| Suburban | 3.3% | 1.1 |
+| Suburban | 2.7% | 0.9 |
 | Pasture and hay | 2.2% | 0.7 |
-| Urban | 1.7% | 0.6 |
 | Airport | 1.0% | 0.3 |
 
 **Settlements**

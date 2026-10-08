@@ -753,11 +753,18 @@ export function buildTerrain(log = () => {}, debugPts = null) {
   }
   for (const bt of BATHY) {
     const pts = resample(bt.pts, g.c * 2);
-    const R = bt.kind === 'trough' ? bt.w : bt.w;
-    for (const p of pts) {
-      forBox(g, p[0] - R, p[1] - R, p[0] + R, p[1] + R, (i, x, y) => {
+    for (let k = 0; k < pts.length; k++) {
+      // Natural troughs and shoals wander and swell along their length;
+      // dredged channels stay straight.
+      const p = pts[k], pa = pts[Math.max(0, k - 1)], pb = pts[Math.min(pts.length - 1, k + 1)];
+      const tl = Math.hypot(pb[0] - pa[0], pb[1] - pa[1]) || 1, tx = (pb[0] - pa[0]) / tl, ty = (pb[1] - pa[1]) / tl;
+      const natural = bt.kind !== 'channel';
+      const wob = natural ? nz.fbm(p[0] * 0.16 + 7.3, p[1] * 0.16 - 2.1, 3) : 0;
+      const R = bt.w * (natural ? 0.55 + 1.1 * clamp(nz.fbm(p[0] * 0.22 - 4, p[1] * 0.22 + 9, 3) + 0.5, 0, 1) : 1);
+      const px = p[0] - ty * wob * bt.w * 1.4, py = p[1] + tx * wob * bt.w * 1.4;
+      forBox(g, px - R, py - R, px + R, py + R, (i, x, y) => {
         if (island[i]) return;
-        const d = Math.hypot(x - p[0], y - p[1]);
+        const d = Math.hypot(x - px, y - py);
         if (d > R) return;
         if (bt.kind === 'trough') {
           const v = -p[2] * (1 - (d / R) ** 2);
