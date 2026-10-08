@@ -5,17 +5,17 @@
 export const SETTLEMENTS = [
   // ---- Calder metropolitan area -----------------------------------------
   { id: 'calder', name: 'Calder', island: 'calder', at: [37.6, 61.6], r: 3.9, form: 'city', pop: 362000,
-    why: 'Bedrock island at the mouth of the Tennalee, beside the deepest natural water in Cassena Sound; head of ocean navigation and the first dry, defensible ground below the falls.' },
+    why: 'Bedrock island at the mouth of the Tennalee, beside the deepest natural water in Cassena Sound; head of ocean navigation and the first high, dry ground below the falls.' },
   { id: 'tennalee-falls', name: 'Tennalee Falls', island: 'halcomb', at: [36.6, 66.4], r: 1.3, form: 'town', pop: 24000,
-    why: 'Fall-line mill town where the Tennalee drops over granite ledges into tidewater; water power, then the railroad crossing.' },
+    why: 'Fall-line town where the Tennalee drops over granite ledges into tidewater: the head of navigation, a mill race, and the narrowest point for the river crossings.' },
   { id: 'riverside', name: 'Riverside', island: 'halcomb', at: [39.2, 65.6], r: 1.0, form: 'suburb', pop: 31000,
-    why: 'Low terrace on the east bank of the Tennalee mouth facing downtown Calder; barge wharves, rail junction and the old ferry landing.' },
+    why: 'Low terrace on the east bank of the Tennalee mouth facing downtown Calder; barge wharves, a rail junction and a ferry slip.' },
   { id: 'halcomb-heights', name: 'Halcomb Heights', island: 'halcomb', at: [32.8, 66.0], r: 1.3, form: 'suburb', pop: 28000,
-    why: 'Foothill ridges above the North Channel that became commuter suburbs once the Tennalee River Bridge opened.' },
+    why: 'Dry, well-drained foothill ridges above the North Channel within a short drive of downtown across the Tennalee River Bridge.' },
   { id: 'corliss', name: 'Corliss', island: 'corliss', at: [46.2, 57.6], r: 1.1, form: 'town', pop: 14000,
     why: 'Worker town on the higher western end of a flat delta-and-spoil island whose east end holds the port, refinery and yards.' },
   { id: 'bellamy-bluffs', name: 'Bellamy Bluffs', island: 'bellamy', at: [30.6, 50.6], r: 1.4, form: 'suburb', pop: 38000,
-    why: 'Sandy bluffs at the south end of the Long Bridge; suburbs grew between the interstate landing and the airport.' },
+    why: 'Sandy bluffs at the south end of the Long Bridge: the nearest high, dry ground to the city between the interstate landing and the airport.' },
 
   // ---- Halcomb Island ----------------------------------------------------
   { id: 'coldwater', name: 'Coldwater', island: 'halcomb', at: [12.4, 79.8], r: 1.1, form: 'town', pop: 9000,
@@ -31,7 +31,7 @@ export const SETTLEMENTS = [
   { id: 'hickory-flat', name: 'Hickory Flat', island: 'halcomb', at: [5.6, 79.2], r: 0.6, form: 'village', pop: 2400,
     why: 'Plateau-top crossroads on the Hickory Tableland, flat enough for an airport and dry enough for a town.' },
   { id: 'calloway', name: 'Calloway', island: 'halcomb', at: [36.9, 71.6], r: 0.5, form: 'village', pop: 900,
-    why: 'Lake village on the east shore of Calloway Lake, built around the marinas and the dam construction camp site.' },
+    why: 'Lake village on the gentle east shore of Calloway Lake, the only flat bench near the dam, with marinas in the sheltered coves.' },
   { id: 'upper-cove', name: 'Upper Cove', island: 'halcomb', at: [40.6, 76.6], r: 0.4, form: 'hamlet', pop: 250,
     why: 'Farm hamlet on the flat floor of the upper Tennalee Cove, above the reservoir\'s full-pool line.' },
   { id: 'big-laurel', name: 'Big Laurel', island: 'halcomb', at: [37.2, 87.3], r: 0.4, form: 'village', pop: 700,
@@ -43,13 +43,13 @@ export const SETTLEMENTS = [
   { id: 'graystone', name: 'Graystone', island: 'graystone', at: [64.4, 68.2], r: 1.1, form: 'town', pop: 21000,
     why: 'Ferry and quarry town on the island\'s one sheltered south-facing harbor, between the Thunderhole mouth and Quarry Creek.' },
   { id: 'fallon', name: 'Fallon', island: 'graystone', at: [76.6, 88.1], r: 0.6, form: 'town', pop: 3500,
-    why: 'Harbor in the only cove breaking the Fallon Cliffs; fishing boats and the Coast Guard station.' },
+    why: 'Harbor in the only cove breaking the Fallon Cliffs; fishing boats and a rescue-boat station.' },
   { id: 'whitlock', name: 'Whitlock', island: 'graystone', at: [55.4, 83.6], r: 0.7, form: 'resort', pop: 1200,
     why: 'Summer village on the cool highland plateau beside Lake Whitlock, 1,050 m above the sound.' },
   { id: 'cutstone', name: 'Cutstone', island: 'graystone', at: [60.2, 71.6], r: 0.5, form: 'village', pop: 1400,
     why: 'Quarry village beside the granite pit on Cutstone Mountain.' },
   { id: 'bright-water', name: 'Bright Water', island: 'graystone', at: [70.0, 74.4], r: 0.4, form: 'village', pop: 600,
-    why: 'Mill village where the Bright Water River leaves the foot of the Blue Wall.' },
+    why: 'Mill village where the Bright Water River leaves the foot of the Blue Wall and its fall can turn a wheel.' },
   { id: 'stillhouse', name: 'Stillhouse', island: 'graystone', at: [56.0, 90.3], r: 0.3, form: 'hamlet', pop: 200,
     why: 'Fishing hamlet at the mouth of Stillhouse Branch on the north shore.' },
 
@@ -61,7 +61,7 @@ export const SETTLEMENTS = [
   { id: 'kinard', name: 'Kinard', island: 'bellamy', at: [26.8, 41.6], r: 0.45, form: 'village', pop: 900,
     why: 'Crossroads and grain elevator on the railroad between Bellamy and the Ashwood River bridge.' },
   { id: 'ocosta', name: 'Ocosta', island: 'bellamy', at: [20.4, 31.8], r: 0.5, form: 'village', pop: 2200,
-    why: 'River landing at the head of the Ocosta estuary, the old limit of tidewater barge traffic.' },
+    why: 'River landing at the head of the Ocosta estuary, the upper limit of tidewater barge navigation.' },
   { id: 'sweetwater', name: 'Sweetwater', island: 'bellamy', at: [12.6, 37.2], r: 0.35, form: 'hamlet', pop: 700,
     why: 'Farm hamlet on Sweetwater Creek.' },
   { id: 'dunmore', name: 'Dunmore', island: 'bellamy', at: [14.0, 29.6], r: 0.4, form: 'hamlet', pop: 600,
@@ -79,7 +79,7 @@ export const SETTLEMENTS = [
 
   // ---- Saint Ambrose Island ----------------------------------------------
   { id: 'haversham', name: 'Haversham', island: 'saint-ambrose', at: [54.6, 48.4], r: 1.3, form: 'town', pop: 28000,
-    why: 'The highest bluff on the island fronting the deepest tidal river; colonial-era port and later the island\'s market town.' },
+    why: 'The highest bluff on the island fronting the deepest tidal river: dry ground beside a natural deep-water landing, central to the island\'s farmland.' },
   { id: 'ambrose-beach', name: 'Ambrose Beach', island: 'saint-ambrose', at: [68.4, 46.6], r: 0.8, form: 'resort', pop: 3000,
     why: 'Holocene barrier beach reached by the causeway across the Bonnet River marsh.' },
   { id: 'oyster-point', name: 'Oyster Point', island: 'saint-ambrose', at: [41.4, 52.0], r: 0.4, form: 'village', pop: 800,
@@ -93,7 +93,7 @@ export const SETTLEMENTS = [
 
   // ---- Wickham Island ----------------------------------------------------
   { id: 'wickham', name: 'Wickham', island: 'wickham', at: [6.4, 16.6], r: 0.35, form: 'hamlet', pop: 280,
-    why: 'Store, church and a few houses on the dry rise above Seacow Spring, where the island road ends.' },
+    why: 'A store and a few houses on the dry rise above Seacow Spring, where the island road ends.' },
   { id: 'cedar-shoals', name: 'Cedar Shoals', island: 'wickham', at: [10.4, 1.8], r: 0.25, form: 'hamlet', pop: 150,
     why: 'Fish houses on pilings at Cedar Point, the island\'s only harbor.' },
   { id: 'wickham-landing', name: 'Wickham Landing', island: 'wickham', at: [12.6, 20.6], r: 0.2, form: 'hamlet', pop: 60,
@@ -105,7 +105,7 @@ export const SETTLEMENTS = [
   { id: 'tarrow-landing', name: 'Tarrow Landing', island: 'ossahatchee', at: [61.1, 13.6], r: 0.35, form: 'village', pop: 450,
     why: 'Ferry and seaplane landing where Long Ridge comes closest to Tarrow Sound.' },
   { id: 'tolar', name: 'Tolar', island: 'ossahatchee', at: [53.2, 18.8], r: 0.25, form: 'hamlet', pop: 120,
-    why: 'Remnant sawmill hamlet on a pine island along the Trail.' },
+    why: 'Sawmill hamlet on a dry pine island along the Trail.' },
   { id: 'sabal-landing', name: 'Sabal Landing', island: 'ossahatchee', at: [44.2, 6.4], r: 0.3, form: 'hamlet', pop: 300,
     why: 'Mainland end of the Keys bridges on the marsh coast.' },
 

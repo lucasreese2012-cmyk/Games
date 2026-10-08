@@ -117,7 +117,7 @@ export function classify(T, zones = {}) {
 
       if (kind === 'mountain' || kind === 'mainland') {
         const cove = curv[i] > 0.6, ridge = curv[i] < -0.6;
-        if (s > 0.85 || (s > 0.55 && n2 > 0.15)) v = C.rock;
+        if (s > 1.15 || (s > 0.8 && n2 > 0.3)) v = C.rock;
         else if (id === 'halcomb' && z > 1880 - 60 * north[i]) v = C['spruce-fir'];
         else if (z > 1650 - 120 * north[i]) v = id === 'graystone' ? (north[i] > 0.2 ? C['spruce-fir'] : C['northern-hardwood']) : C['northern-hardwood'];
         else if (z > 1400 - 80 * north[i]) v = cove ? C['cove-hardwood'] : C['northern-hardwood'];

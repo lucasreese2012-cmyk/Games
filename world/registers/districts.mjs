@@ -188,7 +188,7 @@ export const DISTRICTS = [
 
   // ---------------------------------------------------------------- Corliss
   { id: 'corliss-town', name: 'Corliss Town', island: 'corliss', at: [46.0, 57.6], r: 0.7, bldg: [5, 12, 0.55], form: 'worker housing',
-    desc: 'Shotgun houses, bungalows and churches on the higher western end of the island.',
+    desc: 'Shotgun houses, bungalows and corner stores on the higher western end of the island.',
     why: 'Housing within walking distance of the port and mills.',
     look: 'Small houses under smokestacks.',
     near: 'Paper Mill, Refinery Row.',
@@ -284,11 +284,11 @@ export const DISTRICTS = [
     near: 'Haversham Shrimp Docks, Bay Street.',
     memorable: 'Boats unloading at dawn.' },
   { id: 'uptown-haversham', name: 'Uptown Haversham', island: 'saint-ambrose', at: [53.8, 47.4], r: 0.45, bldg: [6, 14, 0.5], form: 'town commercial',
-    desc: 'Newer commercial streets and churches back from the river, with three white steeples.',
-    why: 'The town\'s growth inland from the bluff.',
-    look: 'Three steeples over the rooftops.',
+    desc: 'Commercial streets back from the river, under three white timber spires.',
+    why: 'Level, dry ground inland from the bluff edge.',
+    look: 'Three spires over the rooftops.',
     near: 'Bay Street, Coastal Highway.',
-    memorable: 'The steeples visible from the marsh.' },
+    memorable: 'The spires visible from the marsh.' },
 
   // ------------------------------------------------- Graystone and Ledford
   { id: 'graystone-harbor', name: 'Graystone Harbor', island: 'graystone', at: [64.0, 67.8], r: 0.5, bldg: [6, 18, 0.6], form: 'harbour town',

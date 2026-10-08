@@ -62,8 +62,8 @@ export const LAKE_TEXT = [
   // -------------------------------------------------------------- Graystone
   { id: 'lake-whitlock', type: 'highland reservoir',
     where: 'Whitlock Basin on the Graystone highlands',
-    desc: 'A clear mountain lake held by a low stone dam on the upper Thunderhole, with summer houses, boathouses and a stone chapel along its shore.',
-    why: 'A dam at the outlet of the highland basin created the lake for the summer colony.',
+    desc: 'A clear mountain lake held by a low stone dam on the upper Thunderhole, with summer houses, boathouses and a stone pavilion along its shore.',
+    why: 'A low dam at the outlet of the highland basin holds back the upper Thunderhole.',
     look: 'Still water reflecting Whitlock Mountain\'s granite face.',
     near: 'Whitlock village, Whitlock Mountain, the Highlands Road.',
     memorable: 'Mirror reflections of granite and fall colour at dawn.' },

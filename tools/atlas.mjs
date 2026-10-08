@@ -1,21 +1,17 @@
-// Atlas renderer: land cover + hillshade + water depth + vectors + labels.
+// Atlas renderer: land cover + hillshade + water depth + vectors.
 // Usage: node tools/atlas.mjs out.png [x0 y0 x1 y1] [cellsPerPixel] [--plain]
 import fs from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import { loadTerrain } from './cache.mjs';
-import { classify, LC, C } from './landcover.mjs';
+import { classify, LC } from './landcover.mjs';
 import { encodePNG } from './lib/png.mjs';
 import { clamp, lerp } from './lib/geom.mjs';
 import { W } from './terrain.mjs';
 import { ROADS, RAILS } from '../world/transport.mjs';
+import { SETTLEMENTS } from '../world/settlements.mjs';
 
-const args = process.argv.slice(2);
-const pos = args.filter((a) => !a.startsWith('--'));
-const out = pos[0] || 'atlas.png';
-const T = loadTerrain(() => {});
+export function renderAtlas(T, cover, box, step = 2, opts = {}) {
 const { g, h, water } = T;
-const { cover } = classify(T);
-const box = pos.length >= 5 ? pos.slice(1, 5).map(Number) : [g.x0, g.y0, g.x1, g.y1];
-const step = pos[5] ? Number(pos[5]) : 2;
 const c0 = g.col(box[0]), c1 = g.col(box[2]) - 1, r0 = g.row(box[3]), r1 = g.row(box[1]) - 1;
 const PW = Math.floor((c1 - c0) / step), PH = Math.floor((r1 - r0) / step);
 const px = new Uint8Array(PW * PH * 3);
@@ -62,21 +58,38 @@ function line(pts, col, w = 1, a = 1, dash = 0) {
     }
   }
 }
-if (!args.includes('--plain')) {
+if (!opts.plain) {
   const routed = Object.fromEntries((T.routeReports || []).filter((r) => r.profile).map((r) => [r.id, r]));
   const geom = (r) => (routed[r.id] ? routed[r.id].profile : r.pts);
   const z = 0.05 / kmPerPx;
   for (const r of RAILS) line(geom(r), r.status === 'abandoned' ? [110, 100, 90] : [40, 40, 44], Math.max(1, 1.2 * z), r.status === 'abandoned' ? 0.6 : 0.9, r.status === 'abandoned' ? 3 : 0);
-  const order = ['county', 'parkway', 'state', 'highway', 'interstate'];
-  const style = { interstate: [[120, 40, 30], [214, 90, 60], 3.2], highway: [[130, 80, 30], [236, 160, 70], 2.6], state: [[120, 100, 40], [246, 214, 110], 2.0], parkway: [[50, 80, 40], [150, 190, 110], 1.8], county: [[120, 110, 100], [250, 248, 240], 1.4] };
+  const order = ['county', 'arterial', 'parkway', 'state', 'highway', 'interstate'];
+  const style = { interstate: [[120, 40, 30], [214, 90, 60], 3.2], highway: [[130, 80, 30], [236, 160, 70], 2.6], state: [[120, 100, 40], [246, 214, 110], 2.0], parkway: [[50, 80, 40], [150, 190, 110], 1.8], county: [[120, 110, 100], [250, 248, 240], 1.4], arterial: [[110, 100, 96], [252, 244, 220], 1.6] };
   for (const pass of [0, 1]) for (const cls of order) for (const r of ROADS) {
     if (r.cls !== cls) continue;
     const [casing, fill, w] = style[cls];
     line(geom(r), pass ? fill : casing, Math.max(1, (pass ? w : w + 1.4) * z), 1);
   }
 }
-fs.writeFileSync(out, encodePNG(PW, PH, px, 2));
-console.log(`wrote ${out} ${PW}x${PH}`);
-const counts = new Map();
-for (let i = 0; i < cover.length; i++) if (T.island[i]) counts.set(cover[i], (counts.get(cover[i]) || 0) + 1);
-console.log([...counts].sort((a, b) => b[1] - a[1]).map(([k, n]) => `${LC[k].key}:${(n * g.c * g.c).toFixed(0)}`).join(' '));
+if (!opts.plain) for (const t of SETTLEMENTS) {
+  const [x, y] = toPx(t.at[0], t.at[1]);
+  const r = Math.max(1.5, Math.min(5, Math.sqrt(t.pop) / 60) * (0.1 / kmPerPx) ** 0.5 * 1.6);
+  for (let a = -Math.ceil(r) - 1; a <= Math.ceil(r) + 1; a++) for (let b = -Math.ceil(r) - 1; b <= Math.ceil(r) + 1; b++) {
+    const d = Math.hypot(a, b);
+    if (d <= r + 1) put(Math.round(x + a), Math.round(y + b), d <= r ? [250, 250, 245] : [30, 30, 30], 1);
+  }
+}
+return { png: encodePNG(PW, PH, px, 2), w: PW, h: PH };
+}
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  const args = process.argv.slice(2);
+  const pos = args.filter((a) => !a.startsWith('--'));
+  const out = pos[0] || 'atlas.png';
+  const T = loadTerrain(() => {});
+  const { cover } = classify(T);
+  const box = pos.length >= 5 ? pos.slice(1, 5).map(Number) : [T.g.x0, T.g.y0, T.g.x1, T.g.y1];
+  const r = renderAtlas(T, cover, box, pos[5] ? Number(pos[5]) : 2, { plain: args.includes('--plain') });
+  fs.writeFileSync(out, r.png);
+  console.log(`wrote ${out} ${r.w}x${r.h}`);
+}
