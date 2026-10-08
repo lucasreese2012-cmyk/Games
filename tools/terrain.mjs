@@ -12,6 +12,9 @@ import {
 } from './lib/geom.mjs';
 import { distanceTransform } from './lib/edt.mjs';
 import { erode } from './lib/erode.mjs';
+import { routeProfile, DESIGN } from './lib/profile.mjs';
+import { makeRouteField, findRoute, simplify, chaikin } from './lib/router.mjs';
+import { ROADS, RAILS, AIRPORTS, PORTS } from '../world/transport.mjs';
 
 export const W = { LAND: 0, SEA: 1, LAKE: 2, RIVER: 3 };
 const OPEN_WATERS = new Set(['atlantic', 'gulf', 'serena-bay']);
@@ -71,9 +74,18 @@ function polyInsideDist(x, y, poly) {
   return pointInPoly(x, y, poly) ? m : -m;
 }
 
-export function buildTerrain(log = () => {}) {
+export function buildTerrain(log = () => {}, debugPts = null) {
   const g = createGrid();
   const N = g.nx * g.ny;
+  let hRef = null;
+  if (debugPts) {
+    const orig = log;
+    log = (m) => {
+      orig(m);
+      if (!hRef) return;
+      orig('   ' + debugPts.map(([n, x, y]) => `${n}=${hRef[g.row(y) * g.nx + g.col(x)].toFixed(0)}`).join(' '));
+    };
+  }
   const nz = makeNoise(WORLD.seed);
   const nz2 = makeNoise(WORLD.seed + 77);
 
@@ -188,6 +200,7 @@ export function buildTerrain(log = () => {}) {
 
   // ---- 3. Structural elevation ---------------------------------------------
   const h = new Float32Array(N);
+  hRef = h;
   const islandIdx = Object.fromEntries(ISLANDS.map((s, k) => [s.id, k + 1]));
   const ridges = RIDGES.map((r) => {
     const pts = resolvePts(r.pts);
@@ -267,9 +280,10 @@ export function buildTerrain(log = () => {}) {
           break;
         case 'mountain': {
           const b = isl.base;
-          const hills = (b.hills || 0) * (nz2.ridged(x * 0.55 + 7, y * 0.55 - 3, 4) - 0.25) * smoothstep(0.6, 4, d);
+          const pv = plateauValue(x, y, k);
+          const hills = (b.hills || 0) * (nz2.ridged(x * 0.55 + 7, y * 0.55 - 3, 4) - 0.25) * smoothstep(0.6, 4, d) * (pv > 0 ? 0.12 : 1);
           const base = b.floor + b.inland * smoothstep(0, b.rise, d) * (0.75 + 0.6 * n1) + 45 * nz2.fbm(x * 0.7, y * 0.7, 4) * smoothstep(0.2, 2, d) + hills;
-          let s = Math.max(base, ridgeValue(x, y, k), plateauValue(x, y, k));
+          let s = Math.max(base, ridgeValue(x, y, k), pv);
           const relief = s - base;
           if (relief > 0) {
             const m = nz.ridged(x * 0.48 + 3.3, y * 0.48 - 7.1, 5);
@@ -351,7 +365,7 @@ export function buildTerrain(log = () => {}) {
   log('structure done');
 
   // ---- 4. Basins, domes, cliffs --------------------------------------------
-  for (const b of BASINS) {
+  const applyBasin = (b) => {
     const R = Math.max(b.rx, b.ry);
     forBox(g, b.at[0] - R, b.at[1] - R, b.at[0] + R, b.at[1] + R, (i, x, y) => {
       if (!island[i]) return;
@@ -360,7 +374,8 @@ export function buildTerrain(log = () => {}) {
       const wgt = b.blend * (1 - smoothstep(0.45, 1.0, rr));
       h[i] = lerp(h[i], b.floor + 8 * nz.fbm(x * 2, y * 2, 3), wgt);
     });
-  }
+  };
+  for (const b of BASINS) if (!b.late) applyBasin(b);
   for (const dm of DOMES) {
     const at = dm.peak ? PEAKS[dm.peak].at : dm.at;
     const top = dm.peak ? PEAKS[dm.peak].z : dm.z;
@@ -499,7 +514,7 @@ export function buildTerrain(log = () => {}) {
     // Extend the mouth along its last bearing until it reaches open water.
     const src = rv.pts.slice();
     const a = src[src.length - 2], b = src[src.length - 1];
-    if (isLandAt(b[0], b[1])) {
+    if (!rv.tidal && isLandAt(b[0], b[1])) {
       const L = Math.hypot(b[0] - a[0], b[1] - a[1]) || 1;
       const ux = (b[0] - a[0]) / L, uy = (b[1] - a[1]) / L;
       let ext = 0;
@@ -546,7 +561,7 @@ export function buildTerrain(log = () => {}) {
       const cw = lerp(cw0, eMouth / 2, Math.pow(et, 1.4));
       if (et > 0) { const sb = lerp(Math.min(bed[s], 0.5), -2.5 - 3 * et, et); if (sb < bed[s]) bed[s] = sb; }
       const fp = et > 0 ? 0.05 : Math.max(a[3] || 0, 0), wall = et > 0 ? 25 : a[4] || 200;
-      const R = cw + fp + clamp(1300 / wall, 0.15, 2.5) * (et > 0 ? 0.2 : 1);
+      const R = cw + fp + clamp(1100 / wall, 0.15, 1.8) * (et > 0 ? 0.2 : 1);
       forBox(g, Math.min(a[0], b[0]) - R, Math.min(a[1], b[1]) - R, Math.max(a[0], b[0]) + R, Math.max(a[1], b[1]) + R, (i, x, y) => {
         const [d, t] = segDist(x, y, a[0], a[1], b[0], b[1]);
         if (d > R) return;
@@ -555,16 +570,36 @@ export function buildTerrain(log = () => {}) {
         if (d <= cw) target = bz - depth;
         else if (d <= cw + fp) target = bz + 1.5 * ((d - cw) / fp);
         else target = bz + (fp > 0 ? 1.5 : 0) + (d - cw - fp) * wall * (1 + 0.35 * nz.fbm(x * 2.3, y * 2.3, 3));
-        if (target < h[i]) h[i] = target;
+        if (target < h[i]) h[i] -= (h[i] - target) * (1 - smoothstep(0.55 * R, R, d));
         if (d <= cw && island[i]) {
+          const localW = rv.width * (0.3 + 0.7 * Math.min(1, along / Math.max(1, L * 0.8)));
           if (rv.tidal || bz < 0.2) water[i] = W.SEA;
-          else if (rv.width >= 30) { water[i] = W.RIVER; surface[i] = bz; }
+          else if (localW >= 28 && d <= Math.max(0.026, localW / 2000)) { water[i] = W.RIVER; surface[i] = bz; }
         }
       });
     }
     riverProfiles.push({ id: rv.id, name: rv.name, pts, bed });
   }
   log('rivers done');
+
+  // ---- 6b. Final summit pass (tight radius) so surveyed heights hold. -------
+  for (let pass = 0; pass < 3; pass++) {
+    const hNow = (x, y) => h[g.row(y) * g.nx + g.col(x)];
+    for (const p of peakFix) {
+      const d2 = p.z - hNow(p.at[0], p.at[1]);
+      if (Math.abs(d2) < 3) continue;
+      const R2 = clamp(Math.abs(d2) / 300, 0.35, 1.2);
+      forBox(g, p.at[0] - R2, p.at[1] - R2, p.at[0] + R2, p.at[1] + R2, (i, x, y) => {
+        if (!island[i] || water[i]) return;
+        const u = Math.hypot(x - p.at[0], y - p.at[1]) / R2;
+        if (u >= 1) return;
+        h[i] += d2 * (1 - u * u) * (1 - u * u);
+      });
+      p.delta2 = d2;
+    }
+  }
+  for (const b of BASINS) if (b.late) applyBasin(b);
+  log('final summit pass done');
 
   // ---- 7. Lakes ---------------------------------------------------------------
   const lakeId = new Uint8Array(N); // 1-based index into LAKES
@@ -730,8 +765,108 @@ export function buildTerrain(log = () => {}) {
   }
   log('bathymetry done');
 
+  // ---- 9. Infrastructure grading -----------------------------------------------
+  // Runways are levelled, berths dredged, and every road and railway gets a
+  // grade-limited alignment cut or filled into the ground. Spans that would
+  // need deeper cuts become tunnels; higher fills become viaducts.
+  const routeReports = [];
+  {
+    const hS = sampler(g, h);
+    const isWet = (x, y) => {
+      const c = g.col(x), r = g.row(y);
+      if (c < 0 || r < 0 || c >= g.nx || r >= g.ny) return true;
+      const i = r * g.nx + c;
+      return water[i] === W.SEA || water[i] === W.LAKE || water[i] === W.RIVER;
+    };
+    // Airports first so roads meet the graded apron.
+    for (const ap of AIRPORTS) {
+      for (const rw of ap.runways) {
+        const za = hS(...rw.a), zb = hS(...rw.b);
+        const L = Math.hypot(rw.b[0] - rw.a[0], rw.b[1] - rw.a[1]);
+        // Longitudinal grade capped at 1%.
+        const zm = (za + zb) / 2, half = Math.min(Math.abs(zb - za) / 2, 0.005 * L * 1000);
+        const z0 = zm - Math.sign(zb - za) * half, z1 = zm + Math.sign(zb - za) * half;
+        const hw = rw.w / 2 + 0.11, mg = 0.25;
+        let cutMax = 0, fillMax = 0;
+        forBox(g, Math.min(rw.a[0], rw.b[0]) - hw - mg, Math.min(rw.a[1], rw.b[1]) - hw - mg, Math.max(rw.a[0], rw.b[0]) + hw + mg, Math.max(rw.a[1], rw.b[1]) + hw + mg, (i, x, y) => {
+          if (!island[i] || water[i]) return;
+          const [d, t] = segDist(x, y, rw.a[0], rw.a[1], rw.b[0], rw.b[1]);
+          if (d > hw + mg) return;
+          const target = lerp(z0, z1, t);
+          const w = d <= hw ? 1 : 1 - smoothstep(0, mg, d - hw);
+          if (d <= hw) { cutMax = Math.max(cutMax, h[i] - target); fillMax = Math.max(fillMax, target - h[i]); }
+          h[i] = lerp(h[i], target, w);
+        });
+        routeReports.push({ kind: 'runway', id: `${ap.id}:${rw.id}`, name: `${ap.name} runway ${rw.id}`, lengthKm: L, z0, z1, gradePct: (Math.abs(z1 - z0) / (L * 1000)) * 100, cutMax, fillMax });
+      }
+    }
+    for (const pt of PORTS) {
+      const [a, b] = pt.berth;
+      forBox(g, Math.min(a[0], b[0]) - 0.35, Math.min(a[1], b[1]) - 0.35, Math.max(a[0], b[0]) + 0.35, Math.max(a[1], b[1]) + 0.35, (i, x, y) => {
+        if (water[i] !== W.SEA) return;
+        const [d] = segDist(x, y, a[0], a[1], b[0], b[1]);
+        if (d < 0.3 && h[i] > -pt.depth) h[i] = -pt.depth;
+      });
+    }
+    const routes = [
+      ...ROADS.map((r) => ({ ...r, kindOf: 'road', design: DESIGN[r.cls] || DESIGN.county })),
+      ...RAILS.map((r) => ({ ...r, kindOf: 'rail', design: r.status === 'abandoned' ? DESIGN['rail-abandoned'] : DESIGN.rail })),
+    ];
+    // Resolve waypoint lists: a vertex tagged 'r' is reached by a
+    // grade-constrained search from the previous vertex; others are straight.
+    const F = makeRouteField(g, h, water, island, 1);
+    let nRouted = 0;
+    for (const rt of routes) {
+      if (!rt.pts.some((q) => q[2] === 'r')) continue;
+      const out = [[rt.pts[0][0], rt.pts[0][1]]];
+      for (let k = 1; k < rt.pts.length; k++) {
+        const q = rt.pts[k], prev = out[out.length - 1];
+        if (q[2] !== 'r') { out.push([q[0], q[1]]); continue; }
+        const res = findRoute(F, prev, q, { gmax: (q[3] || rt.grade || rt.design.grade) * 0.92, waterMult: rt.waterMult || 14, box: rt.box || 3.5 });
+        nRouted++;
+        if (!res) { out.push([q[0], q[1]]); continue; }
+        const sm = chaikin(simplify(res.path, 0.012), 1);
+        for (let m = 1; m < sm.length; m++) out.push(sm[m]);
+      }
+      rt.pts = out;
+    }
+    log(`routed ${nRouted} legs`);
+    const best = new Float32Array(N).fill(1e9);
+    const target = new Float32Array(N);
+    const blendW = new Float32Array(N);
+    for (const rt of routes) {
+      const pr = routeProfile(rt.pts, hS, isWet, rt.design);
+      rt.profile = pr;
+      const hw = rt.design.width / 2;
+      for (const sg of pr.segs) {
+        if (sg.kind !== 'grade') continue;
+        for (let k = sg.i; k <= sg.j; k++) {
+          const [px, py] = pr.P[k];
+          const dz = Math.abs(pr.z[k] - pr.p[k]);
+          const mg = Math.min(0.15, 0.012 + (dz * 2) / 1000);
+          const R = hw + mg;
+          forBox(g, px - R, py - R, px + R, py + R, (i, x, y) => {
+            if (!island[i] || water[i]) return;
+            const d = Math.hypot(x - px, y - py);
+            if (d > R || d >= best[i]) return;
+            best[i] = d; target[i] = pr.p[k];
+            blendW[i] = d <= hw ? 1 : 1 - smoothstep(0, mg, d - hw);
+          });
+        }
+      }
+      routeReports.push({
+        kind: rt.kindOf, id: rt.id, name: rt.name, ref: rt.ref, cls: rt.cls || rt.status, status: rt.status, use: rt.use, lengthKm: pr.length,
+        maxGradePct: pr.maxGrade * 100, maxCut: pr.maxCut, maxFill: pr.maxFill,
+        segs: pr.segs.filter((s) => s.kind !== 'grade').map((s) => ({ kind: s.kind, len: s.len, a: s.a, b: s.b, mid: s.mid, deck: s.deck, minWater: s.minWater })),
+        profile: pr.P.map((q, k) => [q[0], q[1], pr.p[k], pr.wet[k]]).filter((_, k) => k % 4 === 0 || k === pr.P.length - 1),
+      });
+    }
+    for (let i = 0; i < N; i++) if (best[i] < 1e8) h[i] = lerp(h[i], target[i], blendW[i]);
+  }
+  log('infrastructure grading done');
+
   return {
     g, h, island, water, surface, region, lakeId, dLand, dSea, dOpen,
-    riverProfiles, lakeInfo, peakFix, islandIdx,
+    riverProfiles, lakeInfo, peakFix, islandIdx, routeReports,
   };
 }

@@ -159,9 +159,15 @@ export const ISLANDS = [
   },
   {
     id: 'saint-ambrose', name: 'Saint Ambrose Island', type: 'Lowcountry',
-    polys: [[[35.2, 53.4], [36.8, 53.0], [38.5, 53.6], [40.0, 53.2], [41.5, 53.4], [43.0, 53.8], [44.5, 53.6], [46.0, 53.2], [47.5, 53.5], [49.0, 53.9], [50.5, 53.6], [52.0, 53.2], [53.5, 53.4], [55.0, 53.8], [56.2, 54.0], [57.8, 53.8], [59.5, 53.2], [61.0, 53.5], [62.5, 53.3], [64.0, 52.6], [65.5, 52.0], [66.8, 51.4], [67.6, 50.2], [67.2, 48.0], [67.8, 45.0], [67.0, 42.0], [68.0, 39.0], [67.6, 36.0], [68.4, 33.0], [68.0, 30.0], [66.8, 28.4], ...shift(seg(KETCH, 33.6, 64), 0, -3).reverse(), ...shift(ASHWOOD.slice(2), -3, 0).reverse(), [33.4, 52.4]], ambroseBeachN, ambroseBeachS],
+    polys: [[[35.2, 53.4], [36.8, 53.0], [38.5, 53.6], [40.0, 53.2], [41.5, 53.4], [43.0, 53.8], [44.5, 53.6], [46.0, 53.2], [47.5, 53.5], [49.0, 53.9], [50.5, 53.6], [52.0, 53.2], [53.5, 53.4], [55.0, 53.8], [56.2, 54.0], [57.8, 53.8], [59.5, 53.2], [61.0, 53.5], [62.5, 53.3], [64.0, 52.6], [65.5, 52.0], [66.8, 51.4], [67.6, 50.2], [67.2, 48.0], [67.8, 45.0], [67.0, 42.0], [68.0, 39.0], [67.6, 36.0], [68.4, 33.0], [68.0, 30.0], [66.8, 28.4], ...shift(seg(KETCH, 33.6, 64), 0, -3).reverse(), ...shift(ASHWOOD.slice(2), -3, 0).reverse(), [33.4, 52.4]], ],
     coast: { a1: 1.1, s1: 7, a2: 0.55, s2: 2, a3: 0.22, s3: 0.5 },
     base: { kind: 'seaisland' },
+  },
+  {
+    id: 'ambrose-banks', name: 'Ambrose Beach', type: 'Lowcountry barrier beach', partOf: 'saint-ambrose',
+    polys: [ambroseBeachN, ambroseBeachS],
+    coast: { a1: 0.03, s1: 3, a2: 0.015, s2: 1, a3: 0.008, s3: 0.3 },
+    base: { kind: 'barrier' },
   },
   {
     id: 'wickham', name: 'Wickham Island', type: 'Wilderness',
@@ -214,7 +220,7 @@ export const WATER_CORRIDORS = [
 // Named bodies of water (labels, docs, bathymetry recipes). `poly` limits the
 // region a recipe applies to; first match wins, so order matters.
 export const WATERS = [
-  { id: 'hollow-reach', name: 'Hollow Reach', kind: 'drowned gorge', label: [46.9, 83], maxDepth: 48, slope: 45, poly: [[44.8, 66.4], [49.2, 66.8], [49.9, 91], [44.4, 90.6]] },
+  { id: 'hollow-reach', name: 'Hollow Reach', kind: 'drowned gorge', label: [46.9, 83], maxDepth: 48, slope: 45, poly: [[45.0, 68.0], [48.4, 68.2], [48.2, 74.0], [47.0, 77.0], [48.6, 80.5], [48.9, 88.0], [44.9, 88.0], [45.2, 80.0], [45.3, 74.0]] },
   { id: 'mirabel-sound', name: 'Mirabel Sound', kind: 'lagoon', label: [6.6, 40], maxDepth: 4, slope: 3, poly: [[5.5, 54.5], [8.8, 54.5], [8.8, 23.5], [5.5, 23.5]] },
   { id: 'tarrow-sound', name: 'Tarrow Sound', kind: 'lagoon', label: [68.5, 15], maxDepth: 5.5, slope: 1.4, poly: [[62.5, 26.5], [66.5, 27.5], [70.5, 28.6], [73.5, 24.5], [76.5, 17.5], [80, 12.5], [84, 8.6], [83.5, 6.5], [79, 5.4], [73, 3.6], [67, 2.6], [63.5, 3.6], [63.5, 8], [63.9, 14], [63.6, 20]] },
   { id: 'ashwood-river', name: 'Ashwood River', kind: 'tidal river', label: [34.6, 36], maxDepth: 9, slope: 5, poly: [[32.4, 53.2], [36.8, 53.2], [36.8, 26.2], [32.4, 26.2]] },
@@ -246,7 +252,7 @@ export const BATHY = [
 // ---------------------------------------------------------------------------
 export const RIDGES = [
   // Halcomb — Balsam Crest, the island's spine
-  { id: 'balsam-crest', island: 'halcomb', w: 8.5, pow: 1.35, pts: [[13.6, 71.6, 560], [15.2, 73.4, 980], 'gooseberry-bald', [18.2, 75.8, 1290], 'stormhead', [21.0, 77.3, 1480], 'painted-bald', [24.0, 78.8, 1640], 'coldspring-knob', [27.3, 79.7, 1590], 'ledford-dome', [30.8, 80.6, 1860], 'mount-sawyer', [34.2, 80.7, 1760], 'hemlock-knob', [37.3, 80.2, 1660], 'the-steeples', [40.2, 79.4, 1400], [41.5, 79.0, 1185], 'bearpen-knob', [44.9, 77.6, 640]] },
+  { id: 'balsam-crest', island: 'halcomb', w: 8.5, pow: 1.35, pts: [[13.6, 71.6, 560], [15.2, 73.4, 980], 'gooseberry-bald', [18.2, 75.8, 1290], 'stormhead', [21.0, 77.3, 1480], 'painted-bald', [24.0, 78.8, 1640], 'coldspring-knob', [27.3, 79.7, 1590], 'ledford-dome', [30.8, 80.6, 1860], 'mount-sawyer', [34.2, 80.7, 1760], 'hemlock-knob', [37.3, 80.2, 1660], 'the-steeples', [40.2, 79.4, 1400], [41.5, 79.0, 1185], 'bearpen-knob', [44.2, 77.9, 880]] },
   // North spurs to the Narrows (the North Face)
   { id: 'rich-spur', island: 'halcomb', w: 4.2, pow: 1.3, pts: ['stormhead', [19.0, 79.4, 1300], 'rich-mountain', [18.7, 84.5, 760], [19.0, 87.8, 160]] },
   { id: 'thunderstone-spur', island: 'halcomb', w: 4.0, pow: 1.3, pts: [[24.4, 79.0, 1700], 'thunderstone', [23.3, 86.4, 560], [23.2, 88.4, 120]] },
@@ -286,9 +292,9 @@ export const PLATEAUS = [
     poly: [[3.2, 68.5], [5.5, 67.9], [8.0, 69.6], [8.9, 73.5], [8.5, 77.5], [9.1, 81.5], [8.6, 85.2], [7.0, 87.4], [4.6, 87.2], [3.1, 85.0], [2.7, 80.0], [3.0, 75.0], [2.7, 71.0]],
   },
   {
-    id: 'graystone-highlands', name: 'Graystone Highlands', island: 'graystone', edge: 1.6, roughness: 70,
+    id: 'graystone-highlands', name: 'Graystone Highlands', island: 'graystone', edge: 2.2, roughness: 70,
     top: { y0: 74, z0: 960, y1: 90, z1: 1080 },
-    poly: [[48.8, 73.0], [53.0, 74.5], [57.0, 76.6], [61.0, 78.6], [65.0, 80.6], [69.0, 82.6], [73.0, 84.6], [77.2, 86.4], [76.0, 89.2], [70.0, 91.0], [63.0, 91.3], [56.0, 90.8], [50.6, 89.6], [48.9, 85.0], [48.9, 79.0], [48.0, 76.0]],
+    poly: [[50.6, 73.6], [53.0, 74.5], [57.0, 76.6], [61.0, 78.6], [65.0, 80.6], [69.0, 82.6], [73.0, 84.6], [77.2, 86.4], [76.0, 89.2], [70.0, 91.0], [63.0, 91.3], [56.0, 90.8], [50.6, 89.6], [49.2, 85.0], [50.0, 81.0], [50.4, 77.0]],
   },
 ];
 
@@ -307,18 +313,17 @@ export const DOMES = [
 export const BASINS = [
   { id: 'tennalee-cove', name: 'Tennalee Cove', at: [36.1, 73.6], rx: 3.3, ry: 2.1, rot: 28, floor: 470, blend: 0.55 },
   { id: 'upper-cove', name: 'Upper Tennalee Cove', at: [39.2, 75.2], rx: 1.9, ry: 1.3, rot: 35, floor: 560, blend: 0.8 },
-  { id: 'shady-gap', name: 'Shady Gap', at: [14.0, 68.5], rx: 1.4, ry: 1.0, rot: 0, floor: 72, blend: 0.8 },
+  { id: 'shady-gap', name: 'Shady Gap', at: [14.0, 68.6], rx: 1.6, ry: 1.3, rot: 0, floor: 70, blend: 1.0 },
   { id: 'ledford-flats', name: 'Ledford Flats', at: [26.9, 68.8], rx: 1.4, ry: 1.1, rot: 10, floor: 105, blend: 0.6 },
-  { id: 'gate-heights-w', name: 'Gate approach (Halcomb)', at: [44.6, 76.9], rx: 0.8, ry: 0.6, rot: 0, floor: 215, blend: 0.6 },
-  { id: 'gate-heights-e', name: 'Gate approach (Graystone)', at: [47.4, 77.2], rx: 0.8, ry: 0.6, rot: 0, floor: 220, blend: 0.6 },
+  { id: 'gate-heights-w', name: 'Gate Shelf (Halcomb)', at: [45.0, 76.4], rx: 1.0, ry: 1.4, rot: 0, floor: 228, blend: 1.0, late: true },
+  { id: 'gate-heights-e', name: 'Gate Shelf (Graystone)', at: [47.6, 76.6], rx: 0.9, ry: 1.6, rot: 0, floor: 232, blend: 1.0, late: true },
 ];
 
 // Coastal cliff zones: within `poly`, land rises to at least `h` metres within
 // ~70 m of the shoreline.
 export const CLIFFS = [
   { name: 'Tableland Bluffs', h: 95, poly: [[1.0, 68.0], [4.6, 68.0], [4.6, 87.8], [1.0, 87.8]] },
-  { name: 'Halcomb Reach Walls', h: 170, poly: [[44.0, 69.5], [46.2, 69.5], [46.2, 86.0], [44.0, 86.0]] },
-  { name: 'Graystone Reach Walls', h: 180, poly: [[46.2, 70.0], [49.8, 70.0], [49.8, 88.5], [46.2, 88.5]] },
+  { name: 'Hollow Reach Walls', h: 185, poly: [[42.6, 68.6], [50.6, 68.6], [50.6, 88.6], [42.6, 88.6]] },
   { name: 'Fallon Cliffs', h: 210, poly: [[75.0, 77.0], [78.0, 79.0], [81.0, 84.0], [80.5, 88.8], [77.0, 88.8], [75.5, 84.0], [73.5, 79.0]] },
   { name: 'Graystone North Shore', h: 70, poly: [[49.5, 89.4], [76.0, 89.4], [76.0, 93.0], [49.5, 93.0]] },
   { name: 'Graystone Head', h: 45, poly: [[71.5, 67.0], [76.5, 67.0], [76.5, 76.5], [71.5, 76.5]] },
@@ -361,6 +366,7 @@ export const RIVERS = [
   { id: 'hominy', name: 'Hominy Creek', island: 'halcomb', order: 2, width: 14, estuary: [1.2, 0.6], pts: [[23.4, 76.6, 1150, 0, 340], [23.1, 73.0, 540, 0, 300], [22.6, 69.5, 150, 0.12, 200], [22.3, 66.6, 12, 0.2, 100], [22.2, 65.2, -2, 0.2, 60]] },
   { id: 'little-river', name: 'Little River', island: 'halcomb', order: 3, width: 10, estuary: [0.8, 0.3], pts: [[31.0, 74.4, 820, 0, 320], [31.4, 71.0, 320, 0, 280], [31.6, 67.6, 60, 0.08, 160], [31.7, 65.6, 4, 0.1, 80], [31.8, 64.4, -2, 0.12, 60]] },
   { id: 'dogwood-creek', name: 'Dogwood Creek', island: 'halcomb', order: 3, width: 10, pts: [[43.6, 75.6, 700, 0, 330], [44.4, 73.4, 300, 0, 300], [45.1, 71.6, 40, 0, 200], [45.9, 71.0, -4, 0, 100]] },
+  { id: 'shady-creek', name: 'Shady Creek', island: 'halcomb', order: 3, width: 10, pts: [[14.0, 68.3, 66, 0.25, 60], [14.3, 66.8, 34, 0.35, 60], [14.7, 65.2, 6, 0.3, 50], [15.0, 63.8, -2, 0.2, 30]] },
   { id: 'sugartree-branch', name: 'Sugartree Branch', island: 'halcomb', order: 3, width: 8, pts: [[18.4, 74.6, 1000, 0, 320], [18.0, 71.0, 380, 0, 260], [17.6, 68.0, 60, 0.08, 140], [17.4, 65.6, -2, 0.1, 60]] },
   { id: 'hickory-creek', name: 'Hickory Creek', island: 'halcomb', order: 3, width: 10, pts: [[5.4, 80.4, 478, 0, 140], [7.4, 80.6, 455, 0, 160], [8.45, 80.75, 440, 0, 200], [8.75, 80.85, 330, 0, 400], [9.6, 81.0, 110, 0, 300], [11.1, 81.4, 27, 0.2, 120]] },
   { id: 'cane-creek', name: 'Cane Creek', island: 'halcomb', order: 3, width: 8, pts: [[5.6, 84.4, 520, 0, 140], [7.6, 84.5, 490, 0, 160], [8.4, 84.55, 470, 0, 220], [8.75, 84.6, 300, 0, 400], [9.5, 84.6, 80, 0, 260], [10.8, 84.5, 15, 0.2, 120]] },
@@ -434,7 +440,7 @@ export const LAKES = [
   // Corliss
   { id: 'corliss-cooling-pond', name: 'Corliss Cooling Pond', island: 'corliss', kind: 'basin', at: [53.3, 56.9], rx: 0.6, ry: 0.28, rot: 10, depth: 4 },
   // Bellamy
-  { id: 'lake-ocosta', name: 'Lake Ocosta', island: 'bellamy', kind: 'reservoir', level: 58, dam: [[19.2, 43.4], [20.1, 43.5]], region: [[18.6, 43.3], [20.4, 43.4], [20.6, 46.6], [18.6, 46.6]] },
+  { id: 'lake-ocosta', name: 'Lake Ocosta', island: 'bellamy', kind: 'basin', at: [19.3, 45.2], rx: 1.7, ry: 0.32, rot: 84, depth: 9 },
   { id: 'clearwater-bay', name: 'Clearwater Bay', island: 'bellamy', kind: 'basin', at: [25.6, 31.4], rx: 1.25, ry: 0.75, rot: -40, depth: 3 },
   { id: 'tar-kiln-bay', name: 'Tar Kiln Bay', island: 'bellamy', kind: 'basin', at: [17.6, 29.4], rx: 0.95, ry: 0.55, rot: -40, depth: 2.5 },
   { id: 'browns-bay', name: "Brown's Bay", island: 'bellamy', kind: 'basin', at: [28.6, 34.6], rx: 0.8, ry: 0.48, rot: -40, depth: 2.5 },
