@@ -4,7 +4,7 @@
 export const DISTRICTS = [
   // ------------------------------------------------------------ Calder Island
   { id: 'downtown', name: 'Downtown Calder', island: 'calder', at: [37.8, 61.9], r: 0.75, bldg: [40, 270, 0.75], form: 'high-rise core',
-    desc: 'The central business district on the bluff at the river mouth: glass and limestone towers up to 64 storeys, the old customs house, and narrow streets laid out on the colonial grid.',
+    desc: 'The central business district on the bluff at the river mouth: glass and limestone towers up to 64 storeys, the old customs house, and narrow streets on a tight, old grid.',
     why: 'The first dry ground above the deep anchorage at the Tennalee mouth; land values here have always been the highest on the island.',
     look: 'A tight cluster of towers on a bluff, the tallest crowned with a lit spire.',
     near: 'Old Market, Station Square, Market Street Bridge, Calder Tower.',

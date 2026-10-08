@@ -157,7 +157,7 @@ export function classify(T, zones = {}) {
       } else if (kind === 'swamp') {
         if (saltEdge) v = y < 6.8 && n2 > -0.1 ? C.mangrove : C['salt-marsh'];
         else if (z > 27) v = field < 0.55 ? C.longleaf : field < 0.85 ? C['pine-plantation'] : C.scrub;
-        else if (y > 21.5 && z > 14) v = field < 0.45 ? C.flatwoods : field < 0.8 ? C['pine-plantation'] : C['cypress-swamp'];
+        else if (y + 3 * n1 > 21.5 && z > 14 + 4 * n2) v = field < 0.45 ? C.flatwoods : field < 0.8 ? C['pine-plantation'] : C['cypress-swamp'];
         else {
           const m = nz.fbm(x * 0.55 + 3, y * 0.55, 4) + 0.25 * n2;
           v = m < -0.12 ? C['fresh-marsh'] : m < 0.12 ? C['cypress-swamp'] : m < 0.24 ? C['bay-forest'] : C.flatwoods;
@@ -271,10 +271,11 @@ export function classify(T, zones = {}) {
   for (const zn of zones.list || []) {
     const cls = C[zn.cover];
     if (cls === undefined) continue;
-    const R = Math.max(zn.rx || zn.r || 0.5, zn.ry || zn.r || 0.5);
+    const R = 1.8 * Math.max(zn.rx || zn.r || 0.5, zn.ry || zn.r || 0.5);
     paint(zn.at[0], zn.at[1], R, (i, u, x, y) => {
-      const er = zn.rx ? ellipseR(x, y, zn.at[0], zn.at[1], zn.rx, zn.ry, zn.rot || 0) : u;
-      if (er > 1) return;
+      const er = zn.rx ? ellipseR(x, y, zn.at[0], zn.at[1], zn.rx, zn.ry, zn.rot || 0) : u * 1.8;
+      // Ragged stand edges: the boundary wanders with terrain-scale noise.
+      if (er + 1.5 * nz2.fbm(x * 0.9 + 11, y * 0.9 - 5, 5) > 1) return;
       if (zn.only && !zn.only.includes(LC[out[i]].key)) return;
       if (out[i] === C.water || out[i] === C.rock && cls !== C.park) return;
       out[i] = cls;

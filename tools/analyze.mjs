@@ -174,11 +174,13 @@ export function analyze(T, log = console.log) {
     const i = cellIdx(x, y);
     if (i >= 0 && island[i] && !water[i] && !ISLANDS[island[i] - 1].offworld) samples.push([x, y]);
   }
+  const seesAny = new Uint8Array(samples.length);
   const viewshed = LANDMARKS.filter((l) => l.tier === 'primary').map((l) => {
     let n = 0;
-    for (const [x, y] of samples) if (losFrom(x, y, 1.8, l.at[0], l.at[1], Math.max(2, l.h || 0))) n++;
+    samples.forEach(([x, y], k) => { if (losFrom(x, y, 1.8, l.at[0], l.at[1], Math.max(2, l.h || 0))) { n++; seesAny[k] = 1; } });
     return { id: l.id, name: l.name, h: l.h, share: n / samples.length };
   }).sort((a, b) => b.share - a.share);
+  const primaryCoverage = seesAny.reduce((a, v) => a + v, 0) / samples.length;
   log('visibility done');
 
   // ---------------------------------------------------------------------------
@@ -405,7 +407,8 @@ export function analyze(T, log = console.log) {
   for (const s of SETTLEMENTS) {
     let best = -1, bd = 1e9;
     for (let k = 0; k < gn.length; k++) { const d = Math.hypot(gn[k][0] - s.at[0], gn[k][1] - s.at[1]); if (d < bd) { bd = d; best = k; } }
-    settleNode[s.id] = { node: best, access: bd };
+    // More than 1.5 km from any road: reached only by boat or on foot.
+    settleNode[s.id] = { node: best, access: bd, roadless: bd > 1.5 };
   }
   const dijkstra = (src) => {
     const dist = new Float64Array(gn.length).fill(Infinity), km = new Float64Array(gn.length).fill(Infinity);
@@ -428,7 +431,8 @@ export function analyze(T, log = console.log) {
     drive[a] = {};
     for (const b of majors) {
       const n = settleNode[b].node;
-      drive[a][b] = { min: dist[n] + (settleNode[a].access + settleNode[b].access) / 40 * 60, km: km[n] + settleNode[a].access + settleNode[b].access };
+      const off = settleNode[a].roadless || settleNode[b].roadless;
+      drive[a][b] = off ? { min: Infinity, km: Infinity } : { min: dist[n] + (settleNode[a].access + settleNode[b].access) / 40 * 60, km: km[n] + settleNode[a].access + settleNode[b].access };
     }
   }
   log('road graph done');
@@ -467,7 +471,7 @@ export function analyze(T, log = console.log) {
   // Longest drive between settlements on each island.
   const islandDrive = {};
   for (const isl of ISLANDS) {
-    const towns = SETTLEMENTS.filter((t) => partOf(t.island) === isl.id && !isl.offworld);
+    const towns = SETTLEMENTS.filter((t) => partOf(t.island) === isl.id && !isl.offworld && !settleNode[t.id].roadless);
     let best = null;
     for (const a of towns) {
       const { dist, km } = dijkstra(settleNode[a.id].node);
@@ -481,7 +485,7 @@ export function analyze(T, log = console.log) {
   log('statistics done');
 
   return {
-    issues, beaches, mountains, lakes, viewpoints, chains, viewshed, placement, rivers, depressionByIsland,
+    issues, beaches, mountains, lakes, viewpoints, chains, viewshed, primaryCoverage, placement, rivers, depressionByIsland,
     routes, runways, bridges, structures, approaches, ports, power, drive, majors, stats, coverByIsland, islandDrive, cover,
   };
 }

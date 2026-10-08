@@ -5,7 +5,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadTerrain } from './cache.mjs';
 import { analyze } from './analyze.mjs';
-import { writeRegisters, scaleTables, auditTables, islandBlock, splice } from './docgen.mjs';
+import { writeRegisters, scaleTables, auditTables, islandBlock, densityTables, inspirationMatrix, languageLint, masterMap, splice } from './docgen.mjs';
 import { renderAtlas } from './atlas.mjs';
 import { exportGame } from './export.mjs';
 import { ISLANDS } from '../world/geography.mjs';
@@ -25,8 +25,14 @@ if (A.issues.length) {
 writeRegisters(A);
 splice('docs/13-world-scale.md', scaleTables(A));
 splice('docs/15-realism-audit.md', auditTables(A));
+splice('docs/14-exploration-density.md', densityTables(A, T));
 const main = ISLANDS.filter((s) => !s.offworld && !s.partOf);
 for (const s of main) splice(`docs/islands/${s.id}.md`, islandBlock(A, s.id));
+splice('docs/19-inspiration-matrix.md', inspirationMatrix());
+splice('docs/20-master-map.md', masterMap(A));
+const lint = languageLint();
+splice('docs/18-writing-standard.md', lint.md);
+if (lint.total) console.log(`writing standard: ${lint.total} banned phrases in docs`);
 log('docs written');
 
 if (!args.includes('--no-images')) {

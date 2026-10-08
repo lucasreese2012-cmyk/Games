@@ -100,8 +100,8 @@ Visible across an island or between islands; the fixed points by which the whole
 - **Structure height:** 120 m
 - **Visible from:** 1% of all land in the islands
 - **Seen from viewpoints:** Landfill Hill
-- **Description:** A suspension bridge with a 1,020 m main span strung between cliff-top towers, its deck 190 m above Hollow Reach. On the Halcomb side the road leaves the Bearpen Tunnel straight onto the bridge.
-- **Geographic justification:** The narrowest point of the drowned gorge, with rock both sides.
+- **Description:** A steel suspension bridge with an 880 m main span strung between towers on the rims of the gorge, its deck about 250 m above Hollow Reach. On the Halcomb side the road comes down from the Bearpen Tunnel on a curving viaduct and runs straight onto the bridge.
+- **Geographic justification:** The narrowest point of the drowned gorge, where rock shelves of the same height face each other across 900 m of water.
 - **Visual identity:** Two grey towers and a thin deck between granite walls.
 - **Nearby features:** Bearpen Tunnel, Veil Falls, Gate Shelf, Blue Wall Road.
 - **Why it is memorable:** Cars emerging from a tunnel directly onto a bridge in the sky.
@@ -112,7 +112,7 @@ Visible across an island or between islands; the fixed points by which the whole
 - **Location:** 5.7 km NNE of Graystone (grid 66.2 E / 73.6 N)
 - **Type:** dome
 - **Ground elevation:** 455 m
-- **Visible from:** 14% of all land in the islands
+- **Visible from:** 13% of all land in the islands
 - **Seen from viewpoints:** Ledford Dome Observation Tower, Painted Bald, Whitlock Mountain Summit, Lantern Mountain, Anvil Rock, Ravenrock Ledges, Thunderhole Gorge Overlook, Calder Tower Observation Deck, and 10 more
 - **Description:** A bare granite dome rising 380 m out of the farmland of the Piedmont strip.
 - **Geographic justification:** A resistant granite pluton.
@@ -157,7 +157,7 @@ Visible across an island or between islands; the fixed points by which the whole
 - **Ground elevation:** 195 m
 - **Visible from:** 0% of all land in the islands
 - **Seen from viewpoints:** Fallon Cliffs Pull-off
-- **Description:** Granite sea cliffs up to 250 m high along Graystone's east coast, with the Coast Road running along the top.
+- **Description:** Granite sea cliffs up to 210 m high along Graystone's east coast, with the Coast Road running along the top.
 - **Geographic justification:** The highlands meet the open Atlantic and the waves undercut them.
 - **Visual identity:** Pink-grey walls rising out of the surf.
 - **Nearby features:** Coast Road, Fallon, Cape Fallon Light.
@@ -187,7 +187,7 @@ Visible across an island or between islands; the fixed points by which the whole
 - **Type:** mast
 - **Ground elevation:** 92 m
 - **Structure height:** 210 m
-- **Visible from:** 20% of all land in the islands
+- **Visible from:** 19% of all land in the islands
 - **Seen from viewpoints:** Ledford Dome Observation Tower, Gooseberry Fire Tower, Sawyer Gap Overlook, Whitlock Mountain Summit, Lantern Mountain, Grayback Summit, Calder Tower Observation Deck, Tennalee River Bridge Crest, and 13 more
 - **Description:** A self-supporting broadcast tower on the summit of Calder Heights.
 - **Geographic justification:** The highest ground in the city.
@@ -220,7 +220,7 @@ Visible across an island or between islands; the fixed points by which the whole
 - **Ground elevation:** 4 m
 - **Structure height:** 180 m
 - **Visible from:** 13% of all land in the islands
-- **Seen from viewpoints:** Ledford Dome Observation Tower, Painted Bald, Gooseberry Fire Tower, The Steeples, Whitlock Mountain Summit, Lantern Mountain, Grayback Summit, Anvil Rock, and 16 more
+- **Seen from viewpoints:** Ledford Dome Observation Tower, Painted Bald, Gooseberry Fire Tower, The Steeples, Whitlock Mountain Summit, Lantern Mountain, Grayback Summit, Gate Bridge, and 16 more
 - **Description:** Two 180 m concrete chimneys of the old coal units at the Corliss Generating Station, with red-and-white bands near the top.
 - **Geographic justification:** Tall stacks to disperse smoke over the sound, beside the cooling water.
 - **Visual identity:** Twin banded chimneys above the port.
@@ -251,7 +251,7 @@ Visible across an island or between islands; the fixed points by which the whole
 - **Type:** cooling-towers
 - **Ground elevation:** 9 m
 - **Structure height:** 165 m
-- **Visible from:** 18% of all land in the islands
+- **Visible from:** 17% of all land in the islands
 - **Seen from viewpoints:** Ledford Dome Observation Tower, Ledford Gap Overlook, Painted Bald, Gooseberry Fire Tower, The Steeples, Thunderstone Overlook, Sawyer Gap Overlook, Heights Reservoir Park, and 14 more
 - **Description:** Two hyperbolic concrete cooling towers of the nuclear station, usually trailing white plumes.
 - **Geographic justification:** Cooling water from Ketch Sound and the flat, stable ground of south Bellamy.
@@ -266,7 +266,7 @@ Visible across an island or between islands; the fixed points by which the whole
 - **Type:** mast
 - **Ground elevation:** 46 m
 - **Structure height:** 518 m
-- **Visible from:** 42% of all land in the islands
+- **Visible from:** 41% of all land in the islands
 - **Seen from viewpoints:** Ledford Dome Observation Tower, Ledford Gap Overlook, Painted Bald, Gooseberry Fire Tower, The Steeples, Thunderstone Overlook, Sawyer Gap Overlook, Whitlock Mountain Summit, and 22 more
 - **Description:** A guyed television mast 518 m tall, the tallest structure in the islands, with banks of red lights.
 - **Geographic justification:** Flat farmland lets a single tall mast cover all the islands.
@@ -617,7 +617,7 @@ Dominate one region or valley and are visible from its roads.
 - **Ground elevation:** in the water
 - **Structure height:** 70 m
 - **Seen from viewpoints:** Ledford Dome Observation Tower, Gooseberry Fire Tower, Grayback Summit, Calder Tower Observation Deck, Tennalee River Bridge Crest, Landfill Hill, Harbor Bridge, Long Bridge Hump, and 2 more
-- **Description:** A 5.6 km rail trestle with a vertical lift span over the ship channel.
+- **Description:** A 5.2 km low rail trestle across the Sound with a vertical lift span over the ship channel.
 - **Geographic justification:** The freight railroad has to cross the ship channel to reach the port.
 - **Visual identity:** Two lift towers in the middle of the water.
 - **Nearby features:** Tennalee Junction, Corliss Yard.
@@ -643,7 +643,7 @@ Dominate one region or valley and are visible from its roads.
 - **Location:** 5.3 km E of Corliss (grid 51.5 E / 57.3 N)
 - **Type:** mound
 - **Ground elevation:** 48 m
-- **Seen from viewpoints:** Ledford Dome Observation Tower, Painted Bald, Gooseberry Fire Tower, The Steeples, Whitlock Mountain Summit, Lantern Mountain, Grayback Summit, Anvil Rock, and 5 more
+- **Seen from viewpoints:** Ledford Dome Observation Tower, Painted Bald, Gooseberry Fire Tower, The Steeples, Whitlock Mountain Summit, Lantern Mountain, Grayback Summit, Gate Bridge, and 6 more
 - **Description:** A capped landfill mound 48 m high, grassed over with gas vents.
 - **Geographic justification:** The city's waste on the industrial island.
 - **Visual identity:** A smooth green hill on flat land.
@@ -761,7 +761,7 @@ Dominate one region or valley and are visible from its roads.
 - **Type:** steeples
 - **Ground elevation:** 8 m
 - **Structure height:** 45 m
-- **Seen from viewpoints:** Ledford Dome Observation Tower, Painted Bald, Gooseberry Fire Tower, The Steeples, Whitlock Mountain Summit, Lantern Mountain, Grayback Summit, Anvil Rock, and 10 more
+- **Seen from viewpoints:** Ledford Dome Observation Tower, Painted Bald, Gooseberry Fire Tower, The Steeples, Whitlock Mountain Summit, Lantern Mountain, Grayback Summit, Gate Bridge, and 11 more
 - **Description:** Three tall white wooden church steeples rising above the live oaks on the bluff.
 - **Geographic justification:** The town stands on the highest bluff on the island, so its tallest roofs clear the tree line for kilometres across the flat marsh.
 - **Visual identity:** Three white spires above the marsh.
@@ -821,7 +821,7 @@ Dominate one region or valley and are visible from its roads.
 - **Type:** tower
 - **Ground elevation:** 20 m
 - **Structure height:** 15 m
-- **Seen from viewpoints:** Calder Tower Observation Deck, Scrub Hill Fire Tower, Fire Tower Hill, Highpine Fire Tower
+- **Seen from viewpoints:** Calder Tower Observation Deck, Scrub Hill Fire Tower, Fire Tower Hill, Highpine Fire Tower, Ossahatchee Skyway
 - **Description:** A wooden observation tower over the open water of Big Water.
 - **Geographic justification:** The best view over the swamp.
 - **Visual identity:** A wooden tower over cypress.

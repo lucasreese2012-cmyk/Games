@@ -195,7 +195,7 @@
 - **Buildings:** 40–270 m tall, 75% of ground built or paved
 - **Ground elevation:** 10 m
 - **Extent:** about 1.8 km²
-- **Description:** The central business district on the bluff at the river mouth: glass and limestone towers up to 64 storeys, the old customs house, and narrow streets laid out on the colonial grid.
+- **Description:** The central business district on the bluff at the river mouth: glass and limestone towers up to 64 storeys, the old customs house, and narrow streets on a tight, old grid.
 - **Geographic justification:** The first dry ground above the deep anchorage at the Tennalee mouth; land values here have always been the highest on the island.
 - **Visual identity:** A tight cluster of towers on a bluff, the tallest crowned with a lit spire.
 - **Nearby features:** Old Market, Station Square, Market Street Bridge, Calder Tower.

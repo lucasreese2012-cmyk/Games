@@ -23,7 +23,7 @@
 | Pale Wall Rim | Graystone Island | 1,400 | 2 | 6 |
 | Glassface Pull-off | Graystone Island | 263 | 2 | 0 |
 | Grayback Summit | Graystone Island | 455 | 2 | 46 |
-| Gate Bridge | Graystone Island | 0 | 4 | 3 |
+| Gate Bridge | Graystone Island | 0 | 250 | 8 |
 | Veil Falls Rim | Graystone Island | 163 | 2 | 5 |
 | Fallon Cliffs Pull-off | Graystone Island | 202 | 2 | 4 |
 | Cape Fallon Light | Graystone Island | 91 | 20 | 1 |
@@ -307,10 +307,10 @@
 
 - **Island:** Graystone Island
 - **Location:** 5.5 km E of Upper Cove (grid 46.1 E / 77.1 N)
-- **Elevation:** 0 m ground, eye 4 m above it
+- **Elevation:** 0 m ground, eye 250 m above it
 - **Faces:** N
-- **Measured view:** 3 targets; nearest Hollow Reach Power Span (8.7 km), Hawkbill Knob (11.4 km), Corliss (19.5 km); farthest Corliss (19.5 km)
-- **Description:** The suspension bridge deck 190 m above Hollow Reach.
+- **Measured view:** 8 targets; nearest Hollow Reach Power Span (8.7 km), Sassafras Knob (9.1 km), Hawkbill Knob (11.4 km), Corliss (19.5 km), Corliss Landfill Hill (20.5 km), Corliss Stacks (21.0 km); farthest Haversham Steeples (30.6 km)
+- **Description:** The suspension bridge deck about 250 m above Hollow Reach.
 - **Geographic justification:** The bridge crosses at the narrowest point of the gorge.
 - **Visual identity:** Gorge walls rising on both sides, water far below.
 - **Nearby features:** Gate Bridge, Veil Falls, Bearpen Tunnel.
@@ -659,7 +659,7 @@
 - **Location:** 10.7 km W of Tolar (grid 42.6 E / 17.6 N)
 - **Elevation:** 21 m ground, eye 8 m above it
 - **Faces:** S
-- **Measured view:** 1 targets; nearest Corliss Stacks (41.3 km); farthest Corliss Stacks (41.3 km)
+- **Measured view:** 1 targets; nearest Big Water Tower (1.7 km); farthest Big Water Tower (1.7 km)
 - **Description:** The elevated viaduct of the Trail across the swamp.
 - **Geographic justification:** The road crosses the deepest part of the swamp on a viaduct.
 - **Visual identity:** Treetops on both sides.

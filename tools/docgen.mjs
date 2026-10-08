@@ -224,7 +224,7 @@ export function scaleTables(A) {
   md += `| From \\ To | ${M.map(nm).join(' | ')} |\n|---|${M.map(() => '---').join('|')}|\n`;
   for (const a of M) md += `| **${nm(a)}** | ${M.map((b) => (a === b ? '—' : A.drive[a]?.[b] && isFinite(A.drive[a][b].min) ? `${n0(A.drive[a][b].km)} km<br>${mins(A.drive[a][b].min)}` : 'no road')).join(' | ')} |\n`;
   md += '\n**Longest drive within each island**\n\n';
-  md += indexTable(['Island', 'Between', 'Distance', 'Time'], Object.entries(A.islandDrive).filter(([, v]) => v).map(([k, v]) => [islandName(k), `${v.from} – ${v.to}`, `${f1(v.km)} km`, mins(v.min)])) + '\n\n';
+  md += indexTable(['Island', 'Between', 'Distance', 'Time'], Object.entries(A.islandDrive).filter(([, v]) => v && v.km > 0).map(([k, v]) => [islandName(k), `${v.from} – ${v.to}`, `${f1(v.km)} km`, mins(v.min)])) + '\n\n';
 
   // Ferries.
   md += '## Ferries\n\n';
@@ -266,7 +266,7 @@ export function scaleTables(A) {
   md += indexTable(['Port', 'Kind', 'Design depth (m)', 'Measured at berth (m)'], A.ports.map((p) => [p.name, p.kind, f1(p.depth), f1(p.measuredDepth)])) + '\n\n';
   // Rivers.
   md += '## Rivers\n\n';
-  md += indexTable(['River', 'Island', 'Length (km)', 'Source (m)', 'Fall (m)', 'Mean gradient'], A.rivers.slice().sort((a, b) => b.lengthKm - a.lengthKm).map((r) => [r.name, islandName(r.island), f1(r.lengthKm), n0(r.source), n0(r.drop), `${(r.gradient * 1000).toFixed(1)} m/km`])) + '\n\n';
+  md += indexTable(['River', 'Island', 'Length (km)', 'Source (m)', 'Fall (m)', 'Mean gradient'], A.rivers.slice().sort((a, b) => b.lengthKm - a.lengthKm).map((r) => (r.tidal ? [r.name, islandName(r.island), f1(r.lengthKm), 'tidal', 'tidal', 'tidal throughout'] : [r.name, islandName(r.island), f1(r.lengthKm), n0(r.source), n0(r.drop), `${(r.gradient * 1000).toFixed(1)} m/km`]))) + '\n\n';
   // Elevations.
   md += '## Elevations\n\n';
   md += indexTable(['Summit', 'Island', 'Elevation (m)'], Object.values(PEAKS).sort((a, b) => b.z - a.z).slice(0, 25).map((p) => [p.name, islandName(p.island), n0(p.z)])) + '\n\n';
@@ -277,7 +277,11 @@ export function scaleTables(A) {
 
 // ---------------------------------------------------------------------------
 // Automated audit.
-const limitPct = (r) => 100 * (r.kind === 'rail' ? (r.status === 'abandoned' ? DESIGN['rail-abandoned'] : DESIGN.rail) : DESIGN[r.cls] || DESIGN.county).grade;
+const limitPct = (r) => {
+  const def = [...ROADS, ...RAILS].find((q) => q.id === r.id);
+  if (def?.grade) return 100 * def.grade;
+  return 100 * (r.kind === 'rail' ? (r.status === 'abandoned' ? DESIGN['rail-abandoned'] : DESIGN.rail) : DESIGN[r.cls] || DESIGN.county).grade;
+};
 export function auditTables(A) {
   const cnt = (reg) => A.placement.filter((p) => p.reg === reg);
   const ok = (list) => `${list.filter((p) => p.ok).length} / ${list.length}`;
@@ -341,6 +345,162 @@ export function islandBlock(A, id) {
   md += '**Land cover (share of land area)**\n\n';
   md += indexTable(['Cover', 'Share', 'km²'], coverRows.map(([n, v]) => [n, `${((v / land) * 100).toFixed(1)}%`, f1(v)])) + '\n\n';
   if (towns.length) md += '**Settlements**\n\n' + indexTable(['Settlement', 'Form', 'Population', 'Why here'], towns.map((t) => [t.name, t.form, n0(t.pop), t.why])) + '\n\n';
-  if (rivers.length) md += '**Rivers**\n\n' + indexTable(['River', 'Length', 'Fall', 'Gradient'], rivers.map((r) => [r.name, `${f1(r.lengthKm)} km`, `${n0(r.drop)} m`, `${(r.gradient * 1000).toFixed(1)} m/km`])) + '\n\n';
+  if (rivers.length) md += '**Rivers**\n\n' + indexTable(['River', 'Length', 'Fall', 'Gradient'], rivers.map((r) => (r.tidal ? [r.name, `${f1(r.lengthKm)} km`, 'tidal', 'tidal throughout'] : [r.name, `${f1(r.lengthKm)} km`, `${n0(r.drop)} m`, `${(r.gradient * 1000).toFixed(1)} m/km`]))) + '\n\n';
+  return md;
+}
+
+// ---------------------------------------------------------------------------
+// Exploration density: how far apart the things worth stopping for are.
+export function densityTables(A, T) {
+  const { g } = T;
+  const islandAt = (x, y) => {
+    const c = g.col(x), r = g.row(y);
+    if (c < 0 || r < 0 || c >= g.nx || r >= g.ny) return null;
+    const k = T.island[r * g.nx + c];
+    if (!k) return null;
+    const s = ISLANDS[k - 1];
+    return s.partOf || s.id;
+  };
+  const pts = [
+    ...LANDMARKS.map((e) => ({ kind: 'landmark', tier: e.tier, island: e.island, at: e.at })),
+    ...VIEWPOINTS.map((e) => ({ kind: 'viewpoint', island: e.island, at: e.at })),
+    ...A.beaches.map((e) => ({ kind: 'beach', island: e.island, at: e.snapped })),
+    ...A.lakes.map((e) => ({ kind: 'lake', island: e.island, at: e.at })),
+    ...FORESTS.map((e) => ({ kind: 'forest', island: e.island, at: e.at })),
+    ...A.mountains.map((e) => ({ kind: 'summit', island: e.island, at: e.at })),
+    ...DISTRICTS.map((e) => ({ kind: 'district', island: e.island, at: e.at })),
+  ].map((p) => ({ ...p, root: ISLANDS.find((s) => s.id === p.island)?.partOf || p.island }));
+  const main = ISLANDS.filter((s) => !s.offworld && !s.partOf);
+  const rows = [];
+  for (const s of main) {
+    const ids = [s.id, ...ISLANDS.filter((q) => q.partOf === s.id).map((q) => q.id)];
+    const land = ids.reduce((a, k) => a + (A.stats[k]?.landKm2 || 0), 0);
+    const mine = pts.filter((p) => p.root === s.id);
+    const lm = mine.filter((p) => p.kind === 'landmark');
+    const major = lm.filter((p) => p.tier === 'primary' || p.tier === 'secondary').length;
+    const minor = lm.length - major;
+    const vps = mine.filter((p) => p.kind === 'viewpoint').length;
+    let nn = 0;
+    for (const p of mine) {
+      let best = Infinity;
+      for (const q of mine) if (q !== p) best = Math.min(best, Math.hypot(p.at[0] - q.at[0], p.at[1] - q.at[1]));
+      nn += isFinite(best) ? best : 0;
+    }
+    nn /= Math.max(1, mine.length);
+    // Road sampling: distinct register points within 1 km of the road, per road km.
+    let roadKm = 0, seen = new Set(), driveMin = 0;
+    for (const r of A.routes.filter((q) => q.kind === 'road')) {
+      const P = r.profile;
+      const v = (DESIGN[r.cls] || DESIGN.county).speed;
+      for (let k = 1; k < P.length; k++) {
+        const mx = (P[k][0] + P[k - 1][0]) / 2, my = (P[k][1] + P[k - 1][1]) / 2;
+        if (islandAt(mx, my) !== s.id) continue;
+        const L = Math.hypot(P[k][0] - P[k - 1][0], P[k][1] - P[k - 1][1]);
+        roadKm += L; driveMin += (L / v) * 60;
+        for (const p of mine) if (Math.hypot(p.at[0] - mx, p.at[1] - my) < 1.0) seen.add(p);
+      }
+    }
+    const towns = SETTLEMENTS.filter((t) => ids.includes(t.island)).length;
+    const rivKm = A.rivers.filter((r) => r.island === s.id).reduce((a, r) => a + r.lengthKm, 0);
+    rows.push({
+      name: s.name, land, n: mine.length, major, minor, vps, nn, roadKm, seen: seen.size, driveMin, towns, rivKm,
+      per100: (mine.length / land) * 100,
+      kmPer: seen.size ? roadKm / seen.size : null, minPer: seen.size ? driveMin / seen.size : null,
+    });
+  }
+  let md = '## Measured density by island\n\n';
+  md += indexTable(['Island', 'Land (km²)', 'Register places', 'Per 100 km²', 'Primary + secondary landmarks', 'Local + micro landmarks', 'Viewpoints', 'Mean spacing (km)', 'Settlements', 'Major road (km)', 'Places within 1 km of a road', 'Road km per place', 'Driving minutes per place', 'Named rivers (km)'],
+    rows.map((r) => [r.name, n0(r.land), r.n, f1(r.per100), r.major, r.minor, r.vps, f2(r.nn), r.towns, n0(r.roadKm), r.seen, r.kmPer == null ? '—' : f1(r.kmPer), r.minPer == null ? '—' : f1(r.minPer), f1(r.rivKm)])) + '\n\n';
+  const tot = rows.reduce((a, r) => ({ land: a.land + r.land, n: a.n + r.n, road: a.road + r.roadKm, seen: a.seen + r.seen, min: a.min + r.driveMin }), { land: 0, n: 0, road: 0, seen: 0, min: 0 });
+  md += `**Primary landmarks on the horizon:** from ${(A.primaryCoverage * 100).toFixed(0)}% of all land, a standing person can see at least one primary landmark (1 km sample grid, curvature, refraction and forest canopy).\n\n`;
+  md += `**Whole archipelago:** ${tot.n} register places on ${n0(tot.land)} km² (${f1((tot.n / tot.land) * 100)} per 100 km²); along the major road network a new registered place comes within 1 km about every ${f1(tot.road / tot.seen)} km — roughly every ${f1(tot.min / tot.seen)} minutes at road speed. Settlements, farms, bridges and the unregistered detail described in the island profiles fill the spaces between.\n`;
+  return md;
+}
+
+// ---------------------------------------------------------------------------
+// Inspiration matrix: compiled from each island profile's own table.
+export function inspirationMatrix() {
+  let md = '';
+  for (const id of ISLAND_ORDER) {
+    const p = path.join(ROOT, 'docs/islands', `${id}.md`);
+    if (!fs.existsSync(p)) continue;
+    const text = fs.readFileSync(p, 'utf8');
+    const a = text.indexOf('## Inspiration matrix');
+    if (a < 0) continue;
+    const b = text.indexOf('<!-- BEGIN GENERATED -->', a);
+    md += `### [${islandName(id)}](islands/${id}.md)\n\n${text.slice(a + '## Inspiration matrix'.length, b).trim()}\n\n`;
+  }
+  return md;
+}
+
+// Writing standard: phrases that turn place description into game-design talk.
+export const BANNED = ['gameplay', 'quest', 'mission', 'encounter', 'the player can', 'players can', 'loot', 'spawn', 'level design', 'boss', 'collectible', 'side activity', 'npc', 'faction', 'lore', 'backstory'];
+export function languageLint() {
+  const files = [];
+  const walk = (d) => { for (const f of fs.readdirSync(d)) { const p = path.join(d, f); if (fs.statSync(p).isDirectory()) walk(p); else if (f.endsWith('.md')) files.push(p); } };
+  walk(path.join(ROOT, 'docs'));
+  const rows = [];
+  let total = 0;
+  for (const p of files) {
+    if (p.endsWith('18-writing-standard.md') || p.endsWith('00-research-principles.md')) continue;
+    const t = fs.readFileSync(p, 'utf8').toLowerCase();
+    const hits = BANNED.map((w) => [w, (t.match(new RegExp(`\\b${w.replace(/ /g, '\\s+')}s?\\b`, 'g')) || []).length]).filter(([, n]) => n);
+    total += hits.reduce((a, [, n]) => a + n, 0);
+    if (hits.length) rows.push([path.relative(ROOT, p), hits.map(([w, n]) => `${w} ×${n}`).join(', ')]);
+  }
+  let md = `Checked ${files.length - 2} documents for: ${BANNED.map((w) => `"${w}"`).join(', ')}.\n\n`;
+  md += total ? indexTable(['Document', 'Matches'], rows) + '\n' : '**Result: no matches.** Every document describes the physical environment only.\n';
+  return { md, total };
+}
+
+// Master map: island index, networks and natural systems.
+export function masterMap(A) {
+  const sig = { halcomb: 'Ledford Dome Tower / Callahan North Face', graystone: 'The Blue Wall / Gate Bridge', calder: 'Calder Tower', corliss: 'Corliss Stacks', bellamy: 'WCDR-TV Mast', mirabel: 'Mirabel Pier at sunset', 'saint-ambrose': 'Haversham Steeples over the marsh', wickham: 'Wickham Spring', ossahatchee: 'Big Water', gannet: 'Cape Merrin Lighthouse', sabal: 'Sabal Bridges' };
+  const env = { halcomb: 'Southern Appalachian crest, coves and limestone valley', graystone: 'Granite highland and rainforest escarpment', calder: 'High-rise port city', corliss: 'Port, refinery and power station', bellamy: 'Fields, pine woods and Carolina bays', mirabel: 'White-sand Gulf barrier and resort', 'saint-ambrose': 'Tidal marsh and live-oak sea islands', wickham: 'Longleaf sandhills, scrub and springs', ossahatchee: 'Cypress swamp and prairies', gannet: 'Atlantic barrier, dunes and cape', sabal: 'Mangrove and limestone keys' };
+  const rows = [];
+  for (const id of ISLAND_ORDER) {
+    const ids = [id, ...ISLANDS.filter((s) => s.partOf === id).map((s) => s.id)];
+    const land = ids.reduce((a, k) => a + (A.stats[k]?.landKm2 || 0), 0);
+    const cover = new Array(LC.length).fill(0);
+    for (const k of ids) (A.coverByIsland[k] || []).forEach((v, i) => { cover[i] += v; });
+    const groups = { cropland: 'Farmland', pasture: 'Farmland', orchard: 'Farmland', 'urban-core': 'Urban', urban: 'Urban', suburban: 'Urban' };
+    const agg = new Map();
+    cover.forEach((v, i) => { const k = groups[LC[i].key] || LC[i].name; agg.set(k, (agg.get(k) || 0) + v); });
+    const top = [...agg].sort((a, b) => b[1] - a[1]).slice(0, 2).map(([n, v]) => `${n} (${Math.round((v / land) * 100)}%)`).join(', ');
+    const towns = SETTLEMENTS.filter((t) => ids.includes(t.island)).sort((a, b) => b.pop - a.pop);
+    const pop = towns.reduce((a, t) => a + t.pop, 0);
+    const peak = Object.values(PEAKS).filter((p) => p.island === id).sort((a, b) => b.z - a.z)[0];
+    const maxZ = Math.max(...ids.map((k) => A.stats[k]?.maxZ || 0));
+    rows.push([islandName(id), `${n0(land)} km²`, top, peak ? `${n0(peak.z)} m (${peak.name})` : `${n0(maxZ)} m`, `${n0(pop / land)} /km²`, env[id], towns[0] ? `${towns[0].name} (${n0(towns[0].pop)})` : '—', sig[id]]);
+  }
+  let md = '## Island index\n\n' + indexTable(['Island', 'Area', 'Dominant biome (share)', 'Highest point', 'Population density', 'Dominant environment', 'Major settlement', 'Signature landmark'], rows) + '\n\n';
+  const R = (id) => A.routes.find((r) => r.id === id);
+  md += '## Transportation network\n\n### Major highways\n\n';
+  md += indexTable(['Route', 'Name', 'Length', 'Connects'], [
+    ['I-21', 'Interstate 21', `${f1(R('i-21').lengthKm)} km`, 'Mainland → Narrows Bridge → Coldwater Valley → Shady Gap → Calder → Long Bridge → Calder International'],
+    ['I-121', 'Port Spur', `${f1(R('i-121').lengthKm)} km`, 'Calder → Harbor Bridge → Corliss terminals'],
+    ['SR 17', 'Coastal Highway', `${f1(R('sr-17').lengthKm + R('sr-17s').lengthKm)} km`, 'Corliss → Saint Ambrose → Ossahatchee → Sabal Landing'],
+    ['SR 40', 'Cross-Island Highway', `${f1(R('sr-40').lengthKm)} km`, 'Mirabel → Bellamy → Haversham'],
+    ['SR 9', 'Bellamy Highway', `${f1(R('sr-9').lengthKm)} km`, 'Airport → Bellamy → Wickham ferry'],
+    ['SR 14', 'Banks Highway', `${f1(R('sr-14').lengthKm)} km`, 'Haversham → Ambrose Beach → Gannet Banks'],
+    ['SR 29', 'The Trail', `${f1(R('sr-29').lengthKm)} km`, 'Ossahatchee → swamp → Wickham'],
+    ['SR 26 / SR 11', 'Gate Road / Blue Wall Road', `${f1(R('sr-26').lengthKm + R('sr-11').lengthKm)} km`, 'Halcomb → Gate Bridge → Graystone'],
+    ['Parkway', 'Balsam Crest Parkway', `${f1(R('parkway').lengthKm)} km`, 'Along the Halcomb crest'],
+  ]) + '\n\n';
+  const named = A.bridges.filter((b) => b.name).sort((a, b) => b.lengthKm - a.lengthKm);
+  const seenB = new Set();
+  md += '### Bridges\n\n' + indexTable(['Bridge', 'Carries', 'Length', 'Type'], named.filter((b) => !seenB.has(b.name) && seenB.add(b.name)).map((b) => [b.name, b.ref ? `${b.ref} ${b.routeName}` : b.routeName, `${n0(b.lengthKm * 1000)} m`, b.type])) + '\n\n';
+  md += '### Railroads\n\n' + indexTable(['Line', 'Status', 'Length'], RAILS.map((r) => [r.name, r.status, `${f1(R(r.id)?.lengthKm || 0)} km`])) + '\n\n';
+  md += '### Airports\n\n' + indexTable(['Airport', 'Island', 'Runways'], AIRPORTS.map((ap) => [ap.name, islandName(ap.island), ap.runways.map((rw) => { const rr = A.runways.find((q) => q.id === `${ap.id}:${rw.id}`); return `${rw.id} (${n0((rr?.lengthKm || 0) * 1000)} m)`; }).join(', ')])) + '\n\n';
+  md += '### Ports and harbours\n\n' + indexTable(['Port', 'Kind', 'Depth'], A.ports.map((p) => [p.name, p.kind, `${f1(p.depth)} m`])) + '\n\n';
+  md += '### Ferries\n\n' + indexTable(['Ferry', 'Kind', 'Speed'], FERRIES.map((f) => [f.name, f.kind, `${f.knots} kn`])) + '\n\n';
+  md += '## Natural systems\n\n';
+  md += `- **Mountains:** ${A.mountains.length} named summits; the ten highest: ${A.mountains.slice().sort((a, b) => b.z - a.z).slice(0, 10).map((m) => `${m.name} ${n0(m.z)} m`).join(', ')}.\n`;
+  md += `- **Rivers:** ${A.rivers.length} named rivers; the longest: ${A.rivers.slice().sort((a, b) => b.lengthKm - a.lengthKm).slice(0, 6).map((r) => `${r.name} ${f1(r.lengthKm)} km`).join(', ')}.\n`;
+  md += `- **Lakes:** ${A.lakes.length} lakes and ponds; the largest: ${A.lakes.slice().sort((a, b) => b.areaKm2 - a.areaKm2).slice(0, 6).map((l) => `${l.name} ${f1(l.areaKm2)} km²`).join(', ')}.\n`;
+  const tot = (keys) => Object.values(A.coverByIsland).reduce((a, arr) => a + keys.reduce((s, k) => s + arr[LC.findIndex((c) => c.key === k)], 0), 0);
+  md += `- **Wetlands:** ${n0(tot(['salt-marsh']))} km² of salt marsh, ${n0(tot(['fresh-marsh']))} km² of freshwater marsh, ${n0(tot(['cypress-swamp', 'bottomland', 'bay-forest']))} km² of swamp and wet forest, ${n0(tot(['mangrove']))} km² of mangrove.\n`;
+  md += `- **Forests:** ${FORESTS.length} named forests; ${n0(tot(['mixed-forest', 'oak-hickory', 'cove-hardwood', 'northern-hardwood', 'spruce-fir', 'maritime-forest', 'longleaf', 'flatwoods', 'pine-plantation', 'scrub']))} km² of upland forest and scrub in total.\n`;
+  md += `- **Beaches:** ${A.beaches.length} named beaches; ${n0(tot(['beach', 'dune']))} km² of beach and dune.\n`;
   return md;
 }

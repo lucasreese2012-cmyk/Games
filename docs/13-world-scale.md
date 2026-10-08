@@ -1,3 +1,9 @@
+# 13 — World Scale
+
+All figures on this page are measured on the generated world: a 110 × 100 km frame on a 50 m terrain grid, with every road and railway routed across the terrain and engineered to its class's grade limit. Driving times use American posted speeds by road class (interstate 110 km/h, four-lane highway 90, state road 75, county road 65, parkway 60, city arterial 45), slowed on curves and steep grades; ferry crossings include loading time.
+
+**How big it feels.** The longest drive in the islands — from the Narrows Bridge to the Sabal Keys — takes a little under two hours. From Calder, most towns are under 45 minutes away; the Banks, the swamp and the keys take 50–85 minutes; the Graystone mountain towns 70–110 minutes by ferry or over the Gate Bridge. The longest drive within one island ranges from 7 minutes across the Sabal Keys to two hours over Graystone's highland roads. The world is large enough that the far islands are out of sight from the city on a summer day, and small enough that any island is an afternoon's drive.
+
 <!-- BEGIN GENERATED -->
 ## Islands
 
@@ -23,38 +29,36 @@ Fastest road route at posted speeds, slowed for curvature and grade; ferry legs 
 
 | From \ To | Calder | Corliss | Tennalee Falls | Ledford | Coldwater | Narrows Landing | Graystone | Whitlock | Fallon | Haversham | Ambrose Beach | Bellamy | Mirabel Beach | Port Serena | Ossahatchee | Kestrel | Merrin | Wickham | Sabal |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **Calder** | — | 15 km<br>12 min | 16 km<br>13 min | 18 km<br>13 min | 49 km<br>33 min | 58 km<br>39 min | 29 km<br>1 h 10 min | 62 km<br>1 h 49 min | 63 km<br>1 h 44 min | 27 km<br>18 min | 41 km<br>31 min | 35 km<br>23 min | 51 km<br>36 min | 56 km<br>40 min | 59 km<br>41 min | 66 km<br>51 min | 83 km<br>1 h 04 min | 114 km<br>1 h 24 min | 96 km<br>1 h 12 min |
-| **Corliss** | 15 km<br>12 min | — | 27 km<br>19 min | 29 km<br>19 min | 59 km<br>38 min | 69 km<br>44 min | 36 km<br>1 h 15 min | 69 km<br>1 h 54 min | 71 km<br>1 h 49 min | 14 km<br>11 min | 29 km<br>23 min | 46 km<br>29 min | 62 km<br>41 min | 66 km<br>45 min | 47 km<br>33 min | 53 km<br>43 min | 70 km<br>56 min | 101 km<br>1 h 17 min | 84 km<br>1 h 04 min |
-| **Tennalee Falls** | 16 km<br>13 min | 27 km<br>19 min | — | 12 km<br>10 min | 42 km<br>29 min | 51 km<br>35 min | 41 km<br>1 h 21 min | 73 km<br>1 h 39 min | 75 km<br>1 h 55 min | 38 km<br>26 min | 53 km<br>38 min | 42 km<br>28 min | 58 km<br>40 min | 63 km<br>44 min | 71 km<br>48 min | 78 km<br>58 min | 95 km<br>1 h 11 min | 126 km<br>1 h 32 min | 108 km<br>1 h 19 min |
-| **Ledford** | 18 km<br>13 min | 29 km<br>19 min | 12 km<br>10 min | — | 32 km<br>21 min | 41 km<br>27 min | 43 km<br>1 h 21 min | 84 km<br>1 h 49 min | 77 km<br>1 h 55 min | 40 km<br>25 min | 55 km<br>38 min | 44 km<br>28 min | 60 km<br>40 min | 64 km<br>44 min | 73 km<br>48 min | 80 km<br>58 min | 96 km<br>1 h 11 min | 128 km<br>1 h 32 min | 110 km<br>1 h 19 min |
-| **Coldwater** | 49 km<br>33 min | 59 km<br>38 min | 42 km<br>29 min | 32 km<br>21 min | — | 10 km<br>7 min | 73 km<br>1 h 40 min | 115 km<br>2 h 08 min | 108 km<br>2 h 14 min | 71 km<br>45 min | 85 km<br>57 min | 75 km<br>47 min | 90 km<br>1 h 00 min | 95 km<br>1 h 04 min | 104 km<br>1 h 07 min | 110 km<br>1 h 17 min | 127 km<br>1 h 30 min | 158 km<br>1 h 51 min | 140 km<br>1 h 38 min |
-| **Narrows Landing** | 58 km<br>39 min | 69 km<br>44 min | 51 km<br>35 min | 41 km<br>27 min | 10 km<br>7 min | — | 83 km<br>1 h 47 min | 124 km<br>2 h 14 min | 117 km<br>2 h 20 min | 80 km<br>51 min | 95 km<br>1 h 03 min | 84 km<br>53 min | 99 km<br>1 h 06 min | 104 km<br>1 h 10 min | 113 km<br>1 h 13 min | 119 km<br>1 h 23 min | 136 km<br>1 h 37 min | 167 km<br>1 h 57 min | 150 km<br>1 h 44 min |
-| **Graystone** | 29 km<br>1 h 10 min | 36 km<br>1 h 15 min | 41 km<br>1 h 21 min | 43 km<br>1 h 21 min | 73 km<br>1 h 40 min | 83 km<br>1 h 47 min | — | 35 km<br>40 min | 34 km<br>34 min | 48 km<br>1 h 22 min | 63 km<br>1 h 34 min | 66 km<br>1 h 32 min | 81 km<br>1 h 44 min | 86 km<br>1 h 48 min | 81 km<br>1 h 44 min | 87 km<br>1 h 54 min | 104 km<br>2 h 07 min | 135 km<br>2 h 28 min | 117 km<br>2 h 15 min |
-| **Whitlock** | 62 km<br>1 h 49 min | 69 km<br>1 h 54 min | 73 km<br>1 h 39 min | 84 km<br>1 h 49 min | 115 km<br>2 h 08 min | 124 km<br>2 h 14 min | 35 km<br>40 min | — | 69 km<br>1 h 14 min | 81 km<br>2 h 00 min | 96 km<br>2 h 13 min | 115 km<br>2 h 06 min | 131 km<br>2 h 19 min | 135 km<br>2 h 23 min | 114 km<br>2 h 23 min | 120 km<br>2 h 33 min | 137 km<br>2 h 46 min | 168 km<br>3 h 06 min | 150 km<br>2 h 54 min |
-| **Fallon** | 63 km<br>1 h 44 min | 71 km<br>1 h 49 min | 75 km<br>1 h 55 min | 77 km<br>1 h 55 min | 108 km<br>2 h 14 min | 117 km<br>2 h 20 min | 34 km<br>34 min | 69 km<br>1 h 14 min | — | 82 km<br>1 h 55 min | 97 km<br>2 h 08 min | 100 km<br>2 h 05 min | 116 km<br>2 h 18 min | 120 km<br>2 h 22 min | 115 km<br>2 h 18 min | 122 km<br>2 h 28 min | 138 km<br>2 h 41 min | 170 km<br>3 h 02 min | 152 km<br>2 h 49 min |
-| **Haversham** | 27 km<br>18 min | 14 km<br>11 min | 38 km<br>26 min | 40 km<br>25 min | 71 km<br>45 min | 80 km<br>51 min | 48 km<br>1 h 22 min | 81 km<br>2 h 00 min | 82 km<br>1 h 55 min | — | 15 km<br>12 min | 38 km<br>30 min | 53 km<br>43 min | 58 km<br>47 min | 34 km<br>23 min | 39 km<br>32 min | 56 km<br>46 min | 88 km<br>1 h 07 min | 71 km<br>54 min |
-| **Ambrose Beach** | 41 km<br>31 min | 29 km<br>23 min | 53 km<br>38 min | 55 km<br>38 min | 85 km<br>57 min | 95 km<br>1 h 03 min | 63 km<br>1 h 34 min | 96 km<br>2 h 13 min | 97 km<br>2 h 08 min | 15 km<br>12 min | — | 53 km<br>42 min | 68 km<br>55 min | 73 km<br>59 min | 49 km<br>35 min | 25 km<br>20 min | 41 km<br>33 min | 103 km<br>1 h 19 min | 85 km<br>1 h 06 min |
-| **Bellamy** | 35 km<br>23 min | 46 km<br>29 min | 42 km<br>28 min | 44 km<br>28 min | 75 km<br>47 min | 84 km<br>53 min | 66 km<br>1 h 32 min | 115 km<br>2 h 06 min | 100 km<br>2 h 05 min | 38 km<br>30 min | 53 km<br>42 min | — | 16 km<br>13 min | 21 km<br>18 min | 58 km<br>46 min | 77 km<br>1 h 02 min | 94 km<br>1 h 16 min | 112 km<br>1 h 30 min | 95 km<br>1 h 17 min |
-| **Mirabel Beach** | 51 km<br>36 min | 62 km<br>41 min | 58 km<br>40 min | 60 km<br>40 min | 90 km<br>1 h 00 min | 99 km<br>1 h 06 min | 81 km<br>1 h 44 min | 131 km<br>2 h 19 min | 116 km<br>2 h 18 min | 53 km<br>43 min | 68 km<br>55 min | 16 km<br>13 min | — | 16 km<br>13 min | 74 km<br>59 min | 93 km<br>1 h 15 min | 110 km<br>1 h 28 min | 128 km<br>1 h 42 min | 110 km<br>1 h 29 min |
-| **Port Serena** | 56 km<br>40 min | 66 km<br>45 min | 63 km<br>44 min | 64 km<br>44 min | 95 km<br>1 h 04 min | 104 km<br>1 h 10 min | 86 km<br>1 h 48 min | 135 km<br>2 h 23 min | 120 km<br>2 h 22 min | 58 km<br>47 min | 73 km<br>59 min | 21 km<br>18 min | 16 km<br>13 min | — | 78 km<br>1 h 03 min | 97 km<br>1 h 19 min | 114 km<br>1 h 33 min | 133 km<br>1 h 46 min | 115 km<br>1 h 33 min |
-| **Ossahatchee** | 59 km<br>41 min | 47 km<br>33 min | 71 km<br>48 min | 73 km<br>48 min | 104 km<br>1 h 07 min | 113 km<br>1 h 13 min | 81 km<br>1 h 44 min | 114 km<br>2 h 23 min | 115 km<br>2 h 18 min | 34 km<br>23 min | 49 km<br>35 min | 58 km<br>46 min | 74 km<br>59 min | 78 km<br>1 h 03 min | — | 73 km<br>55 min | 90 km<br>1 h 09 min | 54 km<br>44 min | 37 km<br>31 min |
-| **Kestrel** | 66 km<br>51 min | 53 km<br>43 min | 78 km<br>58 min | 80 km<br>58 min | 110 km<br>1 h 17 min | 119 km<br>1 h 23 min | 87 km<br>1 h 54 min | 120 km<br>2 h 33 min | 122 km<br>2 h 28 min | 39 km<br>32 min | 25 km<br>20 min | 77 km<br>1 h 02 min | 93 km<br>1 h 15 min | 97 km<br>1 h 19 min | 73 km<br>55 min | — | 17 km<br>14 min | 128 km<br>1 h 39 min | 110 km<br>1 h 26 min |
+| **Calder** | — | 13 km<br>11 min | 16 km<br>13 min | 18 km<br>13 min | 49 km<br>33 min | 58 km<br>39 min | 29 km<br>1 h 10 min | 62 km<br>1 h 49 min | 63 km<br>1 h 44 min | 27 km<br>18 min | 41 km<br>31 min | 35 km<br>23 min | 51 km<br>36 min | 56 km<br>40 min | 59 km<br>41 min | 66 km<br>51 min | 83 km<br>1 h 04 min | 64 km<br>1 h 14 min | 96 km<br>1 h 12 min |
+| **Corliss** | 13 km<br>11 min | — | 25 km<br>18 min | 27 km<br>18 min | 57 km<br>37 min | 67 km<br>44 min | 35 km<br>1 h 14 min | 67 km<br>1 h 53 min | 69 km<br>1 h 48 min | 14 km<br>10 min | 28 km<br>23 min | 44 km<br>28 min | 60 km<br>41 min | 65 km<br>45 min | 46 km<br>33 min | 53 km<br>42 min | 70 km<br>56 min | 101 km<br>1 h 16 min | 83 km<br>1 h 03 min |
+| **Tennalee Falls** | 16 km<br>13 min | 25 km<br>18 min | — | 12 km<br>10 min | 42 km<br>29 min | 51 km<br>35 min | 41 km<br>1 h 21 min | 73 km<br>1 h 39 min | 75 km<br>1 h 55 min | 38 km<br>26 min | 53 km<br>38 min | 42 km<br>28 min | 58 km<br>40 min | 63 km<br>44 min | 71 km<br>48 min | 78 km<br>58 min | 95 km<br>1 h 11 min | 71 km<br>1 h 18 min | 108 km<br>1 h 19 min |
+| **Ledford** | 18 km<br>13 min | 27 km<br>18 min | 12 km<br>10 min | — | 32 km<br>21 min | 41 km<br>27 min | 43 km<br>1 h 21 min | 84 km<br>1 h 49 min | 77 km<br>1 h 55 min | 40 km<br>25 min | 55 km<br>38 min | 44 km<br>28 min | 60 km<br>40 min | 64 km<br>44 min | 73 km<br>48 min | 80 km<br>58 min | 96 km<br>1 h 11 min | 72 km<br>1 h 18 min | 110 km<br>1 h 19 min |
+| **Coldwater** | 49 km<br>33 min | 57 km<br>37 min | 42 km<br>29 min | 32 km<br>21 min | — | 10 km<br>7 min | 73 km<br>1 h 40 min | 115 km<br>2 h 08 min | 108 km<br>2 h 14 min | 71 km<br>45 min | 85 km<br>57 min | 75 km<br>47 min | 90 km<br>1 h 00 min | 95 km<br>1 h 04 min | 104 km<br>1 h 07 min | 110 km<br>1 h 17 min | 127 km<br>1 h 30 min | 103 km<br>1 h 38 min | 140 km<br>1 h 38 min |
+| **Narrows Landing** | 58 km<br>39 min | 67 km<br>44 min | 51 km<br>35 min | 41 km<br>27 min | 10 km<br>7 min | — | 83 km<br>1 h 47 min | 124 km<br>2 h 14 min | 117 km<br>2 h 20 min | 80 km<br>51 min | 95 km<br>1 h 03 min | 84 km<br>53 min | 99 km<br>1 h 06 min | 104 km<br>1 h 10 min | 113 km<br>1 h 13 min | 119 km<br>1 h 23 min | 136 km<br>1 h 37 min | 112 km<br>1 h 44 min | 150 km<br>1 h 44 min |
+| **Graystone** | 29 km<br>1 h 10 min | 35 km<br>1 h 14 min | 41 km<br>1 h 21 min | 43 km<br>1 h 21 min | 73 km<br>1 h 40 min | 83 km<br>1 h 47 min | — | 35 km<br>40 min | 34 km<br>34 min | 48 km<br>1 h 22 min | 63 km<br>1 h 34 min | 66 km<br>1 h 32 min | 81 km<br>1 h 44 min | 86 km<br>1 h 48 min | 81 km<br>1 h 44 min | 87 km<br>1 h 54 min | 104 km<br>2 h 07 min | 94 km<br>2 h 22 min | 117 km<br>2 h 15 min |
+| **Whitlock** | 62 km<br>1 h 49 min | 67 km<br>1 h 53 min | 73 km<br>1 h 39 min | 84 km<br>1 h 49 min | 115 km<br>2 h 08 min | 124 km<br>2 h 14 min | 35 km<br>40 min | — | 69 km<br>1 h 14 min | 81 km<br>2 h 00 min | 96 km<br>2 h 13 min | 115 km<br>2 h 06 min | 131 km<br>2 h 19 min | 135 km<br>2 h 23 min | 114 km<br>2 h 23 min | 120 km<br>2 h 33 min | 137 km<br>2 h 46 min | 143 km<br>2 h 57 min | 150 km<br>2 h 54 min |
+| **Fallon** | 63 km<br>1 h 44 min | 69 km<br>1 h 48 min | 75 km<br>1 h 55 min | 77 km<br>1 h 55 min | 108 km<br>2 h 14 min | 117 km<br>2 h 20 min | 34 km<br>34 min | 69 km<br>1 h 14 min | — | 82 km<br>1 h 55 min | 97 km<br>2 h 08 min | 100 km<br>2 h 05 min | 116 km<br>2 h 18 min | 120 km<br>2 h 22 min | 115 km<br>2 h 18 min | 122 km<br>2 h 28 min | 138 km<br>2 h 41 min | 128 km<br>2 h 56 min | 152 km<br>2 h 49 min |
+| **Haversham** | 27 km<br>18 min | 14 km<br>10 min | 38 km<br>26 min | 40 km<br>25 min | 71 km<br>45 min | 80 km<br>51 min | 48 km<br>1 h 22 min | 81 km<br>2 h 00 min | 82 km<br>1 h 55 min | — | 15 km<br>12 min | 38 km<br>30 min | 53 km<br>43 min | 58 km<br>47 min | 34 km<br>23 min | 39 km<br>32 min | 56 km<br>46 min | 88 km<br>1 h 07 min | 71 km<br>54 min |
+| **Ambrose Beach** | 41 km<br>31 min | 28 km<br>23 min | 53 km<br>38 min | 55 km<br>38 min | 85 km<br>57 min | 95 km<br>1 h 03 min | 63 km<br>1 h 34 min | 96 km<br>2 h 13 min | 97 km<br>2 h 08 min | 15 km<br>12 min | — | 53 km<br>42 min | 68 km<br>55 min | 73 km<br>59 min | 49 km<br>35 min | 25 km<br>20 min | 41 km<br>33 min | 103 km<br>1 h 19 min | 85 km<br>1 h 06 min |
+| **Bellamy** | 35 km<br>23 min | 44 km<br>28 min | 42 km<br>28 min | 44 km<br>28 min | 75 km<br>47 min | 84 km<br>53 min | 66 km<br>1 h 32 min | 115 km<br>2 h 06 min | 100 km<br>2 h 05 min | 38 km<br>30 min | 53 km<br>42 min | — | 16 km<br>13 min | 21 km<br>18 min | 58 km<br>46 min | 77 km<br>1 h 02 min | 94 km<br>1 h 16 min | 29 km<br>51 min | 95 km<br>1 h 17 min |
+| **Mirabel Beach** | 51 km<br>36 min | 60 km<br>41 min | 58 km<br>40 min | 60 km<br>40 min | 90 km<br>1 h 00 min | 99 km<br>1 h 06 min | 81 km<br>1 h 44 min | 131 km<br>2 h 19 min | 116 km<br>2 h 18 min | 53 km<br>43 min | 68 km<br>55 min | 16 km<br>13 min | — | 16 km<br>13 min | 74 km<br>59 min | 93 km<br>1 h 15 min | 110 km<br>1 h 28 min | 44 km<br>1 h 04 min | 110 km<br>1 h 29 min |
+| **Port Serena** | 56 km<br>40 min | 65 km<br>45 min | 63 km<br>44 min | 64 km<br>44 min | 95 km<br>1 h 04 min | 104 km<br>1 h 10 min | 86 km<br>1 h 48 min | 135 km<br>2 h 23 min | 120 km<br>2 h 22 min | 58 km<br>47 min | 73 km<br>59 min | 21 km<br>18 min | 16 km<br>13 min | — | 78 km<br>1 h 03 min | 97 km<br>1 h 19 min | 114 km<br>1 h 33 min | 32 km<br>57 min | 115 km<br>1 h 33 min |
+| **Ossahatchee** | 59 km<br>41 min | 46 km<br>33 min | 71 km<br>48 min | 73 km<br>48 min | 104 km<br>1 h 07 min | 113 km<br>1 h 13 min | 81 km<br>1 h 44 min | 114 km<br>2 h 23 min | 115 km<br>2 h 18 min | 34 km<br>23 min | 49 km<br>35 min | 58 km<br>46 min | 74 km<br>59 min | 78 km<br>1 h 03 min | — | 73 km<br>55 min | 90 km<br>1 h 09 min | 54 km<br>44 min | 37 km<br>31 min |
+| **Kestrel** | 66 km<br>51 min | 53 km<br>42 min | 78 km<br>58 min | 80 km<br>58 min | 110 km<br>1 h 17 min | 119 km<br>1 h 23 min | 87 km<br>1 h 54 min | 120 km<br>2 h 33 min | 122 km<br>2 h 28 min | 39 km<br>32 min | 25 km<br>20 min | 77 km<br>1 h 02 min | 93 km<br>1 h 15 min | 97 km<br>1 h 19 min | 73 km<br>55 min | — | 17 km<br>14 min | 128 km<br>1 h 39 min | 110 km<br>1 h 26 min |
 | **Merrin** | 83 km<br>1 h 04 min | 70 km<br>56 min | 95 km<br>1 h 11 min | 96 km<br>1 h 11 min | 127 km<br>1 h 30 min | 136 km<br>1 h 37 min | 104 km<br>2 h 07 min | 137 km<br>2 h 46 min | 138 km<br>2 h 41 min | 56 km<br>46 min | 41 km<br>33 min | 94 km<br>1 h 16 min | 110 km<br>1 h 28 min | 114 km<br>1 h 33 min | 90 km<br>1 h 09 min | 17 km<br>14 min | — | 144 km<br>1 h 52 min | 127 km<br>1 h 39 min |
-| **Wickham** | 114 km<br>1 h 24 min | 101 km<br>1 h 17 min | 126 km<br>1 h 32 min | 128 km<br>1 h 32 min | 158 km<br>1 h 51 min | 167 km<br>1 h 57 min | 135 km<br>2 h 28 min | 168 km<br>3 h 06 min | 170 km<br>3 h 02 min | 88 km<br>1 h 07 min | 103 km<br>1 h 19 min | 112 km<br>1 h 30 min | 128 km<br>1 h 42 min | 133 km<br>1 h 46 min | 54 km<br>44 min | 128 km<br>1 h 39 min | 144 km<br>1 h 52 min | — | 91 km<br>1 h 14 min |
-| **Sabal** | 96 km<br>1 h 12 min | 84 km<br>1 h 04 min | 108 km<br>1 h 19 min | 110 km<br>1 h 19 min | 140 km<br>1 h 38 min | 150 km<br>1 h 44 min | 117 km<br>2 h 15 min | 150 km<br>2 h 54 min | 152 km<br>2 h 49 min | 71 km<br>54 min | 85 km<br>1 h 06 min | 95 km<br>1 h 17 min | 110 km<br>1 h 29 min | 115 km<br>1 h 33 min | 37 km<br>31 min | 110 km<br>1 h 26 min | 127 km<br>1 h 39 min | 91 km<br>1 h 14 min | — |
+| **Wickham** | 64 km<br>1 h 14 min | 101 km<br>1 h 16 min | 71 km<br>1 h 18 min | 72 km<br>1 h 18 min | 103 km<br>1 h 38 min | 112 km<br>1 h 44 min | 94 km<br>2 h 22 min | 143 km<br>2 h 57 min | 128 km<br>2 h 56 min | 88 km<br>1 h 07 min | 103 km<br>1 h 19 min | 29 km<br>51 min | 44 km<br>1 h 04 min | 32 km<br>57 min | 54 km<br>44 min | 128 km<br>1 h 39 min | 144 km<br>1 h 52 min | — | 91 km<br>1 h 14 min |
+| **Sabal** | 96 km<br>1 h 12 min | 83 km<br>1 h 03 min | 108 km<br>1 h 19 min | 110 km<br>1 h 19 min | 140 km<br>1 h 38 min | 150 km<br>1 h 44 min | 117 km<br>2 h 15 min | 150 km<br>2 h 54 min | 152 km<br>2 h 49 min | 71 km<br>54 min | 85 km<br>1 h 06 min | 95 km<br>1 h 17 min | 110 km<br>1 h 29 min | 115 km<br>1 h 33 min | 37 km<br>31 min | 110 km<br>1 h 26 min | 127 km<br>1 h 39 min | 91 km<br>1 h 14 min | — |
 
 **Longest drive within each island**
 
 | Island | Between | Distance | Time |
 |---|---|---|---|
-| Halcomb Island | Upper Cove – Big Laurel | 98.7 km | 1 h 31 min |
+| Halcomb Island | Upper Cove – Pigeonroost | 92.3 km | 1 h 23 min |
 | Graystone Island | Fallon – Stillhouse | 92.3 km | 2 h 06 min |
-| Calder Island | Calder – Calder | 0.0 km | 0 min |
-| Corliss Island | Corliss – Corliss | 0.0 km | 0 min |
 | Bellamy Island | Dunmore – Bellamy Bluffs | 43.5 km | 38 min |
 | Mirabel Island | Port Serena – Seaholly | 22.9 km | 18 min |
 | Saint Ambrose Island | Ambrose Beach – Kettle | 32.2 km | 24 min |
-| Wickham Island | Wickham – Wickham Landing | 6.2 km | 5 min |
+| Wickham Island | Wickham Landing – Cedar Shoals | 21.6 km | 20 min |
 | Ossahatchee Island | Tolar – Sabal Landing | 38.6 km | 32 min |
 | The Gannet Banks | Pennick – Kestrel | 32.0 km | 46 min |
 | The Sabal Keys | Sabal – Cayo Viento | 8.4 km | 7 min |
@@ -64,7 +68,7 @@ Fastest road route at posted speeds, slowed for curvature and grade; ferry legs 
 | Ferry | Type | Route length | Speed | Crossing |
 |---|---|---|---|---|
 | Graystone–Calder Ferry | vehicle ferry | 24.2 km | 16 kn | 49 min |
-| Wickham Ferry | cable ferry | 4.4 km | 6 kn | 24 min |
+| Wickham Ferry | small vehicle ferry | 4.4 km | 8 kn | 18 min |
 | Rockfish Inlet Ferry | free vehicle ferry | 1.3 km | 9 kn | 5 min |
 | Tarrow Sound Ferry | vehicle ferry | 13.3 km | 12 kn | 36 min |
 | Serena Bay Seasonal Ferry | passenger fast ferry | 32.3 km | 26 kn | 40 min |
@@ -112,11 +116,13 @@ Lengths and grades are of the routed, graded alignment (each road is engineered 
 | CR 28 | Calloway Dam Road | county | 19.8 | 13.0% | 14 | 14 |
 | I-121 | Interstate 121 (Port Spur) | interstate | 19.4 | 3.9% | 0 | 0 |
 | SR 30 | Tableland Road | state | 19.4 | 8.5% | 8 | 8 |
+| CR 33 | Cedar Point Road | county | 15.0 | 0.7% | 0 | 0 |
 | CR 64 | Bright Water Road | county | 14.9 | 13.0% | 2 | 2 |
 | SR 1 | Keys Highway | state | 14.0 | 1.8% | 0 | 0 |
 | CR 9 | Ocosta River Road | county | 13.2 | 3.6% | 0 | 0 |
 | CR 30 | Serena Causeway | county | 12.3 | 6.3% | 0 | 0 |
 | CR 40 | Rice Hope Road | county | 11.9 | 2.7% | 0 | 0 |
+| CR 19 | Sweetwater Road | county | 11.7 | 1.1% | 0 | 0 |
 | SR 14 | Pennick Road | county | 10.5 | 0.9% | 0 | 0 |
 | Bay Ave | Bay Avenue | arterial | 10.3 | 10.0% | 3 | 3 |
 | CR 17 | Oyster Point Road | county | 9.2 | 3.8% | 0 | 0 |
@@ -125,12 +131,14 @@ Lengths and grades are of the routed, graded alignment (each road is engineered 
 | CR 8 | Hominy Road | county | 7.0 | 13.0% | 1 | 1 |
 | Harbor Blvd | Harbor Boulevard | arterial | 5.6 | 1.0% | 0 | 0 |
 | CR 12 | Dogwood Point Road | county | 4.3 | 13.0% | 1 | 1 |
+| CR 35 | Ferry Landing Road | county | 4.3 | 1.0% | 0 | 0 |
 | W Shore Dr | West Shore Drive | arterial | 3.9 | 5.2% | 0 | 0 |
+| Corliss Ave | Corliss Avenue | arterial | 3.3 | 0.2% | 0 | 0 |
 | CR 41 | Airport Road (Mirabel) | county | 3.3 | 2.4% | 0 | 0 |
 | Spur | Ledford Dome Road | parkway | 2.8 | 8.0% | 11 | 11 |
 | CR 31 | Tarrow Landing Road | county | 1.1 | 2.3% | 0 | 0 |
 
-Totals: 105 km interstate, 712 km state highways and parkway, 286 km county roads and city arterials (major roads only; local streets are not counted).
+Totals: 105 km interstate, 712 km state highways and parkway, 320 km county roads and city arterials (major roads only; local streets are not counted).
 
 ## Railways
 
@@ -141,6 +149,7 @@ Totals: 105 km interstate, 712 km state highways and parkway, 286 km county road
 | Calder Passenger Branch | active | passenger | 4.5 | 2.2% |
 | Bellamy & Southern Railway | active | freight | 54.3 | 2.2% |
 | Haversham Branch | active | freight | 6.3 | 2.2% |
+| Coldwater Quarry Spur | active | stone traffic | 8.7 | 2.2% |
 | Ocosta Station Spur | active | freight | 8.8 | 2.2% |
 | Big Laurel Incline | abandoned | logging incline | 2.2 | 45.0% |
 | Blue Wall Incline (unfinished) | abandoned | never completed | 8.8 | 6.0% |
@@ -188,6 +197,7 @@ Every water crossing over 120 m on the routed network. Named bridges carry their
 | Ashwood River Bridge | SR 40 Cross-Island Highway | 550 | concrete high-rise | 20 |
 | Calloway Lake Bridge | SR 28 Cove Road | 375 | low concrete trestle | 4 |
 | Narrows Rail Bridge | Mainland Main Line | 325 | through truss with swing span | 6 |
+| Coldwater Quarry Spur crossing | Coldwater Quarry Spur | 300 | girder or trestle | — |
 | SR 14 crossing | SR 14 Banks Highway | 250 | girder or trestle | — |
 | SR 17 crossing | SR 17 Coastal Highway | 200 | girder or trestle | — |
 | SR 14 crossing | SR 14 Banks Highway | 200 | girder or trestle | — |
@@ -262,6 +272,7 @@ Every water crossing over 120 m on the routed network. Named bridges carry their
 | Sabal Fish House | fishing dock | 2.0 | 2.0 |
 | Port Serena Marina | marina | 3.0 | 3.0 |
 | Calder Yacht Basin | marina | 4.0 | 10.1 |
+| Cutstone Stone Wharf | stone barge wharf | 5.0 | 6.1 |
 | Calloway Marina | lake marina | 8.0 | 30.4 |
 | Oyster Point Docks | fishing harbor | 3.0 | 3.0 |
 
@@ -276,10 +287,10 @@ Every water crossing over 120 m on the routed network. Named bridges carry their
 | Tennalee River | Halcomb Island | 19.8 | 1,150 | 1,156 | 58.5 m/km |
 | Bright Water River | Graystone Island | 19.3 | 1,016 | 1,021 | 52.9 m/km |
 | Little Ocosta | Bellamy Island | 16.3 | 72 | 74 | 4.6 m/km |
-| Bonnet River | Saint Ambrose Island | 15.3 | -5 | 2 | 0.1 m/km |
-| Haversham River | Saint Ambrose Island | 15.1 | -9 | 0 | 0.0 m/km |
+| Bonnet River | Saint Ambrose Island | 15.3 | tidal | tidal | tidal throughout |
+| Haversham River | Saint Ambrose Island | 15.1 | tidal | tidal | tidal throughout |
 | Ledford Prong | Halcomb Island | 13.9 | 1,292 | 1,297 | 93.3 m/km |
-| Salt Kettle Creek | Saint Ambrose Island | 13.2 | -4 | 0 | 0.0 m/km |
+| Salt Kettle Creek | Saint Ambrose Island | 13.2 | tidal | tidal | tidal throughout |
 | Ossahatchee River | Ossahatchee Island | 13.1 | 19 | 25 | 1.9 m/km |
 | Gapway River | Ossahatchee Island | 13.0 | 21 | 27 | 2.0 m/km |
 | Hickory Creek | Halcomb Island | 12.3 | 448 | 450 | 36.8 m/km |
@@ -298,7 +309,7 @@ Every water crossing over 120 m on the routed network. Named bridges carry their
 | Mill Branch | Bellamy Island | 7.0 | 55 | 61 | 8.6 m/km |
 | Black Creek | Bellamy Island | 6.6 | 19 | 24 | 3.7 m/km |
 | Sawpit River | Wickham Island | 6.3 | 8 | 13 | 2.1 m/km |
-| Oyster Creek | Saint Ambrose Island | 6.3 | -3 | 0 | 0.0 m/km |
+| Oyster Creek | Saint Ambrose Island | 6.3 | tidal | tidal | tidal throughout |
 | Seacow Spring Run | Wickham Island | 5.9 | 3 | 5 | 0.8 m/km |
 | Shady Creek | Halcomb Island | 5.7 | 66 | 68 | 12.0 m/km |
 | Hollow Creek | Graystone Island | 5.4 | 892 | 898 | 166.4 m/km |

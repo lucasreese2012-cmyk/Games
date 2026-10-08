@@ -131,6 +131,10 @@ export const ROADS = [
     [79.8, 12.6], [81.4, 10.6], [82.8, 9.4], [83.4, 8.4], [82.4, 6.6], [80.4, 5.9], [79.4, 5.7],
   ] },
   { id: 'pennick-road', name: 'Pennick Road', ref: 'SR 14', cls: 'county', pts: [[78.2, 5.3], [76.0, 4.6], [73.0, 3.8], [71.0, 3.4], [68.0, 2.8]] },
+  { id: 'corliss-avenue', name: 'Corliss Avenue', ref: 'Corliss Ave', cls: 'arterial', pts: [[45.6, 59.4], [45.9, 58.4], [46.2, 57.6], [47.6, 57.8]] },
+  { id: 'sweetwater-road', name: 'Sweetwater Road', ref: 'CR 19', cls: 'county', pts: [[18.4, 37.2], [15.6, 37.0, 'r'], [12.6, 37.2, 'r'], [12.0, 40.0, 'r'], [13.4, 42.6, 'r']] },
+  { id: 'cedar-point-road', name: 'Cedar Point Road', ref: 'CR 33', cls: 'county', pts: [[9.6, 16.6], [9.4, 12.0, 'r'], [10.0, 6.0, 'r'], [10.4, 1.8, 'r']] },
+  { id: 'landing-road', name: 'Ferry Landing Road', ref: 'CR 35', cls: 'county', pts: [[12.0, 16.4], [12.4, 18.6, 'r'], [12.6, 20.6, 'r']] },
   { id: 'oyster-point-road', name: 'Oyster Point Road', ref: 'CR 17', cls: 'county', pts: [[50.4, 52.0], [41.4, 52.0, 'r']] },
   { id: 'kettle-road', name: 'Rice Hope Road', ref: 'CR 40', cls: 'county', pts: [[44.6, 45.6], [45.6, 40.8, 'r'], [49.4, 35.0, 'r']] },
 ];
@@ -150,6 +154,7 @@ export const RAILS = [
     [21.6, 39.6], [19.4, 38.8], [18.6, 36.0], [18.2, 33.4], [17.4, 31.2], [16.2, 29.4], [15.2, 27.6], [14.4, 26.6],
   ] },
   { id: 'haversham-branch', name: 'Haversham Branch', status: 'active', use: 'freight', pts: [[47.6, 49.4], [50.0, 49.0], [52.4, 48.6], [53.8, 48.2]] },
+  { id: 'quarry-spur', name: 'Coldwater Quarry Spur', status: 'active', use: 'stone traffic', pts: [[12.3, 80.6], [13.4, 82.4, 'r'], [14.4, 83.8, 'r']] },
   { id: 'nuclear-spur', name: 'Ocosta Station Spur', status: 'active', use: 'freight', pts: [[17.4, 31.2], [19.4, 30.4], [23.0, 28.4, 'r'], [24.4, 27.8]] },
   { id: 'big-laurel-grade', name: 'Big Laurel Incline', status: 'abandoned', use: 'logging incline', grade: 0.45, viaductFill: 30, pts: [[37.15, 87.1], [36.95, 86.2], [36.7, 85.0]] },
   { id: 'blue-wall-incline', name: 'Blue Wall Incline (unfinished)', status: 'abandoned', use: 'never completed', pts: [[62.0, 69.8], [62.6, 72.4], [63.4, 74.8], [64.2, 76.8], [64.6, 78.2]] },
@@ -209,7 +214,7 @@ export const HELIPADS = [
   { name: 'Calder General Hospital', at: [36.4, 58.6], note: 'rooftop' },
   { name: 'Ledford Dome Ranger Pad', at: [28.4, 80.0], note: 'gravel pad beside the summit lot' },
   { name: 'Fallon Marine Rescue Station', at: [77.0, 88.4], note: 'ground pad' },
-  { name: 'Whitlock Fire Base', at: [56.2, 83.0], note: 'seasonal fire helibase' },
+  { name: 'Whitlock Fire Base', at: [55.2, 84.1], note: 'seasonal fire helibase' },
   { name: 'Tarrow Landing Seaplane Base', at: [61.4, 13.5], note: 'seaplane ramp' },
 ];
 
@@ -225,13 +230,14 @@ export const PORTS = [
   { id: 'sabal-fishhouse', name: 'Sabal Fish House', kind: 'fishing dock', depth: 2, berth: [[44.6, 1.6], [44.9, 1.7]] },
   { id: 'port-serena-marina', name: 'Port Serena Marina', kind: 'marina', depth: 3, berth: [[5.6, 28.4], [5.8, 29.0]] },
   { id: 'calder-yacht-basin', name: 'Calder Yacht Basin', kind: 'marina', depth: 4, berth: [[30.8, 58.0], [30.8, 58.8]] },
+  { id: 'cutstone-wharf', name: 'Cutstone Stone Wharf', kind: 'stone barge wharf', depth: 5, berth: [[58.8, 68.0], [59.2, 68.1]] },
   { id: 'calloway-marina', name: 'Calloway Marina', kind: 'lake marina', depth: 8, berth: [[37.0, 72.5], [37.6, 72.55]] },
   { id: 'oyster-point-docks', name: 'Oyster Point Docks', kind: 'fishing harbor', depth: 3, berth: [[41.2, 52.6], [41.6, 52.7]] },
 ];
 
 export const FERRIES = [
   { id: 'graystone-ferry', name: 'Graystone–Calder Ferry', kind: 'vehicle ferry', knots: 16, pts: [[64.2, 67.4], [60.0, 66.0], [54.0, 64.8], [48.0, 64.0], [43.0, 63.5], [40.4, 63.2]] },
-  { id: 'wickham-ferry', name: 'Wickham Ferry', kind: 'cable ferry', knots: 6, pts: [[13.0, 25.6], [12.9, 23.4], [12.7, 21.2]] },
+  { id: 'wickham-ferry', name: 'Wickham Ferry', kind: 'small vehicle ferry', knots: 8, pts: [[13.0, 25.6], [12.9, 23.4], [12.7, 21.2]] },
   { id: 'rockfish-ferry', name: 'Rockfish Inlet Ferry', kind: 'free vehicle ferry', knots: 9, pts: [[79.4, 5.9], [78.9, 5.4], [78.3, 5.2]] },
   { id: 'tarrow-ferry', name: 'Tarrow Sound Ferry', kind: 'vehicle ferry', knots: 12, pts: [[61.6, 13.4], [65.6, 10.4], [68.0, 6.8], [70.6, 3.8]] },
   { id: 'serena-ferry', name: 'Serena Bay Seasonal Ferry', kind: 'passenger fast ferry', knots: 26, pts: [[30.6, 58.6], [26.0, 57.0], [18.0, 55.4], [10.0, 55.0], [7.4, 53.6], [6.8, 49.0], [6.2, 45.4]] },
@@ -281,6 +287,9 @@ export const UTILITIES = [
   { kind: 'water-treatment', name: 'Tennalee Water Works', at: [36.0, 67.0], note: 'river intake above the falls' },
   { kind: 'water-treatment', name: 'Ocosta Water Plant', at: [19.0, 43.0], note: 'draws from Lake Ocosta' },
   { kind: 'wastewater', name: 'Calder Southside Treatment Plant', at: [37.8, 55.6] },
+  { kind: 'wastewater', name: 'Tennalee Falls Treatment Plant', at: [37.9, 65.2] },
+  { kind: 'wastewater', name: 'Coldwater Treatment Plant', at: [11.8, 81.6] },
+  { kind: 'wastewater', name: 'Graystone Treatment Plant', at: [65.8, 67.9] },
   { kind: 'wastewater', name: 'Corliss Industrial Wastewater', at: [55.0, 57.6] },
   { kind: 'wastewater', name: 'Haversham Treatment Plant', at: [55.8, 46.4] },
   { kind: 'wastewater', name: 'Mirabel Beach Treatment Plant', at: [5.4, 41.6] },
