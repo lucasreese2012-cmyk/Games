@@ -69,6 +69,43 @@ body.roam .roam-only { display: flex; }
 body.roam #roam { display: block; }
 body.roam #atlas { display: none; }
 
+/* World bible */
+#docs { position: absolute; inset: 0; display: none; grid-template-columns: 260px 1fr; min-height: 0; }
+body.docs #docs { display: grid; }
+body.docs #atlas, body.docs #roam, body.docs #panel { display: none; }
+.docnav { overflow: auto; border-right: 1px solid var(--line); padding: 12px 8px 24px; background: var(--panel); }
+.docnav h4 { margin: 14px 8px 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+.docnav button { display: block; width: 100%; text-align: left; border: 0; background: transparent; padding: 5px 8px; border-radius: 5px; line-height: 1.3; }
+.docnav button[aria-current="true"] { background: var(--ink); color: var(--paper); }
+.docnav button:hover { background: var(--chip); }
+.docnav button[aria-current="true"]:hover { background: var(--ink); }
+.doc { overflow: auto; padding: 24px 32px 64px; min-width: 0; }
+.doc > * { max-width: 78ch; }
+.doc h1 { font-size: 32px; line-height: 1.1; font-weight: 800; margin: 4px 0 14px; text-wrap: balance; }
+.doc h2 { font-size: 22px; margin: 30px 0 8px; font-weight: 800; border-top: 3px solid var(--route); padding-top: 10px; }
+.doc h3 { font-size: 17px; margin: 22px 0 6px; font-weight: 800; }
+.doc h4 { font-size: 14px; margin: 18px 0 4px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+.doc p, .doc li { line-height: 1.6; }
+.doc img { display: block; border-radius: 8px; border: 1px solid var(--line); margin: 12px 0; max-width: 100%; }
+.doc .tbl { overflow-x: auto; max-width: 100%; margin: 10px 0 16px; border: 1px solid var(--line); border-radius: 6px; }
+.doc table { border-collapse: collapse; font-size: 13px; min-width: 100%; }
+.doc th, .doc td { padding: 5px 9px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.doc th { background: var(--chip); font-weight: 600; white-space: nowrap; }
+.doc td { font-variant-numeric: tabular-nums; }
+.doc a { color: var(--shield); }
+.doc code { font-family: var(--f-mono); font-size: 12.5px; background: var(--chip); padding: 1px 4px; border-radius: 3px; }
+.doc pre { background: var(--chip); padding: 10px 12px; border-radius: 6px; overflow-x: auto; max-width: 100%; }
+.doc hr { border: 0; border-top: 1px solid var(--line); margin: 24px 0; }
+.doc .docmeta { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+@media (max-width: 720px) {
+  #docs { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
+  .docnav { display: flex; gap: 6px; overflow-x: auto; border-right: 0; border-bottom: 1px solid var(--line); padding: 8px; }
+  .docnav h4 { display: none; }
+  .docnav button { white-space: nowrap; width: auto; border: 1px solid var(--line); }
+  .doc { padding: 16px 16px 48px; }
+  .doc h1 { font-size: 26px; }
+}
+
 /* Side panel */
 #panel { position: absolute; top: 12px; left: 12px; bottom: 12px; width: 360px; max-width: calc(100% - 24px); display: flex; flex-direction: column; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); z-index: 4; min-height: 0; backdrop-filter: blur(6px); }
 body.roam #panel { display: none; }
@@ -183,6 +220,7 @@ body.coarse .help { display: none; }
     <div class="tabs" role="group" aria-label="View">
       <button id="tab-atlas" aria-pressed="true">Atlas</button>
       <button id="tab-roam" aria-pressed="false">Free roam</button>
+      <button id="tab-docs" aria-pressed="false">World bible</button>
     </div>
     <div class="roam-only">
       <div class="seg" role="group" aria-label="Movement">
@@ -220,6 +258,11 @@ body.coarse .help { display: none; }
         <div class="stick" id="stick"><i></i></div>
         <div class="updown"><button id="up" aria-label="Up">▲</button><button id="down" aria-label="Down">▼</button></div>
       </div>
+    </div>
+
+    <div id="docs">
+      <nav class="docnav" id="docnav" aria-label="Documents"></nav>
+      <article class="doc" id="doc"></article>
     </div>
 
     <aside id="panel" aria-label="Places">

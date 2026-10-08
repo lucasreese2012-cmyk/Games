@@ -1486,22 +1486,134 @@
     placeCamera(o.x, o.y, o.alt, o.yaw, o.pitch, o.move || 'fly');
   }
 
+
+  // ============================================================ WORLD BIBLE
+  const DOC_TREE = [
+    ['Foundations', [['00-research-principles.md', 'Research principles'], ['01-master-framework.md', 'Master framework']]],
+    ['Islands', [['islands/halcomb.md', 'Halcomb'], ['islands/graystone.md', 'Graystone'], ['islands/calder.md', 'Calder'], ['islands/corliss.md', 'Corliss'], ['islands/bellamy.md', 'Bellamy'], ['islands/mirabel.md', 'Mirabel'], ['islands/saint-ambrose.md', 'Saint Ambrose'], ['islands/wickham.md', 'Wickham'], ['islands/ossahatchee.md', 'Ossahatchee'], ['islands/gannet.md', 'Gannet Banks'], ['islands/sabal.md', 'Sabal Keys']]],
+    ['Systems', [['12-landmark-generation.md', 'Landmark generation'], ['13-world-scale.md', 'World scale'], ['14-exploration-density.md', 'Exploration density'], ['15-realism-audit.md', 'Realism audit'], ['16-atmospheric-pass.md', 'Atmospheric pass'], ['17-exploration-psychology.md', 'Exploration psychology'], ['18-writing-standard.md', 'Writing standard'], ['19-inspiration-matrix.md', 'Inspiration matrix'], ['20-master-map.md', 'Master map']]],
+    ['Registers', [['registers/landmarks.md', 'Landmarks'], ['registers/viewpoints.md', 'Viewpoints'], ['registers/beaches.md', 'Beaches'], ['registers/lakes.md', 'Lakes'], ['registers/forests.md', 'Forests'], ['registers/mountains.md', 'Mountains'], ['registers/districts.md', 'Districts']]],
+  ];
+  let DOC_BASE = null, docCur = null;
+  const docCache = new Map();
+  const normPath = (dir, rel) => {
+    const parts = (dir ? `${dir}/${rel}` : rel).split('/'), out = [];
+    for (const q of parts) { if (q === '..') out.pop(); else if (q && q !== '.') out.push(q); }
+    return out.join('/');
+  };
+  async function fetchDoc(path) {
+    if (docCache.has(path)) return docCache.get(path);
+    for (const b of DOC_BASE ? [DOC_BASE] : ['docs/', '../docs/']) {
+      try { const r = await fetch(b + path); if (r.ok) { DOC_BASE = b; const t = await r.text(); docCache.set(path, t); return t; } } catch (e) { /* try next */ }
+    }
+    throw new Error(`${path} is not available`);
+  }
+  function mdRender(src, dir) {
+    src = src.replace(/<!--[\s\S]*?-->/g, '');
+    const lines = src.split('\n');
+    const esc = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    const inline = (t) => {
+      let o = esc(t).replace(/&lt;br&gt;/g, '<br>');
+      o = o.replace(/`([^`]+)`/g, '<code>$1</code>');
+      o = o.replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, (m, a, u) => `<img alt="${a}" loading="lazy" src="${DOC_BASE}${normPath(dir, u)}">`);
+      o = o.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, t2, u) => (/^https?:/.test(u) ? `<a href="${u}" target="_blank" rel="noopener">${t2}</a>` : `<a href="#" data-doc="${normPath(dir, u)}">${t2}</a>`));
+      o = o.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+      o = o.replace(/(^|[\s(>])\*([^*\s][^*]*?)\*(?=[\s).,;:!?<]|$)/g, '$1<em>$2</em>');
+      o = o.replace(/(^|[\s(>])_([^_\s][^_]*?)_(?=[\s).,;:!?<]|$)/g, '$1<em>$2</em>');
+      return o;
+    };
+    const block = /^(#{1,4}\s|\||\s*[-*]\s+|\s*\d+\.\s+|```|---+\s*$)/;
+    let html = '', i = 0;
+    while (i < lines.length) {
+      const l = lines[i];
+      let m;
+      if (/^\s*$/.test(l)) { i++; continue; }
+      if ((m = l.match(/^(#{1,4})\s+(.*)$/))) { const n = m[1].length; html += `<h${n}>${inline(m[2])}</h${n}>`; i++; continue; }
+      if (/^---+\s*$/.test(l)) { html += '<hr>'; i++; continue; }
+      if (/^```/.test(l)) { const buf = []; i++; while (i < lines.length && !/^```/.test(lines[i])) buf.push(lines[i++]); i++; html += `<pre><code>${esc(buf.join('\n'))}</code></pre>`; continue; }
+      if (/^\|/.test(l)) {
+        const rows = []; while (i < lines.length && /^\|/.test(lines[i])) rows.push(lines[i++]);
+        const cells = (r) => r.trim().replace(/^\|/, '').replace(/\|$/, '').split(/(?<!\\)\|/).map((c) => c.trim().replace(/\\\|/g, '|').replace(/\\\\/g, '\\'));
+        const head = cells(rows[0]), body = rows.slice(2).map(cells);
+        html += `<div class="tbl"><table><thead><tr>${head.map((c) => `<th>${inline(c)}</th>`).join('')}</tr></thead><tbody>${body.map((r) => `<tr>${r.map((c) => `<td>${inline(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+        continue;
+      }
+      if ((m = l.match(/^\s*([-*]|\d+\.)\s+/))) {
+        const ordered = /\d/.test(m[1]), items = [];
+        while (i < lines.length && /^\s*([-*]|\d+\.)\s+/.test(lines[i])) {
+          let t = lines[i].replace(/^\s*([-*]|\d+\.)\s+/, ''); i++;
+          while (i < lines.length && /^\s{2,}\S/.test(lines[i]) && !/^\s*([-*]|\d+\.)\s+/.test(lines[i])) t += ` ${lines[i++].trim()}`;
+          items.push(t);
+        }
+        html += `<${ordered ? 'ol' : 'ul'}>${items.map((t) => `<li>${inline(t)}</li>`).join('')}</${ordered ? 'ol' : 'ul'}>`;
+        continue;
+      }
+      const buf = [l]; i++;
+      while (i < lines.length && !/^\s*$/.test(lines[i]) && !block.test(lines[i])) buf.push(lines[i++]);
+      html += `<p>${inline(buf.join(' '))}</p>`;
+    }
+    return html;
+  }
+  function renderDocNav() {
+    const nav = $('#docnav');
+    nav.innerHTML = '';
+    for (const [group, docs] of DOC_TREE) {
+      const h = document.createElement('h4'); h.textContent = group; nav.appendChild(h);
+      for (const [path, label] of docs) {
+        const b = document.createElement('button'); b.textContent = label; b.dataset.path = path;
+        b.onclick = () => openDoc(path);
+        nav.appendChild(b);
+      }
+    }
+  }
+  async function openDoc(path) {
+    const art = $('#doc');
+    docCur = path;
+    document.querySelectorAll('#docnav button').forEach((b) => b.setAttribute('aria-current', String(b.dataset.path === path)));
+    const active = document.querySelector('#docnav button[aria-current="true"]');
+    if (active && innerWidth <= 720) active.scrollIntoView({ inline: 'center', block: 'nearest' });
+    art.innerHTML = '<p class="docmeta">Loading…</p>';
+    try {
+      const text = await fetchDoc(path);
+      if (docCur !== path) return;
+      const dir = path.includes('/') ? path.slice(0, path.lastIndexOf('/')) : '';
+      art.innerHTML = mdRender(text, dir);
+      art.scrollTop = 0;
+      art.querySelectorAll('a[data-doc]').forEach((a) => {
+        a.onclick = (ev) => {
+          ev.preventDefault();
+          const target = a.dataset.doc;
+          if (target.endsWith('.md')) openDoc(target);
+          else if (target.startsWith('registers')) openDoc('registers/landmarks.md');
+        };
+      });
+    } catch (e) {
+      art.innerHTML = '';
+      const p = document.createElement('p'); p.className = 'docmeta'; p.textContent = `${e.message}. The documents are published with the explorer; when running locally, serve the repository root and open /game/.`;
+      art.appendChild(p);
+    }
+  }
+
   // ------------------------------------------------------------ modes
   function setMode(m) {
     state.mode = m;
     document.body.classList.toggle('roam', m === 'roam');
+    document.body.classList.toggle('docs', m === 'docs');
     $('#tab-atlas').setAttribute('aria-pressed', String(m === 'atlas'));
     $('#tab-roam').setAttribute('aria-pressed', String(m === 'roam'));
+    $('#tab-docs').setAttribute('aria-pressed', String(m === 'docs'));
+    if (m === 'docs' && !docCur) { renderDocNav(); openDoc('01-master-framework.md'); }
     if (m === 'roam' && !R) {
       initRoam();
       const v = W.viewpoints.find((q) => q.id === 'vp-ledford-dome');
       placeCamera(v.at[0], v.at[1], hAt(v.at[0], v.at[1]) + v.eye + 1.7, 2.55, -0.08, 'fly');
     }
     if (m === 'atlas') redraw();
-    try { history.replaceState(null, '', m === 'roam' ? '#roam' : '#atlas'); } catch (e) { /* sandboxed */ }
+    try { history.replaceState(null, '', `#${m === 'docs' ? 'bible' : m}`); } catch (e) { /* sandboxed */ }
   }
   $('#tab-atlas').onclick = () => setMode('atlas');
   $('#tab-roam').onclick = () => setMode('roam');
+  $('#tab-docs').onclick = () => setMode('docs');
   addEventListener('resize', () => { if (state.mode === 'atlas') redraw(); });
 
   // ------------------------------------------------------------ boot
@@ -1550,6 +1662,7 @@
     const hash = location.hash.slice(1);
     if (hash.startsWith('vp-') || W.viewpoints.some((v) => v.id === hash)) { const v = W.viewpoints.find((q) => q.id === hash); if (v) { roamToViewpoint(v); return; } }
     if (hash === 'roam') { setMode('roam'); return; }
+    if (hash === 'bible') { setMode('docs'); return; }
     setMode('atlas');
     drawAtlas();
   }

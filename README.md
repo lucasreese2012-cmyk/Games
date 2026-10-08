@@ -44,7 +44,8 @@ The first build generates the terrain (about a minute); later builds reuse it un
 
 `game/index.html` loads `game/data/` (terrain and land-cover rasters plus `world.json`) and offers:
 
-- **Atlas** — the whole archipelago with layers for roads, railways, landmarks, viewpoints and labels; search; and a card for every registered place.
-- **Free roam** — a 3D view of the terrain you can drive, walk or fly over, with roads, bridges, water, landmarks and the sky changing through the day.
+- **Atlas** — the whole archipelago with layers for roads, railways, ferries, power lines, places and labels; search across 460 places; and a card for every registered place with its measured data and sightlines.
+- **Free roam** — a 3D view of the generated terrain to fly, drive or walk over: engineered roads and bridges, lakes and the sea, towns, forests, landmark structures, ferries, a day–night cycle, a road-cruise mode, a minimap and touch controls.
+- **World bible** — every document in `docs/`, readable in the same page.
 
-Serve the folder with any static server (`npx serve game`, or `python3 -m http.server -d game`) and open it in a browser.
+Serve the repository root with any static server (`python3 -m http.server`) and open `http://localhost:8000/game/`. Controls in free roam: `W A S D` move, drag to look, `R`/`F` up and down, `Shift` faster, `1`/`2`/`3` fly, drive, walk, `C` cruise the nearest road, `[` `]` time of day, `M` back to the atlas.
