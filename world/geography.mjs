@@ -315,7 +315,7 @@ export const BASINS = [
   { id: 'upper-cove', name: 'Upper Tennalee Cove', at: [39.2, 75.2], rx: 1.9, ry: 1.3, rot: 35, floor: 560, blend: 0.8 },
   { id: 'shady-gap', name: 'Shady Gap', at: [14.0, 68.6], rx: 1.6, ry: 1.3, rot: 0, floor: 70, blend: 1.0 },
   { id: 'ledford-flats', name: 'Ledford Flats', at: [26.9, 68.8], rx: 1.4, ry: 1.1, rot: 10, floor: 105, blend: 0.6 },
-  { id: 'gate-heights-w', name: 'Gate Shelf (Halcomb)', at: [45.0, 76.4], rx: 1.0, ry: 1.4, rot: 0, floor: 228, blend: 1.0, late: true },
+  { id: 'gate-heights-w', name: 'Gate Shelf (Halcomb)', at: [45.3, 76.5], rx: 1.0, ry: 1.3, rot: 0, floor: 234, blend: 1.0, late: true },
   { id: 'gate-heights-e', name: 'Gate Shelf (Graystone)', at: [47.6, 76.6], rx: 0.9, ry: 1.6, rot: 0, floor: 232, blend: 1.0, late: true },
 ];
 
@@ -421,8 +421,8 @@ export const RIVERS = [
 // quarry (steep pit).
 export const LAKES = [
   // Halcomb
-  { id: 'calloway-lake', name: 'Calloway Lake', island: 'halcomb', kind: 'reservoir', level: 505, dam: [[34.7, 70.25], [35.25, 70.45]], region: [[34.5, 70.25], [35.3, 70.5], [38.0, 71.0], [40.4, 73.4], [40.4, 76.2], [37.6, 76.8], [34.6, 76.6], [32.6, 75.0], [32.4, 72.6], [33.8, 70.9]] },
-  { id: 'lake-hominy', name: 'Lake Hominy', island: 'halcomb', kind: 'reservoir', level: 168, dam: [[22.2, 69.3], [22.9, 69.4]], region: [[21.9, 69.2], [23.1, 69.3], [23.4, 71.8], [22.4, 72.0]] },
+  { id: 'calloway-lake', name: 'Calloway Lake', island: 'halcomb', kind: 'reservoir', level: 420, dam: [[34.29, 72.21], [35.85, 71.95]], upstream: [35.2, 72.9], region: [[34.3, 72.2], [35.9, 71.9], [38.0, 72.2], [40.4, 73.4], [40.4, 76.2], [37.6, 76.8], [34.6, 76.6], [32.6, 75.0], [32.4, 72.6]] },
+  { id: 'lake-hominy', name: 'Lake Hominy', island: 'halcomb', kind: 'reservoir', level: 376, dam: [[22.39, 72.42], [23.25, 72.3]], upstream: [23.1, 72.9], region: [[22.3, 72.4], [23.3, 72.3], [23.6, 74.0], [22.5, 74.2]] },
   { id: 'hickory-lake', name: 'Hickory Lake', island: 'halcomb', kind: 'basin', at: [6.6, 80.6], rx: 1.0, ry: 0.3, rot: 5, depth: 12 },
   { id: 'sinking-pond', name: 'Sinking Pond', island: 'halcomb', kind: 'basin', at: [6.0, 77.0], rx: 0.55, ry: 0.32, rot: 20, depth: 3 },
   { id: 'blue-hole', name: 'The Blue Hole', island: 'halcomb', kind: 'basin', at: [10.0, 82.8], rx: 0.12, ry: 0.1, rot: 0, depth: 22 },
@@ -430,7 +430,7 @@ export const LAKES = [
   { id: 'gooseberry-pond', name: 'Gooseberry Pond', island: 'halcomb', kind: 'basin', at: [17.7, 74.1], rx: 0.14, ry: 0.09, rot: 40, depth: 2 },
   { id: 'big-laurel-millpond', name: 'Big Laurel Millpond', island: 'halcomb', kind: 'basin', at: [36.95, 86.7], rx: 0.28, ry: 0.12, rot: 80, depth: 4 },
   // Graystone
-  { id: 'lake-whitlock', name: 'Lake Whitlock', island: 'graystone', kind: 'reservoir', level: 1046, dam: [[57.85, 83.25], [58.45, 83.45]], region: [[57.6, 83.2], [58.6, 83.4], [58.4, 85.4], [56.2, 86.0], [55.0, 84.8], [55.8, 83.6]] },
+  { id: 'lake-whitlock', name: 'Lake Whitlock', island: 'graystone', kind: 'reservoir', level: 942, dam: [[58.59, 80.66], [59.5, 81.12]], upstream: [58.8, 81.6], region: [[58.5, 80.6], [59.6, 81.1], [59.0, 84.0], [56.5, 84.6], [56.0, 83.0]] },
   { id: 'bright-water-lake', name: 'Bright Water Lake', island: 'graystone', kind: 'basin', at: [66.8, 85.7], rx: 0.75, ry: 0.32, rot: 75, depth: 14 },
   { id: 'fallon-reservoir', name: 'Fallon Reservoir', island: 'graystone', kind: 'basin', at: [71.0, 88.75], rx: 0.7, ry: 0.22, rot: 5, depth: 18 },
   { id: 'cutstone-quarry', name: 'Cutstone Quarry Hole', island: 'graystone', kind: 'quarry', at: [59.6, 70.3], rx: 0.42, ry: 0.3, rot: -20, depth: 70 },

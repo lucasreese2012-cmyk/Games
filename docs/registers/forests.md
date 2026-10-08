@@ -102,7 +102,7 @@
 - **Description:** Even-aged second-growth forest over the old logging grade, with rusting cable, rail spikes and a collapsed trestle in the hollows.
 - **Geographic justification:** Logged by railroad a century ago, now grown back as dense young forest.
 - **Visual identity:** Straight, crowded trees all the same size.
-- **Nearby features:** Big Laurel Logging Grade, Big Laurel Top, Big Laurel Millpond.
+- **Nearby features:** Big Laurel Incline, Big Laurel Top, Big Laurel Millpond.
 - **Why it is memorable:** Iron artefacts of the logging era scattered in the leaf litter.
 
 ### Hemlock Ghost Forest

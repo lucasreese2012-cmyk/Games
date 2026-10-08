@@ -47,16 +47,16 @@ Visible across an island or between islands; the fixed points by which the whole
 ### Calloway Dam
 
 - **Island:** Halcomb Island
-- **Location:** 2.3 km WSW of Calloway (grid 35.0 E / 70.4 N)
+- **Location:** 1.9 km W of Calloway (grid 35.1 E / 72.1 N)
 - **Type:** dam
-- **Ground elevation:** 376 m
-- **Structure height:** 135 m
-- **Visible from:** 18% of all land in the islands
-- **Seen from viewpoints:** Ledford Dome Observation Tower, Gooseberry Fire Tower, Calloway Dam Overlook, Heights Reservoir Park, Calder Tower Observation Deck, Landfill Hill, Harbor Bridge, Long Bridge Hump, and 5 more
-- **Description:** A 135 m concrete gravity dam in the quartzite gorge below Tennalee Cove, with a road across its crest and a powerhouse at its foot.
-- **Geographic justification:** The gorge narrows between quartzite ridges here, the cheapest place to hold back the river.
+- **Ground elevation:** 423 m
+- **Structure height:** 63 m
+- **Visible from:** 5% of all land in the islands
+- **Seen from viewpoints:** Ledford Dome Observation Tower, Calloway Dam Overlook, Mirabel Sands Rooftop, Big Water Tower
+- **Description:** A 1.6 km concrete gravity dam, 63 m high, closing the mouth of Tennalee Cove, with a road along its crest, a gated spillway over the old river channel and a powerhouse at its foot.
+- **Geographic justification:** The cove's mountain rim pinches in to its narrowest point where the Tennalee leaves it for the lower gorge, so one wall holds back the whole cove.
 - **Visual identity:** A pale concrete wall between wooded ridges.
-- **Nearby features:** Calloway Lake, Hogback, Calloway Dam Road.
+- **Nearby features:** Calloway Lake, Calloway village, Calloway Dam Road, the Lower Tennalee Gorge.
 - **Why it is memorable:** Standing on the crest with lake on one side and gorge on the other.
 
 ### Narrows Bridge
@@ -267,7 +267,7 @@ Visible across an island or between islands; the fixed points by which the whole
 - **Ground elevation:** 46 m
 - **Structure height:** 518 m
 - **Visible from:** 42% of all land in the islands
-- **Seen from viewpoints:** Ledford Dome Observation Tower, Ledford Gap Overlook, Painted Bald, Gooseberry Fire Tower, The Steeples, Calloway Dam Overlook, Thunderstone Overlook, Sawyer Gap Overlook, and 23 more
+- **Seen from viewpoints:** Ledford Dome Observation Tower, Ledford Gap Overlook, Painted Bald, Gooseberry Fire Tower, The Steeples, Thunderstone Overlook, Sawyer Gap Overlook, Whitlock Mountain Summit, and 22 more
 - **Description:** A guyed television mast 518 m tall, the tallest structure in the islands, with banks of red lights.
 - **Geographic justification:** Flat farmland lets a single tall mast cover all the islands.
 - **Visual identity:** A needle on the horizon with blinking red lights.
@@ -526,15 +526,16 @@ Dominate one region or valley and are visible from its roads.
 ### Lake Whitlock Dam
 
 - **Island:** Graystone Island
-- **Location:** 2.8 km E of Whitlock (grid 58.2 E / 83.4 N)
+- **Location:** 4.5 km SE of Whitlock (grid 59.1 E / 80.9 N)
 - **Type:** dam
-- **Ground elevation:** in the water
-- **Structure height:** 12 m
-- **Description:** A low stone dam with a waterfall spillway at the outlet of Lake Whitlock.
-- **Geographic justification:** Built to create the lake.
+- **Ground elevation:** 942 m
+- **Structure height:** 61 m
+- **Seen from viewpoints:** Grayback Summit, Anvil Rock, Bay Street Bluff, Ambrose Inlet Bridge, Bonnet Marsh Tower, Kestrel Hill
+- **Description:** A 60 m stone-faced dam with a stepped waterfall spillway at the outlet of Lake Whitlock.
+- **Geographic justification:** The upper Thunderhole valley narrows between granite shoulders before it steepens toward Thunderhole Falls.
 - **Visual identity:** Water sheeting over stone.
-- **Nearby features:** Whitlock, Highlands Road.
-- **Why it is memorable:** The spillway falls under the road bridge.
+- **Nearby features:** Lake Whitlock, Thunderhole Falls, Whitlock Grade.
+- **Why it is memorable:** The spillway steps roar white after every storm.
 
 ### Bright Water Gullies
 
@@ -686,7 +687,7 @@ Dominate one region or valley and are visible from its roads.
 - **Type:** elevator
 - **Ground elevation:** 20 m
 - **Structure height:** 45 m
-- **Seen from viewpoints:** Ledford Dome Observation Tower, Painted Bald, Gooseberry Fire Tower, The Steeples, Calloway Dam Overlook, Thunderstone Overlook, Sawyer Gap Overlook, Grayback Summit, and 6 more
+- **Seen from viewpoints:** Ledford Dome Observation Tower, Painted Bald, Gooseberry Fire Tower, The Steeples, Thunderstone Overlook, Sawyer Gap Overlook, Grayback Summit, Calder Tower Observation Deck, and 5 more
 - **Description:** Concrete grain silos beside the railroad.
 - **Geographic justification:** Collects grain and peanuts for shipping by rail.
 - **Visual identity:** Grey silos above flat land.
@@ -730,7 +731,7 @@ Dominate one region or valley and are visible from its roads.
 - **Type:** lighthouse
 - **Ground elevation:** 4 m
 - **Structure height:** 30 m
-- **Seen from viewpoints:** Painted Bald, Gooseberry Fire Tower, Lookout Bluff, Calloway Dam Overlook, Thunderstone Overlook, Calder Tower Observation Deck, Mirabel Sands Rooftop, Scrub Hill Fire Tower, and 1 more
+- **Seen from viewpoints:** Painted Bald, Gooseberry Fire Tower, Lookout Bluff, Thunderstone Overlook, Calder Tower Observation Deck, Mirabel Sands Rooftop, Scrub Hill Fire Tower, Fire Tower Hill
 - **Description:** A black-and-white banded iron lighthouse on the tip of the foreland.
 - **Geographic justification:** Marks the cape and Serena Pass.
 - **Visual identity:** Banded tower over the beach ridges.
@@ -753,15 +754,15 @@ Dominate one region or valley and are visible from its roads.
 
 #### Saint Ambrose Island
 
-### Haversham Spires
+### Haversham Steeples
 
 - **Island:** Saint Ambrose Island
 - **Location:** 1.3 km SW of Haversham (grid 53.8 E / 47.4 N)
-- **Type:** spires
+- **Type:** steeples
 - **Ground elevation:** 8 m
 - **Structure height:** 45 m
 - **Seen from viewpoints:** Ledford Dome Observation Tower, Painted Bald, Gooseberry Fire Tower, The Steeples, Whitlock Mountain Summit, Lantern Mountain, Grayback Summit, Anvil Rock, and 10 more
-- **Description:** Three tall white timber spires — a town-hall clock tower, a market-hall cupola and a fire-watch belfry — rising above the live oaks on the bluff.
+- **Description:** Three tall white wooden church steeples rising above the live oaks on the bluff.
 - **Geographic justification:** The town stands on the highest bluff on the island, so its tallest roofs clear the tree line for kilometres across the flat marsh.
 - **Visual identity:** Three white spires above the marsh.
 - **Nearby features:** Uptown Haversham, Bay Street.
@@ -892,27 +893,27 @@ Orient a single town, cove, marsh or beach.
 ### Big Laurel Shay
 
 - **Island:** Halcomb Island
-- **Location:** 2.8 km SSW of Big Laurel (grid 36.6 E / 84.6 N)
+- **Location:** 2.3 km SSW of Big Laurel (grid 36.7 E / 85.1 N)
 - **Type:** wreck
-- **Ground elevation:** 560 m
+- **Ground elevation:** 485 m
 - **Structure height:** 4 m
-- **Description:** The rusted frame and boiler of a geared logging locomotive lying on its side at the end of the old grade.
-- **Geographic justification:** Left where it stood when the logging railroad was pulled up.
-- **Visual identity:** Orange rust and moss.
-- **Nearby features:** Big Laurel Logging Grade.
+- **Description:** The rusted frame and boiler of a geared logging locomotive lying on its side beside a giant cable drum at the head of the incline.
+- **Geographic justification:** The incline's upper landing is the only level ground on the spur, a shelf where the slope eases before the next rise.
+- **Visual identity:** Orange rust and moss beside a drum wound with frayed steel cable.
+- **Nearby features:** Big Laurel Incline.
 - **Why it is memorable:** A locomotive in the middle of a forest.
 
 ### Drowned Mill Chimney
 
 - **Island:** Halcomb Island
-- **Location:** 1.6 km NNW of Calloway (grid 36.2 E / 73.0 N)
+- **Location:** 4.5 km NW of Calloway (grid 33.6 E / 74.9 N)
 - **Type:** ruins
 - **Ground elevation:** in the water
-- **Structure height:** 12 m
+- **Structure height:** 10 m
 - **Description:** The stone chimney of a mill on the drowned cove floor, which stands clear of the water only when the lake is drawn down in autumn.
 - **Geographic justification:** It stands on the old valley floor, below the reservoir's full-pool line.
 - **Visual identity:** A lone stone stack standing in grey mud flats.
-- **Nearby features:** Calloway Lake, Calloway village.
+- **Nearby features:** Calloway Lake, Cove Mountain, Little River.
 - **Why it is memorable:** Only visible a few weeks a year.
 
 ### Ledford Gap Foundations
@@ -970,7 +971,7 @@ Orient a single town, cove, marsh or beach.
 ### Calloway Houseboats
 
 - **Island:** Halcomb Island
-- **Location:** 0.7 km NNW of Calloway (grid 36.6 E / 72.2 N)
+- **Location:** 1.0 km NE of Calloway (grid 37.8 E / 72.6 N)
 - **Type:** boats
 - **Ground elevation:** in the water
 - **Structure height:** 4 m

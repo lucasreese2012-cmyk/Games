@@ -108,7 +108,7 @@
 ### Calloway Swim Beach
 
 - **Island:** Halcomb Island
-- **Location:** in Calloway (grid 36.5 E / 71.5 N)
+- **Location:** in Calloway (grid 37.3 E / 72.4 N)
 - **Length:** 0.3 km
 - **Sand:** imported sand
 - **Description:** A small trucked-in sand beach on Calloway Lake with a roped swimming area.

@@ -23,7 +23,7 @@
 | Ravenrock | Graystone Island | 1,390 | 1,191 | mountain |
 | Big Laurel Top | Halcomb Island | 1,380 | 1,382 | mountain |
 | Huckleberry Knob | Halcomb Island | 1,330 | 947 | knob |
-| Bearpen Knob | Halcomb Island | 1,320 | 961 | knob |
+| Bearpen Knob | Halcomb Island | 1,320 | 1,088 | knob |
 | Hawkbill Knob | Graystone Island | 1,310 | 1,217 | knob |
 | Sheepback Bald | Halcomb Island | 1,280 | 1,240 | grassy bald |
 | Bald Rock | Graystone Island | 1,260 | 920 | granite summit |
@@ -208,9 +208,9 @@
 - **Local relief:** 1,382 m within 3 km
 - **Form:** mountain
 - **Description:** A heavily forested summit cut by an abandoned logging railroad grade that zigzags up its western flank.
-- **Geographic justification:** Spur between Big Laurel Creek and the Narrows Branch; the only North Face slope gentle enough for a logging railroad.
+- **Geographic justification:** Spur between Big Laurel Creek and the Narrows Branch; the only North Face spur with a straight, even slope for a cable incline.
 - **Visual identity:** Visible switchback scars under second-growth forest.
-- **Nearby features:** Big Laurel Logging Grade, Big Laurel Millpond, the Narrows.
+- **Nearby features:** Big Laurel Incline, Big Laurel Millpond, the Narrows.
 - **Why it is memorable:** The old grade benches read like contour lines drawn on the mountain.
 
 ### Huckleberry Knob
@@ -224,14 +224,14 @@
 - **Geographic justification:** Short spur off the crest whose thin soils support heath rather than forest.
 - **Visual identity:** A rust-coloured knob in autumn above blue water.
 - **Nearby features:** Calloway Lake, Upper Cove, Tennalee Cove.
-- **Why it is memorable:** The best place to see the full branching outline of Calloway Lake.
+- **Why it is memorable:** The best place to see the whole of Calloway Lake laid out in its bowl of mountains.
 
 ### Bearpen Knob
 
 - **Island:** Halcomb Island
 - **Location:** Eastern end of the crest, above Hollow Reach — 3.2 km ENE of Upper Cove
 - **Elevation:** 1,320 m (surveyed terrain 1,320 m)
-- **Local relief:** 961 m within 3 km
+- **Local relief:** 1,088 m within 3 km
 - **Form:** knob
 - **Description:** The last high point before the crest drops into Hollow Reach: a rocky knob with a sheer eastern drop and the Bearpen Tunnel beneath its southern shoulder.
 - **Geographic justification:** The crest ends abruptly where the drowned gorge of Hollow Reach cuts through the massif.
@@ -363,11 +363,11 @@
 - **Elevation:** 640 m (surveyed terrain 640 m)
 - **Local relief:** 603 m within 3 km
 - **Form:** ridge
-- **Description:** A narrow, steep-sided ridge of hard quartzite that the Tennalee cuts through just below Calloway Dam.
-- **Geographic justification:** Resistant quartzite forms a long hogback that holds up the gorge where the dam was built.
+- **Description:** A narrow, steep-sided ridge of hard quartzite east of the Lower Tennalee Gorge, between Calloway Dam and the falls.
+- **Geographic justification:** Resistant quartzite stands up as a long hogback while the softer schist on either side has worn down.
 - **Visual identity:** A sharp, wooded ridgeline above the falls town.
 - **Nearby features:** Calloway Dam, Tennalee Falls, the Lower Tennalee Gorge.
-- **Why it is memorable:** Its quartzite ledges frame both ends of the dam.
+- **Why it is memorable:** Its quartzite ledges catch the first sun above the fog in the gorge.
 
 ### Hickory Knob
 

@@ -4,15 +4,15 @@
 
 | Lake | Island | Type | Surface (m) | Area (km²) | Max depth (m) |
 |---|---|---|---|---|---|
-| Calloway Lake | Halcomb Island | hydroelectric reservoir | 505.0 | 30.39 | 264.0 |
-| Lake Hominy | Halcomb Island | water-supply reservoir | 168.0 | 0.41 | 90.7 |
+| Calloway Lake | Halcomb Island | hydroelectric reservoir | 420.0 | 13.66 | 56.4 |
+| Lake Hominy | Halcomb Island | water-supply reservoir | 376.0 | 0.72 | 55.8 |
 | Hickory Lake | Halcomb Island | plateau lake | 321.3 | 0.95 | 11.9 |
 | Sinking Pond | Halcomb Island | karst pond | 375.0 | 0.55 | 3.0 |
 | The Blue Hole | Halcomb Island | karst spring pool | 17.6 | 0.04 | 19.7 |
 | Coldwater Quarry Lake | Halcomb Island | flooded quarry | -2.1 | 0.41 | 45.0 |
 | Gooseberry Pond | Halcomb Island | mountain bog pond | 861.3 | 0.04 | 1.9 |
 | Big Laurel Millpond | Halcomb Island | millpond | 85.4 | 0.10 | 3.8 |
-| Lake Whitlock | Graystone Island | highland reservoir | 1,046.0 | 3.41 | 114.3 |
+| Lake Whitlock | Graystone Island | highland reservoir | 942.0 | 5.42 | 69.1 |
 | Bright Water Lake | Graystone Island | highland lake | 594.1 | 0.76 | 13.9 |
 | Fallon Reservoir | Graystone Island | water-supply reservoir | 555.6 | 0.48 | 17.8 |
 | Cutstone Quarry Hole | Graystone Island | flooded quarry | 26.0 | 0.39 | 70.0 |
@@ -60,27 +60,27 @@
 ### Calloway Lake
 
 - **Island:** Halcomb Island
-- **Location:** Tennalee Cove, central Halcomb, behind Calloway Dam — 2.0 km NNW of Calloway
+- **Location:** Tennalee Cove, central Halcomb, behind Calloway Dam — 2.3 km NNW of Calloway
 - **Type:** hydroelectric reservoir
-- **Surface elevation:** 505.0 m
-- **Area:** 30.39 km²
-- **Maximum depth:** 264.0 m
-- **Description:** A long, branching reservoir that drowned the lower Tennalee Cove and the hollows around it. Arms of deep green water reach up every tributary valley; floating houseboats are moored in the sheltered coves.
+- **Surface elevation:** 420.0 m
+- **Area:** 13.66 km²
+- **Maximum depth:** 56.4 m
+- **Description:** A broad reservoir filling the flat floor of Tennalee Cove, ringed by steep wooded mountainsides, with short arms reaching into the mouths of the tributary hollows; floating houseboats are moored in the sheltered coves.
 - **Geographic justification:** A 135 m concrete dam in the narrow quartzite gorge below the cove stores the Tennalee for power and flood control.
-- **Visual identity:** Fjord-like, many-fingered outline under steep wooded slopes; a pale "bathtub ring" of bare clay shows when the water is drawn down in autumn.
+- **Visual identity:** A wide sheet of deep green water in a bowl of mountains; a pale "bathtub ring" of bare clay shows when the water is drawn down in autumn.
 - **Nearby features:** Calloway Dam, Calloway village and marina, Cove Mountain, Huckleberry Knob, Upper Cove.
 - **Why it is memorable:** In late autumn the drawdown exposes old roadbeds, stone walls and chimneys from the drowned valley.
 
 ### Lake Hominy
 
 - **Island:** Halcomb Island
-- **Location:** Hominy Creek valley north of Hominy — 3.0 km N of Hominy
+- **Location:** Upper Hominy Creek valley, 5 km above Hominy — 5.6 km N of Hominy
 - **Type:** water-supply reservoir
-- **Surface elevation:** 168.0 m
-- **Area:** 0.41 km²
-- **Maximum depth:** 90.7 m
+- **Surface elevation:** 376.0 m
+- **Area:** 0.72 km²
+- **Maximum depth:** 55.8 m
 - **Description:** A small reservoir with a grassy earth dam and a concrete spillway, surrounded by forest with no development on its shores.
-- **Geographic justification:** Dams the narrow lower valley of Hominy Creek to supply Ledford and Hominy.
+- **Geographic justification:** A 46 m earth dam closes the narrow upper valley of Hominy Creek, where the stream has cut a slot between Chestnut Knob and the Brushy spur.
 - **Visual identity:** A narrow ribbon of water in a wooded valley.
 - **Nearby features:** Hominy, Chestnut Knob, Sugartree Knob, I-21.
 - **Why it is memorable:** The stepped spillway roars white after storms.
@@ -166,7 +166,7 @@
 - **Description:** A small pond behind a dry-laid stone dam with the foundations of a mill at its foot.
 - **Geographic justification:** An old dam built to power a sawmill on the only gentle reach of the creek.
 - **Visual identity:** Still water above a stone wall.
-- **Nearby features:** Big Laurel, Big Laurel Logging Grade.
+- **Nearby features:** Big Laurel, Big Laurel Incline.
 - **Why it is memorable:** The mill's iron water wheel lies rusting below the dam.
 
 ## Graystone Island
@@ -174,13 +174,13 @@
 ### Lake Whitlock
 
 - **Island:** Graystone Island
-- **Location:** Whitlock Basin on the Graystone highlands — 1.7 km ENE of Whitlock
+- **Location:** Whitlock Basin on the Graystone highlands — 2.7 km ESE of Whitlock
 - **Type:** highland reservoir
-- **Surface elevation:** 1,046.0 m
-- **Area:** 3.41 km²
-- **Maximum depth:** 114.3 m
-- **Description:** A clear mountain lake held by a low stone dam on the upper Thunderhole, with summer houses, boathouses and a stone pavilion along its shore.
-- **Geographic justification:** A low dam at the outlet of the highland basin holds back the upper Thunderhole.
+- **Surface elevation:** 942.0 m
+- **Area:** 5.42 km²
+- **Maximum depth:** 69.1 m
+- **Description:** A clear mountain lake held by a 60 m stone-faced dam on the upper Thunderhole, filling the shallow highland valley below Whitlock village, with summer houses, boathouses and a stone pavilion along its north shore.
+- **Geographic justification:** The dam sits where the upper Thunderhole leaves the gentle highland surface and starts to steepen toward the falls, so a single wall floods the whole shallow valley above.
 - **Visual identity:** Still water reflecting Whitlock Mountain's granite face.
 - **Nearby features:** Whitlock village, Whitlock Mountain, the Highlands Road.
 - **Why it is memorable:** Mirror reflections of granite and fall colour at dawn.

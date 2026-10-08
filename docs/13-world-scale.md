@@ -3,8 +3,8 @@
 
 | Island | Type | Land (km²) | Inland water (km²) | Sea coast (km) | Length (km) | Highest point (m) | Mean elevation (m) | Land below 3 m | Slopes over 40% | Population |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Halcomb Island | Appalachian highland | 962 | 33.6 | 181 | 45.2 | Ledford Dome, 2,047 | 466 | 0% | 30% | 105,950 |
-| Graystone Island | Mountainous escarpment | 677 | 5.2 | 161 | 37.2 | Whitlock Mountain, 1,724 | 440 | 0% | 30% | 27,900 |
+| Halcomb Island | Appalachian highland | 978 | 17.4 | 181 | 45.2 | Ledford Dome, 2,047 | 465 | 0% | 30% | 105,430 |
+| Graystone Island | Mountainous escarpment | 675 | 7.2 | 161 | 37.2 | Whitlock Mountain, 1,724 | 439 | 0% | 30% | 27,900 |
 | Calder Island | Dense urban | 74 | 0.5 | 36 | 10.9 | Calder Heights, 92 | 18 | 6% | 0% | 362,000 |
 | Corliss Island | Industrial | 66 | 0.5 | 32 | 12.5 | unnamed, 48 | 4 | 23% | 0% | 14,000 |
 | Bellamy Island | Agricultural | 696 | 10.2 | 273 | 38.9 | Iron Mountain, 118 | 26 | 9% | 0% | 58,000 |
@@ -15,7 +15,7 @@
 | The Gannet Banks | Barrier islands | 34 | 0.1 | 92 | 26.7 | Kestrel Hill, 28 | 4 | 35% | 0% | 3,600 |
 | The Sabal Keys | Mangrove keys | 26 | 0.5 | 80 | 32.2 | unnamed, 2 | 1 | 100% | 0% | 750 |
 
-**Archipelago totals:** 4,579 km² of land, 62 km² of lakes and rivers, 2,749 km of sea coast (measured on the 50 m grid; a 10 m survey would add roughly a third), 632,460 permanent residents.
+**Archipelago totals:** 4,593 km² of land, 47 km² of lakes and rivers, 2,749 km of sea coast (measured on the 50 m grid; a 10 m survey would add roughly a third), 631,940 permanent residents.
 
 ## Driving times
 
@@ -23,32 +23,32 @@ Fastest road route at posted speeds, slowed for curvature and grade; ferry legs 
 
 | From \ To | Calder | Corliss | Tennalee Falls | Ledford | Coldwater | Narrows Landing | Graystone | Whitlock | Fallon | Haversham | Ambrose Beach | Bellamy | Mirabel Beach | Port Serena | Ossahatchee | Kestrel | Merrin | Wickham | Sabal |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **Calder** | — | 15 km<br>12 min | 16 km<br>13 min | 18 km<br>13 min | 49 km<br>33 min | 58 km<br>39 min | 29 km<br>1 h 10 min | 58 km<br>1 h 41 min | 63 km<br>1 h 44 min | 27 km<br>18 min | 41 km<br>31 min | 35 km<br>23 min | 51 km<br>36 min | 56 km<br>40 min | 59 km<br>41 min | 66 km<br>51 min | 83 km<br>1 h 04 min | 114 km<br>1 h 24 min | 96 km<br>1 h 12 min |
-| **Corliss** | 15 km<br>12 min | — | 27 km<br>19 min | 29 km<br>19 min | 59 km<br>38 min | 69 km<br>44 min | 36 km<br>1 h 15 min | 66 km<br>1 h 46 min | 71 km<br>1 h 49 min | 14 km<br>11 min | 29 km<br>23 min | 46 km<br>29 min | 62 km<br>41 min | 66 km<br>45 min | 47 km<br>33 min | 53 km<br>43 min | 70 km<br>56 min | 101 km<br>1 h 17 min | 84 km<br>1 h 04 min |
-| **Tennalee Falls** | 16 km<br>13 min | 27 km<br>19 min | — | 12 km<br>10 min | 42 km<br>29 min | 51 km<br>35 min | 41 km<br>1 h 21 min | 69 km<br>1 h 31 min | 75 km<br>1 h 55 min | 38 km<br>26 min | 53 km<br>38 min | 42 km<br>28 min | 58 km<br>40 min | 63 km<br>44 min | 71 km<br>48 min | 78 km<br>58 min | 95 km<br>1 h 11 min | 126 km<br>1 h 32 min | 108 km<br>1 h 19 min |
-| **Ledford** | 18 km<br>13 min | 29 km<br>19 min | 12 km<br>10 min | — | 32 km<br>21 min | 41 km<br>27 min | 43 km<br>1 h 21 min | 81 km<br>1 h 40 min | 77 km<br>1 h 55 min | 40 km<br>25 min | 55 km<br>38 min | 44 km<br>28 min | 60 km<br>40 min | 64 km<br>44 min | 73 km<br>48 min | 80 km<br>58 min | 96 km<br>1 h 11 min | 128 km<br>1 h 32 min | 110 km<br>1 h 19 min |
-| **Coldwater** | 49 km<br>33 min | 59 km<br>38 min | 42 km<br>29 min | 32 km<br>21 min | — | 10 km<br>7 min | 73 km<br>1 h 40 min | 111 km<br>2 h 00 min | 108 km<br>2 h 14 min | 71 km<br>45 min | 85 km<br>57 min | 75 km<br>47 min | 90 km<br>1 h 00 min | 95 km<br>1 h 04 min | 104 km<br>1 h 07 min | 110 km<br>1 h 17 min | 127 km<br>1 h 30 min | 158 km<br>1 h 51 min | 140 km<br>1 h 38 min |
-| **Narrows Landing** | 58 km<br>39 min | 69 km<br>44 min | 51 km<br>35 min | 41 km<br>27 min | 10 km<br>7 min | — | 83 km<br>1 h 47 min | 120 km<br>2 h 06 min | 117 km<br>2 h 20 min | 80 km<br>51 min | 95 km<br>1 h 03 min | 84 km<br>53 min | 99 km<br>1 h 06 min | 104 km<br>1 h 10 min | 113 km<br>1 h 13 min | 119 km<br>1 h 23 min | 136 km<br>1 h 37 min | 167 km<br>1 h 57 min | 150 km<br>1 h 44 min |
-| **Graystone** | 29 km<br>1 h 10 min | 36 km<br>1 h 15 min | 41 km<br>1 h 21 min | 43 km<br>1 h 21 min | 73 km<br>1 h 40 min | 83 km<br>1 h 47 min | — | 31 km<br>33 min | 34 km<br>34 min | 48 km<br>1 h 22 min | 63 km<br>1 h 34 min | 66 km<br>1 h 32 min | 81 km<br>1 h 44 min | 86 km<br>1 h 48 min | 81 km<br>1 h 44 min | 87 km<br>1 h 54 min | 104 km<br>2 h 07 min | 135 km<br>2 h 28 min | 117 km<br>2 h 15 min |
-| **Whitlock** | 58 km<br>1 h 41 min | 66 km<br>1 h 46 min | 69 km<br>1 h 31 min | 81 km<br>1 h 40 min | 111 km<br>2 h 00 min | 120 km<br>2 h 06 min | 31 km<br>33 min | — | 65 km<br>1 h 06 min | 77 km<br>1 h 53 min | 92 km<br>2 h 05 min | 111 km<br>1 h 58 min | 127 km<br>2 h 11 min | 132 km<br>2 h 15 min | 110 km<br>2 h 15 min | 117 km<br>2 h 25 min | 133 km<br>2 h 39 min | 164 km<br>2 h 59 min | 147 km<br>2 h 46 min |
-| **Fallon** | 63 km<br>1 h 44 min | 71 km<br>1 h 49 min | 75 km<br>1 h 55 min | 77 km<br>1 h 55 min | 108 km<br>2 h 14 min | 117 km<br>2 h 20 min | 34 km<br>34 min | 65 km<br>1 h 06 min | — | 82 km<br>1 h 55 min | 97 km<br>2 h 08 min | 100 km<br>2 h 05 min | 116 km<br>2 h 18 min | 120 km<br>2 h 22 min | 115 km<br>2 h 18 min | 122 km<br>2 h 28 min | 138 km<br>2 h 41 min | 170 km<br>3 h 02 min | 152 km<br>2 h 49 min |
-| **Haversham** | 27 km<br>18 min | 14 km<br>11 min | 38 km<br>26 min | 40 km<br>25 min | 71 km<br>45 min | 80 km<br>51 min | 48 km<br>1 h 22 min | 77 km<br>1 h 53 min | 82 km<br>1 h 55 min | — | 15 km<br>12 min | 38 km<br>30 min | 53 km<br>43 min | 58 km<br>47 min | 34 km<br>23 min | 39 km<br>32 min | 56 km<br>46 min | 88 km<br>1 h 07 min | 71 km<br>54 min |
-| **Ambrose Beach** | 41 km<br>31 min | 29 km<br>23 min | 53 km<br>38 min | 55 km<br>38 min | 85 km<br>57 min | 95 km<br>1 h 03 min | 63 km<br>1 h 34 min | 92 km<br>2 h 05 min | 97 km<br>2 h 08 min | 15 km<br>12 min | — | 53 km<br>42 min | 68 km<br>55 min | 73 km<br>59 min | 49 km<br>35 min | 25 km<br>20 min | 41 km<br>33 min | 103 km<br>1 h 19 min | 85 km<br>1 h 06 min |
-| **Bellamy** | 35 km<br>23 min | 46 km<br>29 min | 42 km<br>28 min | 44 km<br>28 min | 75 km<br>47 min | 84 km<br>53 min | 66 km<br>1 h 32 min | 111 km<br>1 h 58 min | 100 km<br>2 h 05 min | 38 km<br>30 min | 53 km<br>42 min | — | 16 km<br>13 min | 21 km<br>18 min | 58 km<br>46 min | 77 km<br>1 h 02 min | 94 km<br>1 h 16 min | 112 km<br>1 h 30 min | 95 km<br>1 h 17 min |
-| **Mirabel Beach** | 51 km<br>36 min | 62 km<br>41 min | 58 km<br>40 min | 60 km<br>40 min | 90 km<br>1 h 00 min | 99 km<br>1 h 06 min | 81 km<br>1 h 44 min | 127 km<br>2 h 11 min | 116 km<br>2 h 18 min | 53 km<br>43 min | 68 km<br>55 min | 16 km<br>13 min | — | 16 km<br>13 min | 74 km<br>59 min | 93 km<br>1 h 15 min | 110 km<br>1 h 28 min | 128 km<br>1 h 42 min | 110 km<br>1 h 29 min |
-| **Port Serena** | 56 km<br>40 min | 66 km<br>45 min | 63 km<br>44 min | 64 km<br>44 min | 95 km<br>1 h 04 min | 104 km<br>1 h 10 min | 86 km<br>1 h 48 min | 132 km<br>2 h 15 min | 120 km<br>2 h 22 min | 58 km<br>47 min | 73 km<br>59 min | 21 km<br>18 min | 16 km<br>13 min | — | 78 km<br>1 h 03 min | 97 km<br>1 h 19 min | 114 km<br>1 h 33 min | 133 km<br>1 h 46 min | 115 km<br>1 h 33 min |
-| **Ossahatchee** | 59 km<br>41 min | 47 km<br>33 min | 71 km<br>48 min | 73 km<br>48 min | 104 km<br>1 h 07 min | 113 km<br>1 h 13 min | 81 km<br>1 h 44 min | 110 km<br>2 h 15 min | 115 km<br>2 h 18 min | 34 km<br>23 min | 49 km<br>35 min | 58 km<br>46 min | 74 km<br>59 min | 78 km<br>1 h 03 min | — | 73 km<br>55 min | 90 km<br>1 h 09 min | 54 km<br>44 min | 37 km<br>31 min |
-| **Kestrel** | 66 km<br>51 min | 53 km<br>43 min | 78 km<br>58 min | 80 km<br>58 min | 110 km<br>1 h 17 min | 119 km<br>1 h 23 min | 87 km<br>1 h 54 min | 117 km<br>2 h 25 min | 122 km<br>2 h 28 min | 39 km<br>32 min | 25 km<br>20 min | 77 km<br>1 h 02 min | 93 km<br>1 h 15 min | 97 km<br>1 h 19 min | 73 km<br>55 min | — | 17 km<br>14 min | 128 km<br>1 h 39 min | 110 km<br>1 h 26 min |
-| **Merrin** | 83 km<br>1 h 04 min | 70 km<br>56 min | 95 km<br>1 h 11 min | 96 km<br>1 h 11 min | 127 km<br>1 h 30 min | 136 km<br>1 h 37 min | 104 km<br>2 h 07 min | 133 km<br>2 h 39 min | 138 km<br>2 h 41 min | 56 km<br>46 min | 41 km<br>33 min | 94 km<br>1 h 16 min | 110 km<br>1 h 28 min | 114 km<br>1 h 33 min | 90 km<br>1 h 09 min | 17 km<br>14 min | — | 144 km<br>1 h 52 min | 127 km<br>1 h 39 min |
-| **Wickham** | 114 km<br>1 h 24 min | 101 km<br>1 h 17 min | 126 km<br>1 h 32 min | 128 km<br>1 h 32 min | 158 km<br>1 h 51 min | 167 km<br>1 h 57 min | 135 km<br>2 h 28 min | 164 km<br>2 h 59 min | 170 km<br>3 h 02 min | 88 km<br>1 h 07 min | 103 km<br>1 h 19 min | 112 km<br>1 h 30 min | 128 km<br>1 h 42 min | 133 km<br>1 h 46 min | 54 km<br>44 min | 128 km<br>1 h 39 min | 144 km<br>1 h 52 min | — | 91 km<br>1 h 14 min |
-| **Sabal** | 96 km<br>1 h 12 min | 84 km<br>1 h 04 min | 108 km<br>1 h 19 min | 110 km<br>1 h 19 min | 140 km<br>1 h 38 min | 150 km<br>1 h 44 min | 117 km<br>2 h 15 min | 147 km<br>2 h 46 min | 152 km<br>2 h 49 min | 71 km<br>54 min | 85 km<br>1 h 06 min | 95 km<br>1 h 17 min | 110 km<br>1 h 29 min | 115 km<br>1 h 33 min | 37 km<br>31 min | 110 km<br>1 h 26 min | 127 km<br>1 h 39 min | 91 km<br>1 h 14 min | — |
+| **Calder** | — | 15 km<br>12 min | 16 km<br>13 min | 18 km<br>13 min | 49 km<br>33 min | 58 km<br>39 min | 29 km<br>1 h 10 min | 62 km<br>1 h 49 min | 63 km<br>1 h 44 min | 27 km<br>18 min | 41 km<br>31 min | 35 km<br>23 min | 51 km<br>36 min | 56 km<br>40 min | 59 km<br>41 min | 66 km<br>51 min | 83 km<br>1 h 04 min | 114 km<br>1 h 24 min | 96 km<br>1 h 12 min |
+| **Corliss** | 15 km<br>12 min | — | 27 km<br>19 min | 29 km<br>19 min | 59 km<br>38 min | 69 km<br>44 min | 36 km<br>1 h 15 min | 69 km<br>1 h 54 min | 71 km<br>1 h 49 min | 14 km<br>11 min | 29 km<br>23 min | 46 km<br>29 min | 62 km<br>41 min | 66 km<br>45 min | 47 km<br>33 min | 53 km<br>43 min | 70 km<br>56 min | 101 km<br>1 h 17 min | 84 km<br>1 h 04 min |
+| **Tennalee Falls** | 16 km<br>13 min | 27 km<br>19 min | — | 12 km<br>10 min | 42 km<br>29 min | 51 km<br>35 min | 41 km<br>1 h 21 min | 73 km<br>1 h 39 min | 75 km<br>1 h 55 min | 38 km<br>26 min | 53 km<br>38 min | 42 km<br>28 min | 58 km<br>40 min | 63 km<br>44 min | 71 km<br>48 min | 78 km<br>58 min | 95 km<br>1 h 11 min | 126 km<br>1 h 32 min | 108 km<br>1 h 19 min |
+| **Ledford** | 18 km<br>13 min | 29 km<br>19 min | 12 km<br>10 min | — | 32 km<br>21 min | 41 km<br>27 min | 43 km<br>1 h 21 min | 84 km<br>1 h 49 min | 77 km<br>1 h 55 min | 40 km<br>25 min | 55 km<br>38 min | 44 km<br>28 min | 60 km<br>40 min | 64 km<br>44 min | 73 km<br>48 min | 80 km<br>58 min | 96 km<br>1 h 11 min | 128 km<br>1 h 32 min | 110 km<br>1 h 19 min |
+| **Coldwater** | 49 km<br>33 min | 59 km<br>38 min | 42 km<br>29 min | 32 km<br>21 min | — | 10 km<br>7 min | 73 km<br>1 h 40 min | 115 km<br>2 h 08 min | 108 km<br>2 h 14 min | 71 km<br>45 min | 85 km<br>57 min | 75 km<br>47 min | 90 km<br>1 h 00 min | 95 km<br>1 h 04 min | 104 km<br>1 h 07 min | 110 km<br>1 h 17 min | 127 km<br>1 h 30 min | 158 km<br>1 h 51 min | 140 km<br>1 h 38 min |
+| **Narrows Landing** | 58 km<br>39 min | 69 km<br>44 min | 51 km<br>35 min | 41 km<br>27 min | 10 km<br>7 min | — | 83 km<br>1 h 47 min | 124 km<br>2 h 14 min | 117 km<br>2 h 20 min | 80 km<br>51 min | 95 km<br>1 h 03 min | 84 km<br>53 min | 99 km<br>1 h 06 min | 104 km<br>1 h 10 min | 113 km<br>1 h 13 min | 119 km<br>1 h 23 min | 136 km<br>1 h 37 min | 167 km<br>1 h 57 min | 150 km<br>1 h 44 min |
+| **Graystone** | 29 km<br>1 h 10 min | 36 km<br>1 h 15 min | 41 km<br>1 h 21 min | 43 km<br>1 h 21 min | 73 km<br>1 h 40 min | 83 km<br>1 h 47 min | — | 35 km<br>40 min | 34 km<br>34 min | 48 km<br>1 h 22 min | 63 km<br>1 h 34 min | 66 km<br>1 h 32 min | 81 km<br>1 h 44 min | 86 km<br>1 h 48 min | 81 km<br>1 h 44 min | 87 km<br>1 h 54 min | 104 km<br>2 h 07 min | 135 km<br>2 h 28 min | 117 km<br>2 h 15 min |
+| **Whitlock** | 62 km<br>1 h 49 min | 69 km<br>1 h 54 min | 73 km<br>1 h 39 min | 84 km<br>1 h 49 min | 115 km<br>2 h 08 min | 124 km<br>2 h 14 min | 35 km<br>40 min | — | 69 km<br>1 h 14 min | 81 km<br>2 h 00 min | 96 km<br>2 h 13 min | 115 km<br>2 h 06 min | 131 km<br>2 h 19 min | 135 km<br>2 h 23 min | 114 km<br>2 h 23 min | 120 km<br>2 h 33 min | 137 km<br>2 h 46 min | 168 km<br>3 h 06 min | 150 km<br>2 h 54 min |
+| **Fallon** | 63 km<br>1 h 44 min | 71 km<br>1 h 49 min | 75 km<br>1 h 55 min | 77 km<br>1 h 55 min | 108 km<br>2 h 14 min | 117 km<br>2 h 20 min | 34 km<br>34 min | 69 km<br>1 h 14 min | — | 82 km<br>1 h 55 min | 97 km<br>2 h 08 min | 100 km<br>2 h 05 min | 116 km<br>2 h 18 min | 120 km<br>2 h 22 min | 115 km<br>2 h 18 min | 122 km<br>2 h 28 min | 138 km<br>2 h 41 min | 170 km<br>3 h 02 min | 152 km<br>2 h 49 min |
+| **Haversham** | 27 km<br>18 min | 14 km<br>11 min | 38 km<br>26 min | 40 km<br>25 min | 71 km<br>45 min | 80 km<br>51 min | 48 km<br>1 h 22 min | 81 km<br>2 h 00 min | 82 km<br>1 h 55 min | — | 15 km<br>12 min | 38 km<br>30 min | 53 km<br>43 min | 58 km<br>47 min | 34 km<br>23 min | 39 km<br>32 min | 56 km<br>46 min | 88 km<br>1 h 07 min | 71 km<br>54 min |
+| **Ambrose Beach** | 41 km<br>31 min | 29 km<br>23 min | 53 km<br>38 min | 55 km<br>38 min | 85 km<br>57 min | 95 km<br>1 h 03 min | 63 km<br>1 h 34 min | 96 km<br>2 h 13 min | 97 km<br>2 h 08 min | 15 km<br>12 min | — | 53 km<br>42 min | 68 km<br>55 min | 73 km<br>59 min | 49 km<br>35 min | 25 km<br>20 min | 41 km<br>33 min | 103 km<br>1 h 19 min | 85 km<br>1 h 06 min |
+| **Bellamy** | 35 km<br>23 min | 46 km<br>29 min | 42 km<br>28 min | 44 km<br>28 min | 75 km<br>47 min | 84 km<br>53 min | 66 km<br>1 h 32 min | 115 km<br>2 h 06 min | 100 km<br>2 h 05 min | 38 km<br>30 min | 53 km<br>42 min | — | 16 km<br>13 min | 21 km<br>18 min | 58 km<br>46 min | 77 km<br>1 h 02 min | 94 km<br>1 h 16 min | 112 km<br>1 h 30 min | 95 km<br>1 h 17 min |
+| **Mirabel Beach** | 51 km<br>36 min | 62 km<br>41 min | 58 km<br>40 min | 60 km<br>40 min | 90 km<br>1 h 00 min | 99 km<br>1 h 06 min | 81 km<br>1 h 44 min | 131 km<br>2 h 19 min | 116 km<br>2 h 18 min | 53 km<br>43 min | 68 km<br>55 min | 16 km<br>13 min | — | 16 km<br>13 min | 74 km<br>59 min | 93 km<br>1 h 15 min | 110 km<br>1 h 28 min | 128 km<br>1 h 42 min | 110 km<br>1 h 29 min |
+| **Port Serena** | 56 km<br>40 min | 66 km<br>45 min | 63 km<br>44 min | 64 km<br>44 min | 95 km<br>1 h 04 min | 104 km<br>1 h 10 min | 86 km<br>1 h 48 min | 135 km<br>2 h 23 min | 120 km<br>2 h 22 min | 58 km<br>47 min | 73 km<br>59 min | 21 km<br>18 min | 16 km<br>13 min | — | 78 km<br>1 h 03 min | 97 km<br>1 h 19 min | 114 km<br>1 h 33 min | 133 km<br>1 h 46 min | 115 km<br>1 h 33 min |
+| **Ossahatchee** | 59 km<br>41 min | 47 km<br>33 min | 71 km<br>48 min | 73 km<br>48 min | 104 km<br>1 h 07 min | 113 km<br>1 h 13 min | 81 km<br>1 h 44 min | 114 km<br>2 h 23 min | 115 km<br>2 h 18 min | 34 km<br>23 min | 49 km<br>35 min | 58 km<br>46 min | 74 km<br>59 min | 78 km<br>1 h 03 min | — | 73 km<br>55 min | 90 km<br>1 h 09 min | 54 km<br>44 min | 37 km<br>31 min |
+| **Kestrel** | 66 km<br>51 min | 53 km<br>43 min | 78 km<br>58 min | 80 km<br>58 min | 110 km<br>1 h 17 min | 119 km<br>1 h 23 min | 87 km<br>1 h 54 min | 120 km<br>2 h 33 min | 122 km<br>2 h 28 min | 39 km<br>32 min | 25 km<br>20 min | 77 km<br>1 h 02 min | 93 km<br>1 h 15 min | 97 km<br>1 h 19 min | 73 km<br>55 min | — | 17 km<br>14 min | 128 km<br>1 h 39 min | 110 km<br>1 h 26 min |
+| **Merrin** | 83 km<br>1 h 04 min | 70 km<br>56 min | 95 km<br>1 h 11 min | 96 km<br>1 h 11 min | 127 km<br>1 h 30 min | 136 km<br>1 h 37 min | 104 km<br>2 h 07 min | 137 km<br>2 h 46 min | 138 km<br>2 h 41 min | 56 km<br>46 min | 41 km<br>33 min | 94 km<br>1 h 16 min | 110 km<br>1 h 28 min | 114 km<br>1 h 33 min | 90 km<br>1 h 09 min | 17 km<br>14 min | — | 144 km<br>1 h 52 min | 127 km<br>1 h 39 min |
+| **Wickham** | 114 km<br>1 h 24 min | 101 km<br>1 h 17 min | 126 km<br>1 h 32 min | 128 km<br>1 h 32 min | 158 km<br>1 h 51 min | 167 km<br>1 h 57 min | 135 km<br>2 h 28 min | 168 km<br>3 h 06 min | 170 km<br>3 h 02 min | 88 km<br>1 h 07 min | 103 km<br>1 h 19 min | 112 km<br>1 h 30 min | 128 km<br>1 h 42 min | 133 km<br>1 h 46 min | 54 km<br>44 min | 128 km<br>1 h 39 min | 144 km<br>1 h 52 min | — | 91 km<br>1 h 14 min |
+| **Sabal** | 96 km<br>1 h 12 min | 84 km<br>1 h 04 min | 108 km<br>1 h 19 min | 110 km<br>1 h 19 min | 140 km<br>1 h 38 min | 150 km<br>1 h 44 min | 117 km<br>2 h 15 min | 150 km<br>2 h 54 min | 152 km<br>2 h 49 min | 71 km<br>54 min | 85 km<br>1 h 06 min | 95 km<br>1 h 17 min | 110 km<br>1 h 29 min | 115 km<br>1 h 33 min | 37 km<br>31 min | 110 km<br>1 h 26 min | 127 km<br>1 h 39 min | 91 km<br>1 h 14 min | — |
 
 **Longest drive within each island**
 
 | Island | Between | Distance | Time |
 |---|---|---|---|
-| Halcomb Island | Upper Cove – Big Laurel | 106.2 km | 1 h 40 min |
-| Graystone Island | Fallon – Stillhouse | 90.1 km | 2 h 00 min |
+| Halcomb Island | Upper Cove – Big Laurel | 98.7 km | 1 h 31 min |
+| Graystone Island | Fallon – Stillhouse | 92.3 km | 2 h 06 min |
 | Calder Island | Calder – Calder | 0.0 km | 0 min |
 | Corliss Island | Corliss – Corliss | 0.0 km | 0 min |
 | Bellamy Island | Dunmore – Bellamy Bluffs | 43.5 km | 38 min |
@@ -90,7 +90,7 @@ Lengths and grades are of the routed, graded alignment (each road is engineered 
 |---|---|---|---|---|---|---|
 | Parkway | Balsam Crest Parkway | parkway | 93.7 | 8.0% | 19 | 47 |
 | I-21 | Interstate 21 | interstate | 85.7 | 5.0% | 16 | 16 |
-| CR 107 | Highlands Road | county | 69.6 | 13.0% | 12 | 12 |
+| CR 107 | Highlands Road | county | 68.2 | 13.0% | 10 | 10 |
 | SR 14 | Banks Highway | state | 63.0 | 8.5% | 0 | 0 |
 | SR 29 | The Trail | state | 54.4 | 2.1% | 0 | 0 |
 | SR 40 | Cross-Island Highway | state | 52.9 | 8.5% | 3 | 3 |
@@ -98,20 +98,20 @@ Lengths and grades are of the routed, graded alignment (each road is engineered 
 | SR 73 | Gap Road | state | 50.2 | 8.5% | 32 | 56 |
 | SR 17 | Coastal Highway | highway | 47.2 | 4.2% | 0 | 0 |
 | SR 64 | Graystone Coast Road | state | 44.9 | 8.5% | 11 | 11 |
-| SR 28 | Cove Road | state | 37.2 | 8.5% | 14 | 14 |
-| CR 2 | Stillhouse Road | county | 33.0 | 13.0% | 15 | 48 |
-| SR 2 | Narrows Road | state | 32.8 | 8.5% | 21 | 49 |
+| SR 28 | Cove Road | state | 39.1 | 8.5% | 16 | 39 |
 | SR 17 | Coastal Highway (Long Ridge) | state | 31.3 | 3.2% | 0 | 0 |
+| CR 2 | Stillhouse Road | county | 29.2 | 13.0% | 15 | 48 |
 | SR 30 | Beach Road | state | 28.7 | 4.0% | 0 | 0 |
 | SR 9 | Bellamy Highway | highway | 27.5 | 2.9% | 0 | 0 |
-| CR 28 | Calloway Dam Road | county | 25.5 | 13.0% | 15 | 47 |
+| SR 2 | Narrows Road | state | 26.0 | 8.5% | 2 | 2 |
 | CR 14 | Red Hills Road | county | 23.5 | 4.9% | 0 | 0 |
+| SR 107 | Whitlock Grade | state | 22.4 | 10.0% | 16 | 35 |
 | CR 21 | Old Valley Road | county | 22.3 | 13.0% | 0 | 0 |
-| SR 26 | Gate Road | state | 21.8 | 8.5% | 215 | 223 |
+| SR 26 | Gate Road | state | 21.2 | 8.5% | 83 | 85 |
 | SR 8 | South Shore Road | state | 20.7 | 8.5% | 1 | 1 |
+| CR 28 | Calloway Dam Road | county | 19.8 | 13.0% | 14 | 14 |
 | I-121 | Interstate 121 (Port Spur) | interstate | 19.4 | 3.9% | 0 | 0 |
 | SR 30 | Tableland Road | state | 19.4 | 8.5% | 8 | 8 |
-| SR 107 | Whitlock Grade | state | 18.8 | 8.5% | 27 | 66 |
 | CR 64 | Bright Water Road | county | 14.9 | 13.0% | 2 | 2 |
 | SR 1 | Keys Highway | state | 14.0 | 1.8% | 0 | 0 |
 | CR 9 | Ocosta River Road | county | 13.2 | 3.6% | 0 | 0 |
@@ -130,7 +130,7 @@ Lengths and grades are of the routed, graded alignment (each road is engineered 
 | Spur | Ledford Dome Road | parkway | 2.8 | 8.0% | 11 | 11 |
 | CR 31 | Tarrow Landing Road | county | 1.1 | 2.3% | 0 | 0 |
 
-Totals: 105 km interstate, 714 km state highways and parkway, 297 km county roads and city arterials (major roads only; local streets are not counted).
+Totals: 105 km interstate, 712 km state highways and parkway, 286 km county roads and city arterials (major roads only; local streets are not counted).
 
 ## Railways
 
@@ -142,7 +142,7 @@ Totals: 105 km interstate, 714 km state highways and parkway, 297 km county road
 | Bellamy & Southern Railway | active | freight | 54.3 | 2.2% |
 | Haversham Branch | active | freight | 6.3 | 2.2% |
 | Ocosta Station Spur | active | freight | 8.8 | 2.2% |
-| Big Laurel Logging Grade | abandoned | logging | 9.6 | 6.0% |
+| Big Laurel Incline | abandoned | logging incline | 2.2 | 45.0% |
 | Blue Wall Incline (unfinished) | abandoned | never completed | 8.8 | 6.0% |
 | Ossahatchee Cypress Tram | abandoned | logging | 14.6 | 3.1% |
 | Wickham Turpentine Tram | abandoned | naval stores | 7.7 | 2.2% |
@@ -158,57 +158,44 @@ Every water crossing over 120 m on the routed network. Named bridges carry their
 | Long Bridge | I-21 Interstate 21 | 3,475 | low trestle with high-rise navigation hump | 38 |
 | Ambrose Beach Line crossing | Ambrose Beach Line | 3,175 | girder or trestle | — |
 | Ambrose Beach Line crossing | Ambrose Beach Line | 3,175 | girder or trestle | — |
-| SR 2 crossing | SR 2 Narrows Road | 3,150 | girder or trestle | — |
 | South Sound Bridge | SR 17 Coastal Highway | 3,000 | twin concrete trestles | 20 |
 | South Sound Rail Bridge | Bellamy & Southern Railway | 2,850 | timber trestle with swing span | 4 |
 | Sabal Bridges | SR 1 Keys Highway | 2,750 | low concrete trestles | 4 |
-| SR 28 crossing | SR 28 Cove Road | 2,725 | girder or trestle | — |
 | Ambrose Inlet Bridge | SR 14 Banks Highway | 2,300 | concrete high-rise | 20 |
 | Mirabel Causeway | SR 40 Cross-Island Highway | 2,125 | causeway with bascule span | 7 |
 | Tennalee River Bridge | I-21 Interstate 21 | 2,100 | concrete segmental box girder | 24 |
 | Narrows Rail Bridge | Mainland Main Line | 2,025 | through truss with swing span | 6 |
 | Serena Causeway Bridge | CR 30 Serena Causeway | 1,875 | causeway with high-rise span | 19 |
 | Harbor Bridge | I-121 Interstate 121 (Port Spur) | 1,850 | steel girder with bascule span | 18 |
+| Calloway Lake Bridge | SR 28 Cove Road | 1,850 | low concrete trestle | 4 |
 | SR 1 crossing | SR 1 Keys Highway | 1,825 | girder or trestle | — |
 | SR 1 crossing | SR 1 Keys Highway | 1,775 | girder or trestle | — |
 | Bonnet Inlet Bridge | SR 14 Banks Highway | 1,575 | concrete girder | 9 |
 | Mainland Main Line crossing | Mainland Main Line | 1,575 | girder or trestle | — |
+| Calloway Lake Bridge | SR 28 Cove Road | 1,500 | low concrete trestle | 4 |
 | Sawpit Pass Bridge | SR 29 The Trail | 1,450 | steel swing span on timber approaches | 3 |
 | Market Street Bridge | Calder Passenger Branch | 1,400 | double-deck vertical lift | 11 |
 | Narrows Bridge | I-21 Interstate 21 | 1,250 | steel cantilever truss | 41 |
 | SR 14 crossing | SR 14 Banks Highway | 1,250 | girder or trestle | — |
 | Haversham River Bridge | SR 14 Banks Highway | 1,100 | steel bascule | 8 |
 | Ashwood Swing Bridge | Bellamy & Southern Railway | 1,100 | center-pier swing span | 3 |
-| SR 2 crossing | SR 2 Narrows Road | 1,050 | girder or trestle | — |
-| Gate Bridge | SR 26 Gate Road | 900 | suspension bridge, 1,020 m main span | 190 |
-| CR 28 crossing | CR 28 Calloway Dam Road | 800 | girder or trestle | — |
+| Whitlock Lake Bridge | SR 107 Whitlock Grade | 1,000 | steel deck arch | 34 |
+| Gate Bridge | SR 26 Gate Road | 900 | steel suspension bridge, 880 m main span | 225 |
 | SR 14 crossing | SR 14 Banks Highway | 800 | girder or trestle | — |
 | Sheepshead Inlet Bridge | SR 14 Banks Highway | 725 | concrete high-rise | 18 |
 | SR 14 crossing | SR 14 Banks Highway | 700 | girder or trestle | — |
-| CR 28 crossing | CR 28 Calloway Dam Road | 625 | girder or trestle | — |
-| CR 2 crossing | CR 2 Stillhouse Road | 625 | girder or trestle | — |
-| SR 28 crossing | SR 28 Cove Road | 575 | girder or trestle | — |
-| SR 28 crossing | SR 28 Cove Road | 575 | girder or trestle | — |
-| SR 28 crossing | SR 28 Cove Road | 550 | girder or trestle | — |
 | Mirabel Causeway | SR 40 Cross-Island Highway | 550 | causeway with bascule span | 7 |
 | Ashwood River Bridge | SR 40 Cross-Island Highway | 550 | concrete high-rise | 20 |
-| SR 2 crossing | SR 2 Narrows Road | 525 | girder or trestle | — |
-| SR 28 crossing | SR 28 Cove Road | 325 | girder or trestle | — |
+| Calloway Lake Bridge | SR 28 Cove Road | 375 | low concrete trestle | 4 |
 | Narrows Rail Bridge | Mainland Main Line | 325 | through truss with swing span | 6 |
-| SR 28 crossing | SR 28 Cove Road | 300 | girder or trestle | — |
 | SR 14 crossing | SR 14 Banks Highway | 250 | girder or trestle | — |
-| CR 107 crossing | CR 107 Highlands Road | 225 | girder or trestle | — |
-| SR 28 crossing | SR 28 Cove Road | 200 | girder or trestle | — |
-| CR 28 crossing | CR 28 Calloway Dam Road | 200 | girder or trestle | — |
 | SR 17 crossing | SR 17 Coastal Highway | 200 | girder or trestle | — |
 | SR 14 crossing | SR 14 Banks Highway | 200 | girder or trestle | — |
 | Bellamy & Southern Railway crossing | Bellamy & Southern Railway | 200 | girder or trestle | — |
-| SR 28 crossing | SR 28 Cove Road | 175 | girder or trestle | — |
-| CR 28 crossing | CR 28 Calloway Dam Road | 175 | girder or trestle | — |
+| Calloway Lake Bridge | SR 28 Cove Road | 175 | low concrete trestle | 4 |
 | SR 17 crossing | SR 17 Coastal Highway | 175 | girder or trestle | — |
 | SR 17 crossing | SR 17 Coastal Highway | 175 | girder or trestle | — |
 | SR 14 crossing | SR 14 Banks Highway | 175 | girder or trestle | — |
-| SR 28 crossing | SR 28 Cove Road | 125 | girder or trestle | — |
 | Mainland Main Line crossing | Mainland Main Line | 125 | girder or trestle | — |
 
 ## Tunnels and viaducts
@@ -219,7 +206,6 @@ Every water crossing over 120 m on the routed network. Named bridges carry their
 | viaduct | Gap Road | 300 |
 | viaduct | Gap Road | 850 |
 | viaduct | Gap Road | 3,100 |
-| viaduct | Narrows Road | 100 |
 | viaduct | Balsam Crest Parkway | 100 |
 | viaduct | Balsam Crest Parkway | 500 |
 | viaduct | Balsam Crest Parkway | 350 |
@@ -229,18 +215,15 @@ Every water crossing over 120 m on the routed network. Named bridges carry their
 | viaduct | Balsam Crest Parkway | 175 |
 | viaduct | Balsam Crest Parkway | 100 |
 | viaduct | Balsam Crest Parkway | 775 |
-| tunnel | Gate Road | 1,550 |
-| viaduct | Gate Road | 2,825 |
-| tunnel | Gate Road | 150 |
-| viaduct | Gate Road | 750 |
-| viaduct | Calloway Dam Road | 100 |
-| viaduct | Calloway Dam Road | 150 |
-| viaduct | Calloway Dam Road | 175 |
-| viaduct | Whitlock Grade | 2,575 |
-| viaduct | Whitlock Grade | 825 |
+| viaduct | Cove Road | 100 |
+| tunnel | Gate Road | 1,650 |
+| viaduct | Gate Road | 1,575 |
+| viaduct | Whitlock Grade | 350 |
+| viaduct | Whitlock Grade | 175 |
+| viaduct | Whitlock Grade | 450 |
+| viaduct | Whitlock Grade | 125 |
+| viaduct | Whitlock Grade | 700 |
 | viaduct | Stillhouse Road | 625 |
-| viaduct | Big Laurel Logging Grade | 1,700 |
-| viaduct | Big Laurel Logging Grade | 1,900 |
 | viaduct | Blue Wall Incline (unfinished) | 300 |
 | viaduct | Blue Wall Incline (unfinished) | 100 |
 | viaduct | Blue Wall Incline (unfinished) | 875 |
@@ -279,7 +262,7 @@ Every water crossing over 120 m on the routed network. Named bridges carry their
 | Sabal Fish House | fishing dock | 2.0 | 2.0 |
 | Port Serena Marina | marina | 3.0 | 3.0 |
 | Calder Yacht Basin | marina | 4.0 | 10.1 |
-| Calloway Marina | lake marina | 8.0 | 102.9 |
+| Calloway Marina | lake marina | 8.0 | 30.4 |
 | Oyster Point Docks | fishing harbor | 3.0 | 3.0 |
 
 ## Rivers
@@ -323,7 +306,7 @@ Every water crossing over 120 m on the routed network. Named bridges carry their
 | Narrows Branch | Halcomb Island | 5.2 | 566 | 568 | 110.4 m/km |
 | Stillhouse Branch | Graystone Island | 4.2 | 1,069 | 1,072 | 255.3 m/km |
 | Piney Creek | Halcomb Island | 4.2 | 441 | 443 | 106.7 m/km |
-| Ravenfork | Graystone Island | 3.0 | 931 | 934 | 316.6 m/km |
+| Ravenfork | Graystone Island | 3.0 | 931 | 934 | 316.5 m/km |
 
 ## Elevations
 

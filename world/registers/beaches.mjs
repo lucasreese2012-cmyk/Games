@@ -242,7 +242,7 @@ export const BEACHES = [
     look: 'Grey cobbles with the mainland across the strait.',
     near: 'Pigeonroost, Narrows Road.',
     memorable: 'The North Face rising straight up behind.' },
-  { id: 'calloway-swim-beach', name: 'Calloway Swim Beach', island: 'halcomb', at: [36.7, 71.2], len: 0.3, sand: 'imported sand',
+  { id: 'calloway-swim-beach', name: 'Calloway Swim Beach', island: 'halcomb', at: [37.3, 72.4], len: 0.3, sand: 'imported sand',
     desc: 'A small trucked-in sand beach on Calloway Lake with a roped swimming area.',
     why: 'Built at the most sheltered shore near the village.',
     look: 'Sand beach and floating dock on a mountain lake.',

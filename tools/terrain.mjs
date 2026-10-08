@@ -611,43 +611,54 @@ export function buildTerrain(log = () => {}, debugPts = null) {
   LAKES.forEach((lk, k) => {
     let level = lk.level;
     if (lk.kind === 'reservoir') {
-      // Flood upstream from the dam: only cells connected to the dam face and
-      // below the crest level fill, so the outline follows the drowned valley.
-      const [bx0, by0, bx1, by1] = bbox(lk.region);
-      const inReg = (i, x, y) => island[i] && pointInPoly(x, y, lk.region);
-      const mx = (lk.dam[0][0] + lk.dam[1][0]) / 2, my = (lk.dam[0][1] + lk.dam[1][1]) / 2;
-      let cx = 0, cy = 0;
-      for (const q of lk.region) { cx += q[0]; cy += q[1]; }
-      cx /= lk.region.length; cy /= lk.region.length;
-      const L = Math.hypot(cx - mx, cy - my) || 1;
+      // Flood upstream from the dam. The dam line is a barrier; water fills
+      // every connected cell below the pool level. If the pool escapes (finds
+      // the sea, or spreads beyond the search box) the level is above the
+      // basin's lowest saddle, so it is lowered until the basin holds.
+      const [d0, d1] = lk.dam;
+      const mx = (d0[0] + d1[0]) / 2, my = (d0[1] + d1[1]) / 2;
+      const up = lk.upstream || lk.at;
+      const R = 7;
+      const onDam = (x, y) => segDist(x, y, d0[0], d0[1], d1[0], d1[1])[0] < 0.045;
       let seed = -1, seedH = Infinity;
-      for (let t = 0.15; t <= 1.2; t += 0.05) {
-        const sx = mx + ((cx - mx) / L) * t, sy = my + ((cy - my) / L) * t;
-        const sc = g.col(sx), sr = g.row(sy);
-        for (let dr = -4; dr <= 4; dr++) for (let dc = -4; dc <= 4; dc++) {
-          const ii = (sr + dr) * g.nx + sc + dc;
-          if (h[ii] < seedH && inReg(ii, g.X(sc + dc), g.Y(sr + dr))) { seedH = h[ii]; seed = ii; }
-        }
-        if (seedH < level) break;
-      }
-      let area = 0;
-      if (seed >= 0 && seedH < level) {
-        const q = [seed];
-        lakeId[seed] = k + 1;
+      forBox(g, up[0] - 0.25, up[1] - 0.25, up[0] + 0.25, up[1] + 0.25, (i, x, y) => {
+        if (island[i] && !onDam(x, y) && h[i] < seedH) { seedH = h[i]; seed = i; }
+      });
+      const mark = new Uint8Array(N);
+      const flood = (lev) => {
+        mark.fill(0);
+        const q = [seed], cells = [];
+        mark[seed] = 1;
         while (q.length) {
           const i = q.pop();
-          water[i] = W.LAKE; surface[i] = level; area++;
+          cells.push(i);
+          if (water[i] === W.SEA || cells.length > 60000) return null;
           const c = i % g.nx, r = Math.floor(i / g.nx);
+          if (Math.abs(g.X(c) - mx) > R || Math.abs(g.Y(r) - my) > R) return null;
           for (const [dc, dr] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
             const j = (r + dr) * g.nx + c + dc;
-            if (lakeId[j] || h[j] >= level) continue;
-            const x = g.X(c + dc), y = g.Y(r + dr);
-            if (x < bx0 || x > bx1 || y < by0 || y > by1 || !inReg(j, x, y)) continue;
-            lakeId[j] = k + 1; q.push(j);
+            if (mark[j] || h[j] >= lev || !island[j]) continue;
+            if (onDam(g.X(c + dc), g.Y(r + dr))) continue;
+            mark[j] = 1; q.push(j);
           }
         }
+        return cells;
+      };
+      let cells = null;
+      while (seed >= 0 && level > seedH + 2) {
+        cells = flood(level);
+        if (cells) break;
+        level -= 2;
       }
-      lakeInfo.push({ id: lk.id, level, areaKm2: area * g.c * g.c });
+      if (level !== lk.level) log(`  ${lk.id}: pool lowered from ${lk.level} to ${level} m to stay below the basin saddle`);
+      for (const i of cells || []) { water[i] = W.LAKE; surface[i] = level; lakeId[i] = k + 1; }
+      // The dam itself: a crest 3 m above pool across the valley.
+      const crest = level + 3;
+      forBox(g, Math.min(d0[0], d1[0]) - 0.1, Math.min(d0[1], d1[1]) - 0.1, Math.max(d0[0], d1[0]) + 0.1, Math.max(d0[1], d1[1]) + 0.1, (i, x, y) => {
+        const [d] = segDist(x, y, d0[0], d0[1], d1[0], d1[1]);
+        if (d < 0.03 && h[i] < crest) { h[i] = crest; if (water[i] === W.RIVER) water[i] = W.LAND; }
+      });
+      lakeInfo.push({ id: lk.id, level, areaKm2: (cells || []).length * g.c * g.c, dam: lk.dam, crest });
       return;
     }
     if (lk.kind === 'arc') {
@@ -813,8 +824,8 @@ export function buildTerrain(log = () => {}, debugPts = null) {
       });
     }
     const routes = [
-      ...ROADS.map((r) => ({ ...r, kindOf: 'road', design: DESIGN[r.cls] || DESIGN.county })),
-      ...RAILS.map((r) => ({ ...r, kindOf: 'rail', design: r.status === 'abandoned' ? DESIGN['rail-abandoned'] : DESIGN.rail })),
+      ...ROADS.map((r) => ({ ...r, kindOf: 'road', design: { ...(DESIGN[r.cls] || DESIGN.county), ...(r.grade ? { grade: r.grade } : {}) } })),
+      ...RAILS.map((r) => ({ ...r, kindOf: 'rail', design: { ...(r.status === 'abandoned' ? DESIGN['rail-abandoned'] : DESIGN.rail), ...(r.grade ? { grade: r.grade } : {}), ...(r.viaductFill ? { viaductFill: r.viaductFill } : {}) } })),
     ];
     // Resolve waypoint lists: a vertex tagged 'r' is reached by a
     // grade-constrained search from the previous vertex; others are straight.
@@ -917,6 +928,25 @@ export function buildTerrain(log = () => {}, debugPts = null) {
     });
     const ci = g.row(p.at[1]) * g.nx + g.col(p.at[0]);
     h[ci] = p.z;
+  }
+
+  // ---- 12. Lake containment. --------------------------------------------------
+  // Shore cells that later grading or erosion left below an adjacent lake's
+  // surface would let the lake spill; they become a low natural rim instead.
+  {
+    let raised = 0, worst = 0;
+    for (let pass = 0; pass < 2; pass++) {
+      for (let r = 1; r < g.ny - 1; r++) for (let c = 1; c < g.nx - 1; c++) {
+        const i = r * g.nx + c;
+        if (water[i] !== W.LAND) continue;
+        let s = -Infinity;
+        for (const j of [i - 1, i + 1, i - g.nx, i + g.nx]) if (water[j] === W.LAKE) s = Math.max(s, surface[j]);
+        if (s === -Infinity || h[i] >= s + 0.2) continue;
+        worst = Math.max(worst, s + 0.3 - h[i]);
+        h[i] = s + 0.3; raised++;
+      }
+    }
+    log(`lake containment: raised ${raised} shore cells (largest ${worst.toFixed(1)} m)`);
   }
 
   return {

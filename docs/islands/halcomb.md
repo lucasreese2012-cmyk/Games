@@ -3,30 +3,30 @@
 
 | Measure | Value |
 |---|---|
-| Land area | 962 km² |
-| Inland water | 33.6 km² |
+| Land area | 978 km² |
+| Inland water | 17.4 km² |
 | Sea coastline | 181 km |
 | Greatest length | 45.2 km |
 | Highest point | Ledford Dome, 2,047 m |
-| Mean elevation | 466 m |
+| Mean elevation | 465 m |
 | Land below 3 m | 0% |
 | Slopes steeper than 40% | 30% |
-| Population | 105,950 |
-| Longest drive | Upper Cove – Big Laurel, 106.2 km, 1 h 40 min |
+| Population | 105,430 |
+| Longest drive | Upper Cove – Big Laurel, 98.7 km, 1 h 31 min |
 | Register entries | 27 landmarks, 14 viewpoints, 5 beaches, 8 lakes, 13 forests, 26 summits, 7 districts |
 
 **Land cover (share of land area)**
 
 | Cover | Share | km² |
 |---|---|---|
-| Pine–hardwood forest | 38.8% | 373.5 |
-| Cove hardwood and rhododendron | 22.5% | 216.7 |
-| Oak–hickory forest | 12.5% | 120.4 |
-| Pasture and hay | 10.2% | 97.7 |
-| Cropland | 4.9% | 47.3 |
+| Pine–hardwood forest | 39.2% | 383.8 |
+| Cove hardwood and rhododendron | 22.6% | 221.3 |
+| Oak–hickory forest | 12.3% | 120.5 |
+| Pasture and hay | 10.1% | 98.3 |
+| Cropland | 4.9% | 48.0 |
 | Northern hardwoods | 3.5% | 34.1 |
 | Bare rock and cliff | 3.5% | 33.9 |
-| Suburban | 1.9% | 17.9 |
+| Suburban | 1.8% | 17.9 |
 | Spruce–fir | 0.9% | 8.6 |
 
 **Settlements**
@@ -42,10 +42,10 @@
 | Hickory Flat | village | 2,400 | Plateau-top crossroads on the Hickory Tableland, flat enough for an airport and dry enough for a town. |
 | Hominy | village | 1,500 | Head of Hominy Bay, the only sheltered anchorage on the island's southwest coast. |
 | Shady Gap | village | 1,100 | Low saddle between the Coldwater Valley and the south coast used by the interstate and railroad; truck stops and a rail siding. |
-| Calloway | village | 900 | Lake village on the gentle east shore of Calloway Lake, the only flat bench near the dam, with marinas in the sheltered coves. |
-| Big Laurel | village | 700 | North-coast cove at the mouth of Big Laurel Creek; the only landing on the steep North Face. |
+| Calloway | village | 900 | Lake village on a gentle bench of the cove rim at the east end of Calloway Dam, above the sheltered east arm of the lake. |
 | Pigeonroost | hamlet | 300 | Where the Gap Road reaches the Narrows at the mouth of Pigeonroost Creek. |
 | Upper Cove | hamlet | 250 | Farm hamlet on the flat floor of the upper Tennalee Cove, above the reservoir's full-pool line. |
+| Big Laurel | hamlet | 180 | North-coast cove at the mouth of Big Laurel Creek, the only landing on the cliff-bound North Face; no road reaches it, only boats from Narrows Landing and the footpath along the old incline. |
 
 **Rivers**
 

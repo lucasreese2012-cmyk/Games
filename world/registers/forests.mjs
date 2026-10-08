@@ -29,7 +29,7 @@ export const FORESTS = [
     desc: 'Even-aged second-growth forest over the old logging grade, with rusting cable, rail spikes and a collapsed trestle in the hollows.',
     why: 'Logged by railroad a century ago, now grown back as dense young forest.',
     look: 'Straight, crowded trees all the same size.',
-    near: 'Big Laurel Logging Grade, Big Laurel Top, Big Laurel Millpond.',
+    near: 'Big Laurel Incline, Big Laurel Top, Big Laurel Millpond.',
     memorable: 'Iron artefacts of the logging era scattered in the leaf litter.' },
   { id: 'hemlock-ghost-forest', name: 'Hemlock Ghost Forest', island: 'halcomb', at: [36.0, 81.8], rx: 1.0, ry: 0.7, rot: 0, cover: 'cove-hardwood', only: NAT,
     desc: 'A stand of dead eastern hemlocks, grey and needle-less, standing over a thicket of rhododendron and young hardwoods.',

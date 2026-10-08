@@ -43,7 +43,7 @@ export const ROADS = [
     [26.4, 67.6], [26.8, 68.6], [27.2, 72.0, 'r'], [27.4, 75.2, 'r'], [27.3, 79.7, 'r'], [26.4, 88.4, 'r'],
   ] },
   { id: 'sr-2', name: 'Narrows Road', ref: 'SR 2', cls: 'state', pts: [
-    [12.6, 88.6], [15.8, 89.0, 'r'], [19.4, 89.2, 'r'], [22.8, 89.0, 'r'], [26.4, 88.4, 'r'], [29.8, 88.4, 'r'], [33.4, 88.4, 'r'], [37.2, 87.3, 'r'],
+    [12.6, 88.6], [15.8, 89.0, 'r'], [19.4, 89.2, 'r'], [22.8, 89.0, 'r'], [26.4, 88.4, 'r'], [29.8, 88.4, 'r'], [31.6, 88.3, 'r'],
   ] },
   { id: 'parkway', name: 'Balsam Crest Parkway', ref: 'Parkway', cls: 'parkway', box: 3, pts: [
     [14.4, 67.8], [16.2, 71.0, 'r'], [17.6, 74.4, 'r'], [21.0, 76.9, 'r'], [24.4, 78.5, 'r'], [27.3, 79.7, 'r'], [30.4, 80.1, 'r'],
@@ -67,7 +67,7 @@ export const ROADS = [
     [26.9, 68.6], [30.2, 67.4, 'r'], [33.4, 66.4, 'r'], [36.6, 66.4, 'r'], [39.2, 65.6, 'r'], [42.0, 66.2, 'r'], [44.4, 67.6, 'r'],
   ] },
   { id: 'dogwood-road', name: 'Dogwood Point Road', ref: 'CR 12', cls: 'county', pts: [[44.4, 67.6], [45.0, 71.4, 'r']] },
-  { id: 'hogback-road', name: 'Calloway Dam Road', ref: 'CR 28', cls: 'county', pts: [[36.4, 69.4], [35.7, 70.4, 'r'], [35.0, 70.35], [34.4, 70.6], [33.2, 72.6, 'r']] },
+  { id: 'hogback-road', name: 'Calloway Dam Road', ref: 'CR 28', cls: 'county', pts: [[36.4, 69.4], [36.0, 71.7, 'r'], [35.85, 71.97], [34.29, 72.23], [33.2, 72.6, 'r']] },
 
   // ---- Graystone Island -------------------------------------------------------
   { id: 'sr-64', name: 'Graystone Coast Road', ref: 'SR 64', cls: 'state', pts: [
@@ -151,7 +151,7 @@ export const RAILS = [
   ] },
   { id: 'haversham-branch', name: 'Haversham Branch', status: 'active', use: 'freight', pts: [[47.6, 49.4], [50.0, 49.0], [52.4, 48.6], [53.8, 48.2]] },
   { id: 'nuclear-spur', name: 'Ocosta Station Spur', status: 'active', use: 'freight', pts: [[17.4, 31.2], [19.4, 30.4], [23.0, 28.4, 'r'], [24.4, 27.8]] },
-  { id: 'big-laurel-grade', name: 'Big Laurel Logging Grade', status: 'abandoned', use: 'logging', box: 2, pts: [[37.2, 87.3], [36.6, 84.6, 'r']] },
+  { id: 'big-laurel-grade', name: 'Big Laurel Incline', status: 'abandoned', use: 'logging incline', grade: 0.45, viaductFill: 30, pts: [[37.15, 87.1], [36.95, 86.2], [36.7, 85.0]] },
   { id: 'blue-wall-incline', name: 'Blue Wall Incline (unfinished)', status: 'abandoned', use: 'never completed', pts: [[62.0, 69.8], [62.6, 72.4], [63.4, 74.8], [64.2, 76.8], [64.6, 78.2]] },
   { id: 'swamp-tram', name: 'Ossahatchee Cypress Tram', status: 'abandoned', use: 'logging', pts: [[58.6, 17.0], [55.0, 16.0], [51.0, 14.8], [47.0, 14.6], [44.4, 14.8]] },
   { id: 'turpentine-tram', name: 'Wickham Turpentine Tram', status: 'abandoned', use: 'naval stores', pts: [[13.6, 11.6], [11.0, 11.0], [8.4, 10.6], [6.0, 10.4]] },
@@ -178,7 +178,10 @@ export const BRIDGE_NAMES = [
   { name: 'Sheepshead Inlet Bridge', road: 'sr-14', near: [76.6, 17.4], type: 'concrete high-rise', clearance: 18 },
   { name: 'Bonnet Inlet Bridge', road: 'sr-14', near: [69.1, 41.5], type: 'concrete girder', clearance: 9 },
   { name: 'Haversham River Bridge', road: 'sr-14', near: [55.7, 47.8], type: 'steel bascule', clearance: 8 },
-  { name: 'Gate Bridge', road: 'sr-26', near: [46.0, 77.05], type: 'suspension bridge, 1,020 m main span', clearance: 190 },
+  { name: 'Gate Bridge', road: 'sr-26', near: [46.0, 77.05], type: 'steel suspension bridge, 880 m main span', clearance: 225 },
+  { name: 'Calloway Lake Bridge', road: 'sr-28', near: [37.3, 73.3], type: 'low concrete trestle', clearance: 4 },
+  { name: 'East Arm Bridge', road: 'sr-28', near: [37.8, 72.3], type: 'concrete girder', clearance: 4 },
+  { name: 'Whitlock Lake Bridge', road: 'sr-107', near: [58.8, 82.1], type: 'steel deck arch', clearance: 34 },
   { name: 'Sabal Bridges', road: 'keys-highway', near: [44.1, 3.8], type: 'low concrete trestles', clearance: 4 },
   { name: 'Ossahatchee Skyway', road: 'sr-29', near: [41.0, 17.6], type: 'wetland viaduct', clearance: 3 },
 ];
@@ -222,7 +225,7 @@ export const PORTS = [
   { id: 'sabal-fishhouse', name: 'Sabal Fish House', kind: 'fishing dock', depth: 2, berth: [[44.6, 1.6], [44.9, 1.7]] },
   { id: 'port-serena-marina', name: 'Port Serena Marina', kind: 'marina', depth: 3, berth: [[5.6, 28.4], [5.8, 29.0]] },
   { id: 'calder-yacht-basin', name: 'Calder Yacht Basin', kind: 'marina', depth: 4, berth: [[30.8, 58.0], [30.8, 58.8]] },
-  { id: 'calloway-marina', name: 'Calloway Marina', kind: 'lake marina', depth: 8, berth: [[36.6, 71.8], [36.7, 72.2]] },
+  { id: 'calloway-marina', name: 'Calloway Marina', kind: 'lake marina', depth: 8, berth: [[37.0, 72.5], [37.6, 72.55]] },
   { id: 'oyster-point-docks', name: 'Oyster Point Docks', kind: 'fishing harbor', depth: 3, berth: [[41.2, 52.6], [41.6, 52.7]] },
 ];
 
@@ -238,7 +241,7 @@ export const FERRIES = [
 export const POWER = {
   plants: [
     { id: 'corliss-gs', name: 'Corliss Generating Station', at: [53.6, 57.4], kind: 'gas combined-cycle with two retired coal stacks', mw: 1850, stacks: 2, stackH: 180 },
-    { id: 'calloway-hydro', name: 'Calloway Dam Powerhouse', at: [35.1, 70.0], kind: 'hydroelectric', mw: 300 },
+    { id: 'calloway-hydro', name: 'Calloway Dam Powerhouse', at: [35.0, 71.85], kind: 'hydroelectric', mw: 180 },
     { id: 'ocosta-nuclear', name: 'Ocosta Nuclear Station', at: [24.6, 27.6], kind: 'two-unit pressurized-water reactor with hyperbolic cooling towers', mw: 2300, towers: 2, towerH: 165 },
     { id: 'bellamy-solar', name: 'Bellamy Solar Farm', at: [21.6, 44.2], kind: 'utility photovoltaic', mw: 150, area: [[20.6, 43.6], [22.6, 43.6], [22.6, 44.8], [20.6, 44.8]] },
     { id: 'merrin-wind', name: 'Merrin Shoals Offshore Wind', at: [93.0, 14.0], kind: 'offshore wind, 28 turbines', mw: 380 },
@@ -258,7 +261,7 @@ export const POWER = {
   lines: [
     { kv: 500, from: 'mainland', to: 'narrows-sub', pts: [[13.6, 96.0], [13.6, 92.6], [13.4, 90.2], [12.8, 88.2]], note: '150 m crossing towers either side of the Narrows' },
     { kv: 500, from: 'narrows-sub', to: 'falls-sub', pts: [[12.8, 88.2], [13.8, 84.0], [14.2, 78.0], [14.6, 72.0], [14.8, 68.6], [17.0, 67.0], [22.0, 68.8], [27.0, 69.4], [31.0, 68.0], [35.8, 66.8]] },
-    { kv: 230, from: 'calloway-hydro', to: 'falls-sub', pts: [[35.1, 70.0], [35.4, 68.4], [35.8, 66.8]] },
+    { kv: 230, from: 'calloway-hydro', to: 'falls-sub', pts: [[35.0, 71.85], [35.6, 70.2], [35.5, 68.4], [35.8, 66.8]] },
     { kv: 230, from: 'falls-sub', to: 'calder-north-sub', pts: [[35.8, 66.8], [35.4, 64.8], [35.2, 63.0], [35.0, 61.6]], note: 'tall towers across the North Channel' },
     { kv: 230, from: 'corliss-gs', to: 'corliss-sub', pts: [[53.6, 57.4], [52.4, 58.2]] },
     { kv: 230, from: 'corliss-sub', to: 'calder-north-sub', pts: [[52.4, 58.2], [47.0, 58.6], [42.6, 59.0], [39.0, 60.2], [35.0, 61.6]] },

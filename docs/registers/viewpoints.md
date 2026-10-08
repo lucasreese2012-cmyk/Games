@@ -7,13 +7,13 @@
 | Ledford Dome Observation Tower | Halcomb Island | 2,047 | 14 | 64 |
 | Ledford Gap Overlook | Halcomb Island | 1,474 | 2 | 2 |
 | Painted Bald | Halcomb Island | 1,745 | 2 | 36 |
-| Gooseberry Fire Tower | Halcomb Island | 1,420 | 18 | 49 |
+| Gooseberry Fire Tower | Halcomb Island | 1,420 | 18 | 48 |
 | The Steeples | Halcomb Island | 1,620 | 2 | 40 |
 | Callahan Cliff Tops | Halcomb Island | 1,579 | 2 | 7 |
 | Lookout Bluff | Halcomb Island | 495 | 2 | 11 |
 | Hickory Falls Overlook | Halcomb Island | 213 | 2 | 3 |
 | Tableland Grade Pull-off | Halcomb Island | 69 | 2 | 4 |
-| Calloway Dam Overlook | Halcomb Island | 453 | 2 | 13 |
+| Calloway Dam Overlook | Halcomb Island | 427 | 2 | 5 |
 | Thunderstone Overlook | Halcomb Island | 1,508 | 2 | 14 |
 | Sawyer Gap Overlook | Halcomb Island | 1,097 | 2 | 13 |
 | Hominy Bay Overlook | Halcomb Island | 63 | 2 | 2 |
@@ -22,35 +22,35 @@
 | Lantern Mountain | Graystone Island | 1,580 | 2 | 25 |
 | Pale Wall Rim | Graystone Island | 1,400 | 2 | 6 |
 | Glassface Pull-off | Graystone Island | 263 | 2 | 0 |
-| Grayback Summit | Graystone Island | 455 | 2 | 45 |
+| Grayback Summit | Graystone Island | 455 | 2 | 46 |
 | Gate Bridge | Graystone Island | 0 | 4 | 3 |
 | Veil Falls Rim | Graystone Island | 163 | 2 | 5 |
 | Fallon Cliffs Pull-off | Graystone Island | 202 | 2 | 4 |
 | Cape Fallon Light | Graystone Island | 91 | 20 | 1 |
-| Anvil Rock | Graystone Island | 1,120 | 2 | 40 |
+| Anvil Rock | Graystone Island | 1,120 | 2 | 41 |
 | Ravenrock Ledges | Graystone Island | 1,297 | 2 | 19 |
 | Thunderhole Gorge Overlook | Graystone Island | 444 | 2 | 11 |
-| Heights Reservoir Park | Calder Island | 73 | 2 | 42 |
-| Calder Tower Observation Deck | Calder Island | 11 | 260 | 67 |
+| Heights Reservoir Park | Calder Island | 73 | 2 | 41 |
+| Calder Tower Observation Deck | Calder Island | 11 | 260 | 66 |
 | Tennalee River Bridge Crest | Calder Island | 0 | 30 | 29 |
-| Landfill Hill | Corliss Island | 48 | 2 | 61 |
-| Harbor Bridge | Corliss Island | 0 | 18 | 55 |
+| Landfill Hill | Corliss Island | 48 | 2 | 60 |
+| Harbor Bridge | Corliss Island | 0 | 18 | 54 |
 | Iron Mountain | Bellamy Island | 118 | 2 | 23 |
-| Long Bridge Hump | Bellamy Island | 0 | 40 | 53 |
+| Long Bridge Hump | Bellamy Island | 0 | 40 | 52 |
 | Sound Bluffs | Bellamy Island | 29 | 2 | 40 |
 | End of Mirabel Pier | Mirabel Island | 0 | 6 | 23 |
-| Cape Serena Light | Mirabel Island | 4 | 30 | 19 |
+| Cape Serena Light | Mirabel Island | 4 | 30 | 18 |
 | Mirabel Sands Rooftop | Mirabel Island | 5 | 95 | 34 |
 | Bay Street Bluff | Saint Ambrose Island | 7 | 2 | 38 |
 | Ambrose Inlet Bridge | Saint Ambrose Island | 0 | 22 | 33 |
-| Bonnet Marsh Tower | Saint Ambrose Island | 1 | 10 | 33 |
+| Bonnet Marsh Tower | Saint Ambrose Island | 1 | 10 | 34 |
 | Scrub Hill Fire Tower | Wickham Island | 76 | 30 | 21 |
 | Fire Tower Hill | Wickham Island | 70 | 25 | 15 |
 | Cedar Point | Wickham Island | 2 | 2 | 0 |
 | Highpine Fire Tower | Ossahatchee Island | 44 | 30 | 31 |
 | Big Water Tower | Ossahatchee Island | 20 | 15 | 10 |
 | Ossahatchee Skyway | Ossahatchee Island | 21 | 8 | 1 |
-| Kestrel Hill | The Gannet Banks | 28 | 2 | 21 |
+| Kestrel Hill | The Gannet Banks | 28 | 2 | 22 |
 | Cape Merrin Lighthouse | The Gannet Banks | 4 | 55 | 7 |
 | Sheepshead Inlet Bridge | The Gannet Banks | 0 | 18 | 8 |
 | Sabal Bridges | The Sabal Keys | 0 | 6 | 7 |
@@ -101,7 +101,7 @@
 - **Location:** 6.6 km SE of Coldwater (grid 17.0 E / 75.0 N)
 - **Elevation:** 1,420 m ground, eye 18 m above it
 - **Faces:** W
-- **Measured view:** 49 targets; nearest Stormhead Mountain (3.0 km), Sugartree Knob (3.9 km), Rich Mountain (6.8 km), Brushy Mountain (8.2 km), Coldspring Knob (9.5 km), Hickory Falls (10.2 km); farthest Cape Serena Light (52.7 km)
+- **Measured view:** 48 targets; nearest Stormhead Mountain (3.0 km), Sugartree Knob (3.9 km), Rich Mountain (6.8 km), Brushy Mountain (8.2 km), Coldspring Knob (9.5 km), Hickory Falls (10.2 km); farthest Cape Serena Light (52.7 km)
 - **Description:** A steel fire lookout cab on a grassy summit at the western end of the crest.
 - **Geographic justification:** Built to watch the Coldwater Valley and the Tableland for smoke.
 - **Visual identity:** Steel stairs and a glass cab.
@@ -176,14 +176,14 @@
 ### Calloway Dam Overlook
 
 - **Island:** Halcomb Island
-- **Location:** 2.0 km SW of Calloway (grid 35.5 E / 70.2 N)
-- **Elevation:** 453 m ground, eye 2 m above it
-- **Faces:** N
-- **Measured view:** 13 targets; nearest Calloway Dam (0.5 km), Huckleberry Knob (7.2 km), Cove Mountain (7.3 km), The Steeples (10.2 km), Brushy Mountain (11.4 km), Ledford Dome Tower (12.0 km); farthest Cape Serena Light (56.5 km)
-- **Description:** A viewing terrace on the dam crest between the lake and the gorge.
-- **Geographic justification:** The dam spans the narrowest point of the gorge.
-- **Visual identity:** Lake on one side, a 135 m drop on the other.
-- **Nearby features:** Calloway Dam, Calloway Lake, Hogback.
+- **Location:** 0.9 km W of Calloway (grid 36.2 E / 71.9 N)
+- **Elevation:** 427 m ground, eye 2 m above it
+- **Faces:** WNW
+- **Measured view:** 5 targets; nearest Calloway Dam (1.1 km), Huckleberry Knob (5.7 km), Ledford Dome Tower (11.1 km), Painted Bald (15.0 km), Sugartree Knob (15.9 km); farthest Sugartree Knob (15.9 km)
+- **Description:** A viewing terrace on the east abutment, level with the dam crest, between the lake and the gorge.
+- **Geographic justification:** The abutment knob is the high point where the cove rim meets the dam.
+- **Visual identity:** Lake on one side, a 60 m concrete face and the gorge on the other.
+- **Nearby features:** Calloway Dam, Calloway Lake, Calloway village.
 - **Why it is memorable:** Spillway gates opening in a flood.
 
 ### Thunderstone Overlook
@@ -296,7 +296,7 @@
 - **Island:** Graystone Island
 - **Location:** 5.7 km NNE of Graystone (grid 66.2 E / 73.6 N)
 - **Elevation:** 455 m ground, eye 2 m above it
-- **Measured view:** 45 targets; nearest Graystone (5.7 km), Thunderhole Falls (6.9 km), Anvil Rock (7.1 km), Glassface Dome (8.9 km), Hornet Spire (10.6 km), Bald Rock (11.1 km); farthest Highpine Fire Tower (59.9 km)
+- **Measured view:** 46 targets; nearest Graystone (5.7 km), Thunderhole Falls (6.9 km), Anvil Rock (7.1 km), Glassface Dome (8.9 km), Lake Whitlock Dam (10.2 km), Hornet Spire (10.6 km); farthest Highpine Fire Tower (59.9 km)
 - **Description:** The bare top of the granite monadnock.
 - **Geographic justification:** Isolated dome rising above the plain.
 - **Visual identity:** Bare rock in all directions.
@@ -361,7 +361,7 @@
 - **Location:** 12.2 km N of Graystone (grid 64.2 E / 80.4 N)
 - **Elevation:** 1,120 m ground, eye 2 m above it
 - **Faces:** SSE
-- **Measured view:** 40 targets; nearest Thunderhole Falls (4.4 km), Bald Rock (4.4 km), Hornet Spire (6.3 km), Lantern Mountain Radar Dome (7.0 km), Lantern Mountain (7.0 km), Grayback Mountain (7.1 km); farthest Kestrel Hill Dune (57.2 km)
+- **Measured view:** 41 targets; nearest Thunderhole Falls (4.4 km), Bald Rock (4.4 km), Lake Whitlock Dam (5.2 km), Hornet Spire (6.3 km), Lantern Mountain Radar Dome (7.0 km), Lantern Mountain (7.0 km); farthest Kestrel Hill Dune (57.2 km)
 - **Description:** The flat top of the granite prow.
 - **Geographic justification:** Projecting rock on the escarpment edge.
 - **Visual identity:** Drop on three sides.
@@ -402,7 +402,7 @@
 - **Location:** 3.8 km SW of Calder (grid 35.2 E / 58.6 N)
 - **Elevation:** 73 m ground, eye 2 m above it
 - **Faces:** NE
-- **Measured view:** 42 targets; nearest Calder Central Clock Tower (3.6 km), Calder (3.8 km), Calder Tower (4.1 km), Long Bridge (4.9 km), Tennalee River Bridge (5.1 km), Market Street Bridge (5.4 km); farthest Highpine Fire Tower (51.0 km)
+- **Measured view:** 41 targets; nearest Calder Central Clock Tower (3.6 km), Calder (3.8 km), Calder Tower (4.1 km), Long Bridge (4.9 km), Tennalee River Bridge (5.1 km), Market Street Bridge (5.4 km); farthest Highpine Fire Tower (51.0 km)
 - **Description:** The promenade around the reservoir at the top of the Heights.
 - **Geographic justification:** Highest ground in the city.
 - **Visual identity:** Skyline and harbour beyond the water.
@@ -414,7 +414,7 @@
 - **Island:** Calder Island
 - **Location:** in Calder (grid 37.8 E / 61.8 N)
 - **Elevation:** 11 m ground, eye 260 m above it
-- **Measured view:** 67 targets; nearest Calder Central Clock Tower (0.6 km), Market Street Bridge (1.9 km), Calder Harbor Light (3.8 km), Calder Heights Tower (3.9 km), Riverside (4.0 km), Tennalee River Bridge (4.4 km); farthest Scrub Hill Fire Tower (53.6 km)
+- **Measured view:** 66 targets; nearest Calder Central Clock Tower (0.6 km), Market Street Bridge (1.9 km), Calder Harbor Light (3.8 km), Calder Heights Tower (3.9 km), Riverside (4.0 km), Tennalee River Bridge (4.4 km); farthest Scrub Hill Fire Tower (53.6 km)
 - **Description:** The observation floor at the top of the tallest building in the islands.
 - **Geographic justification:** Downtown sits on the bluff at the river mouth.
 - **Visual identity:** Glass floor-to-ceiling windows.
@@ -442,7 +442,7 @@
 - **Location:** 5.3 km E of Corliss (grid 51.5 E / 57.3 N)
 - **Elevation:** 48 m ground, eye 2 m above it
 - **Faces:** N
-- **Measured view:** 61 targets; nearest Corliss Stacks (2.1 km), Corliss Gantry Cranes (4.1 km), Shipyard Goliath Crane (4.6 km), Corliss (5.3 km), Refinery Flare (7.1 km), Harbor Bridge (9.3 km); farthest Merrin Shoals Wind Farm (60.0 km)
+- **Measured view:** 60 targets; nearest Corliss Stacks (2.1 km), Corliss Gantry Cranes (4.1 km), Shipyard Goliath Crane (4.6 km), Corliss (5.3 km), Refinery Flare (7.1 km), Harbor Bridge (9.3 km); farthest Merrin Shoals Wind Farm (60.0 km)
 - **Description:** The grassy top of the capped landfill.
 - **Geographic justification:** Highest point on flat Corliss.
 - **Visual identity:** Cranes, stacks and ships.
@@ -455,7 +455,7 @@
 - **Location:** 4.1 km WNW of Corliss (grid 42.6 E / 59.5 N)
 - **Elevation:** 0 m ground, eye 18 m above it
 - **Faces:** N
-- **Measured view:** 55 targets; nearest Calder Harbor Light (2.1 km), Refinery Flare (2.5 km), Calder Stadium (3.8 km), Corliss (4.1 km), Corliss Lift Bridge (4.1 km), Calder Tower (5.3 km); farthest Ravenrock (39.6 km)
+- **Measured view:** 54 targets; nearest Calder Harbor Light (2.1 km), Refinery Flare (2.5 km), Calder Stadium (3.8 km), Corliss (4.1 km), Corliss Lift Bridge (4.1 km), Calder Tower (5.3 km); farthest Ravenrock (39.6 km)
 - **Description:** The bridge between Calder and Corliss.
 - **Geographic justification:** Crosses the Inner Harbor.
 - **Visual identity:** Port cranes and the city.
@@ -483,7 +483,7 @@
 - **Location:** 4.5 km NE of Bellamy Bluffs (grid 34.0 E / 53.6 N)
 - **Elevation:** 0 m ground, eye 40 m above it
 - **Faces:** N
-- **Measured view:** 53 targets; nearest Bellamy Bluffs (4.5 km), Calder Heights Tower (5.2 km), Calder Stadium (6.6 km), Calder (8.8 km), Calder Tower (9.0 km), Harbor Bridge (10.3 km); farthest Ravenrock (50.0 km)
+- **Measured view:** 52 targets; nearest Bellamy Bluffs (4.5 km), Calder Heights Tower (5.2 km), Calder Stadium (6.6 km), Calder (8.8 km), Calder Tower (9.0 km), Harbor Bridge (10.3 km); farthest Ravenrock (50.0 km)
 - **Description:** The high navigation span of the Long Bridge.
 - **Geographic justification:** Ships pass under the hump.
 - **Visual identity:** City ahead, sound on both sides.
@@ -524,7 +524,7 @@
 - **Location:** 4.8 km SSW of Port Serena (grid 2.4 E / 24.4 N)
 - **Elevation:** 4 m ground, eye 30 m above it
 - **Faces:** SW
-- **Measured view:** 19 targets; nearest Scrub Hill Fire Tower (15.2 km), Mirabel Sands (20.0 km), Bellamy Grain Elevator (21.5 km), Peanut Water Tower (21.6 km), Ocosta Cooling Towers (22.4 km), WCDR-TV Mast (27.5 km); farthest Coldspring Knob (59.6 km)
+- **Measured view:** 18 targets; nearest Scrub Hill Fire Tower (15.2 km), Mirabel Sands (20.0 km), Bellamy Grain Elevator (21.5 km), Peanut Water Tower (21.6 km), Ocosta Cooling Towers (22.4 km), WCDR-TV Mast (27.5 km); farthest Coldspring Knob (59.6 km)
 - **Description:** The gallery of the lighthouse on the foreland tip.
 - **Geographic justification:** Lighthouse at the cape.
 - **Visual identity:** Beach ridges and dune lakes below.
@@ -552,7 +552,7 @@
 - **Location:** in Haversham (grid 54.9 E / 48.4 N)
 - **Elevation:** 7 m ground, eye 2 m above it
 - **Faces:** E
-- **Measured view:** 38 targets; nearest Haversham Spires (1.5 km), Corliss Stacks (9.1 km), Calder Tower (21.7 km), Calder Heights Tower (21.9 km), Grayback Mountain (27.6 km), Grayback Mountain (27.6 km); farthest Gooseberry Fire Tower (46.3 km)
+- **Measured view:** 38 targets; nearest Haversham Steeples (1.5 km), Corliss Stacks (9.1 km), Calder Tower (21.7 km), Calder Heights Tower (21.9 km), Grayback Mountain (27.6 km), Grayback Mountain (27.6 km); farthest Gooseberry Fire Tower (46.3 km)
 - **Description:** The bluff-top promenade along Haversham's waterfront.
 - **Geographic justification:** The town sits on the highest bluff on the river.
 - **Visual identity:** Marsh, river and shrimp boats.
@@ -578,7 +578,7 @@
 - **Location:** 3.8 km WSW of Ambrose Beach (grid 65.0 E / 45.0 N)
 - **Elevation:** 1 m ground, eye 10 m above it
 - **Faces:** E
-- **Measured view:** 33 targets; nearest Grayback Mountain (28.6 km), Grayback Mountain (28.6 km), Glassface Dome (31.8 km), Thunderhole Falls (33.1 km), Anvil Rock (35.4 km), Wolfpen Mountain (35.5 km); farthest Gooseberry Fire Tower (56.6 km)
+- **Measured view:** 34 targets; nearest Grayback Mountain (28.6 km), Grayback Mountain (28.6 km), Glassface Dome (31.8 km), Thunderhole Falls (33.1 km), Anvil Rock (35.4 km), Wolfpen Mountain (35.5 km); farthest Gooseberry Fire Tower (56.6 km)
 - **Description:** A wooden observation tower in the marsh.
 - **Geographic justification:** Built for birdwatchers.
 - **Visual identity:** Marsh to the horizon.
@@ -673,7 +673,7 @@
 - **Island:** The Gannet Banks
 - **Location:** 0.7 km N of Kestrel (grid 73.3 E / 23.9 N)
 - **Elevation:** 28 m ground, eye 2 m above it
-- **Measured view:** 21 targets; nearest Ambrose Inlet Bridge (5.9 km), Highpine Fire Tower (16.6 km), Cape Merrin Lighthouse (18.7 km), Merrin Shoals Wind Farm (22.0 km), Haversham Spires (30.5 km), Corliss Stacks (38.9 km); farthest Hornet Spire (59.8 km)
+- **Measured view:** 22 targets; nearest Ambrose Inlet Bridge (5.9 km), Highpine Fire Tower (16.6 km), Cape Merrin Lighthouse (18.7 km), Merrin Shoals Wind Farm (22.0 km), Haversham Steeples (30.5 km), Corliss Stacks (38.9 km); farthest Hornet Spire (59.8 km)
 - **Description:** The bare summit of the big dune.
 - **Geographic justification:** Tallest dune on the Banks.
 - **Visual identity:** Ocean, sound and village.

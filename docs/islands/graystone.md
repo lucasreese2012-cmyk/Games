@@ -3,30 +3,30 @@
 
 | Measure | Value |
 |---|---|
-| Land area | 677 km² |
-| Inland water | 5.2 km² |
+| Land area | 675 km² |
+| Inland water | 7.2 km² |
 | Sea coastline | 161 km |
 | Greatest length | 37.2 km |
 | Highest point | Whitlock Mountain, 1,724 m |
-| Mean elevation | 440 m |
+| Mean elevation | 439 m |
 | Land below 3 m | 0% |
 | Slopes steeper than 40% | 30% |
 | Population | 27,900 |
-| Longest drive | Fallon – Stillhouse, 90.1 km, 2 h 00 min |
+| Longest drive | Fallon – Stillhouse, 92.3 km, 2 h 06 min |
 | Register entries | 17 landmarks, 12 viewpoints, 5 beaches, 4 lakes, 10 forests, 17 summits, 2 districts |
 
 **Land cover (share of land area)**
 
 | Cover | Share | km² |
 |---|---|---|
-| Pine–hardwood forest | 35.8% | 242.8 |
-| Cove hardwood and rhododendron | 30.2% | 204.4 |
-| Pasture and hay | 10.3% | 69.5 |
-| Oak–hickory forest | 9.7% | 65.5 |
-| Cropland | 5.1% | 34.8 |
+| Pine–hardwood forest | 35.9% | 242.8 |
+| Cove hardwood and rhododendron | 29.7% | 200.6 |
+| Pasture and hay | 10.2% | 69.1 |
+| Oak–hickory forest | 9.6% | 64.7 |
+| Cropland | 5.2% | 34.8 |
+| Northern hardwoods | 3.8% | 25.6 |
 | Bare rock and cliff | 3.8% | 25.4 |
-| Northern hardwoods | 3.4% | 23.0 |
-| Suburban | 0.8% | 5.2 |
+| Suburban | 0.8% | 5.4 |
 
 **Settlements**
 
@@ -49,5 +49,5 @@
 | Quarry Creek | 7.3 km | 122 m | 16.7 m/km |
 | Hollow Creek | 5.4 km | 898 m | 166.4 m/km |
 | Stillhouse Branch | 4.2 km | 1,072 m | 255.3 m/km |
-| Ravenfork | 3.0 km | 934 m | 316.6 m/km |
+| Ravenfork | 3.0 km | 934 m | 316.5 m/km |
 <!-- END GENERATED -->

@@ -5,13 +5,13 @@
 | District | Island | Form | Building heights (m) |
 |---|---|---|---|
 | Downtown Calder | Calder Island | high-rise core | 40–270 |
-| Old Market | Calder Island | historic waterfront | 8–20 |
-| Calder Point | Calder Island | historic residential | 8–16 |
+| Old Market | Calder Island | waterfront | 8–20 |
+| Calder Point | Calder Island | older residential | 8–16 |
 | Station Square | Calder Island | transit hub | 15–60 |
 | Midtown | Calder Island | mid-rise mixed | 20–110 |
 | Uptown | Calder Island | residential towers | 15–90 |
 | Northpoint | Calder Island | residential | 8–30 |
-| The Heights | Calder Island | historic residential | 8–18 |
+| The Heights | Calder Island | older residential | 8–18 |
 | Reservoir Hill | Calder Island | residential | 8–16 |
 | Mill Creek | Calder Island | rowhouses | 8–16 |
 | Westside | Calder Island | residential | 8–25 |
@@ -20,19 +20,19 @@
 | South Shore | Calder Island | waterfront residential | 8–40 |
 | Southside | Calder Island | industrial | 8–20 |
 | Harborside | Calder Island | converted warehouses | 10–50 |
-| Cotton Exchange | Calder Island | historic commercial | 8–30 |
+| Cotton Exchange | Calder Island | warehouse commercial | 8–30 |
 | Hospital Hill | Calder Island | institutional | 15–70 |
 | University | Calder Island | campus | 8–40 |
 | Stadium District | Calder Island | entertainment | 10–50 |
-| Cypress Row | Calder Island | historic rowhouses | 8–14 |
+| Cypress Row | Calder Island | rowhouses | 8–14 |
 | Brickyard | Calder Island | lofts | 8–24 |
 | Gasworks | Calder Island | post-industrial | 8–30 |
 | Fairgrounds | Calder Island | mixed | 6–15 |
 | Ferry Landing | Calder Island | transport | 8–25 |
-| Tennalee Falls Mill District | Halcomb Island | historic industrial | 10–30 |
+| Tennalee Falls Mill District | Halcomb Island | mill district | 10–30 |
 | Riverside | Halcomb Island | residential and wharves | 8–25 |
 | Halcomb Heights | Halcomb Island | suburb | 6–12 |
-| Falls Hill | Halcomb Island | historic residential | 6–12 |
+| Falls Hill | Halcomb Island | older residential | 6–12 |
 | Tennalee Junction | Halcomb Island | rail yard | 6–15 |
 | Corliss Town | Corliss Island | worker housing | 5–12 |
 | Container Terminal | Corliss Island | port | 5–75 |
@@ -40,14 +40,14 @@
 | Shipyard | Corliss Island | shipyard | 10–90 |
 | Bellamy Bluffs | Bellamy Island | suburb | 6–14 |
 | Airport Commerce Park | Bellamy Island | logistics | 8–20 |
-| Courthouse Square | Bellamy Island | historic town centre | 6–25 |
+| Courthouse Square | Bellamy Island | town centre | 6–25 |
 | Depot District | Bellamy Island | agricultural industry | 6–35 |
 | The Strip | Mirabel Island | resort commercial | 6–40 |
 | Pier District | Mirabel Island | amusement | 6–25 |
 | Condo Row | Mirabel Island | high-rise resort | 30–95 |
 | Port Serena Harbor | Mirabel Island | marina village | 6–15 |
-| Bay Street | Saint Ambrose Island | historic waterfront | 6–15 |
-| The Point | Saint Ambrose Island | historic residential | 6–12 |
+| Bay Street | Saint Ambrose Island | waterfront | 6–15 |
+| The Point | Saint Ambrose Island | older residential | 6–12 |
 | Shrimp Docks | Saint Ambrose Island | fishing harbor | 5–10 |
 | Uptown Haversham | Saint Ambrose Island | town commercial | 6–14 |
 | Graystone Harbor | Graystone Island | harbour town | 6–18 |
@@ -61,7 +61,7 @@
 
 - **Island:** Halcomb Island
 - **Location:** in Tennalee Falls (grid 36.9 E / 65.9 N)
-- **Urban form:** historic industrial
+- **Urban form:** mill district
 - **Buildings:** 10–30 m tall, 60% of ground built or paved
 - **Ground elevation:** 18 m
 - **Extent:** about 0.8 km²
@@ -103,7 +103,7 @@
 
 - **Island:** Halcomb Island
 - **Location:** 1.0 km NW of Tennalee Falls (grid 36.0 E / 67.2 N)
-- **Urban form:** historic residential
+- **Urban form:** older residential
 - **Buildings:** 6–12 m tall, 40% of ground built or paved
 - **Ground elevation:** 76 m
 - **Extent:** about 0.6 km²
@@ -205,7 +205,7 @@
 
 - **Island:** Calder Island
 - **Location:** 1.7 km NE of Calder (grid 39.0 E / 62.6 N)
-- **Urban form:** historic waterfront
+- **Urban form:** waterfront
 - **Buildings:** 8–20 m tall, 70% of ground built or paved
 - **Ground elevation:** 4 m
 - **Extent:** about 0.6 km²
@@ -219,7 +219,7 @@
 
 - **Island:** Calder Island
 - **Location:** 3.3 km E of Calder (grid 40.9 E / 61.2 N)
-- **Urban form:** historic residential
+- **Urban form:** older residential
 - **Buildings:** 8–16 m tall, 55% of ground built or paved
 - **Ground elevation:** 5 m
 - **Extent:** about 0.6 km²
@@ -289,7 +289,7 @@
 
 - **Island:** Calder Island
 - **Location:** 3.4 km SW of Calder (grid 35.2 E / 59.2 N)
-- **Urban form:** historic residential
+- **Urban form:** older residential
 - **Buildings:** 8–18 m tall, 35% of ground built or paved
 - **Ground elevation:** 51 m
 - **Extent:** about 1.0 km²
@@ -414,7 +414,7 @@
 
 - **Island:** Calder Island
 - **Location:** 2.3 km ESE of Calder (grid 39.6 E / 60.4 N)
-- **Urban form:** historic commercial
+- **Urban form:** warehouse commercial
 - **Buildings:** 8–30 m tall, 70% of ground built or paved
 - **Ground elevation:** 13 m
 - **Extent:** about 0.6 km²
@@ -470,7 +470,7 @@
 
 - **Island:** Calder Island
 - **Location:** 1.6 km SSE of Calder (grid 38.4 E / 60.2 N)
-- **Urban form:** historic rowhouses
+- **Urban form:** rowhouses
 - **Buildings:** 8–14 m tall, 70% of ground built or paved
 - **Ground elevation:** 31 m
 - **Extent:** about 0.4 km²
@@ -628,7 +628,7 @@
 
 - **Island:** Bellamy Island
 - **Location:** in Bellamy (grid 18.4 E / 38.6 N)
-- **Urban form:** historic town centre
+- **Urban form:** town centre
 - **Buildings:** 6–25 m tall, 60% of ground built or paved
 - **Ground elevation:** 21 m
 - **Extent:** about 0.5 km²
@@ -716,7 +716,7 @@
 
 - **Island:** Saint Ambrose Island
 - **Location:** in Haversham (grid 55.0 E / 48.4 N)
-- **Urban form:** historic waterfront
+- **Urban form:** waterfront
 - **Buildings:** 6–15 m tall, 70% of ground built or paved
 - **Ground elevation:** 5 m
 - **Extent:** about 0.4 km²
@@ -730,7 +730,7 @@
 
 - **Island:** Saint Ambrose Island
 - **Location:** 1.0 km NNW of Haversham (grid 54.4 E / 49.4 N)
-- **Urban form:** historic residential
+- **Urban form:** older residential
 - **Buildings:** 6–12 m tall, 40% of ground built or paved
 - **Ground elevation:** 9 m
 - **Extent:** about 0.5 km²
@@ -762,9 +762,9 @@
 - **Buildings:** 6–14 m tall, 50% of ground built or paved
 - **Ground elevation:** 8 m
 - **Extent:** about 0.6 km²
-- **Description:** Commercial streets back from the river, under three white timber spires.
+- **Description:** Commercial streets and churches back from the river, under three white steeples.
 - **Geographic justification:** Level, dry ground inland from the bluff edge.
-- **Visual identity:** Three spires over the rooftops.
+- **Visual identity:** Three steeples over the rooftops.
 - **Nearby features:** Bay Street, Coastal Highway.
-- **Why it is memorable:** The spires visible from the marsh.
+- **Why it is memorable:** The steeples visible from the marsh.
 

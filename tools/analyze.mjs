@@ -80,6 +80,7 @@ export function analyze(T, log = console.log) {
     const rec = { reg, id: e.id, name: e.name || e.id, island: e.island, at: e.at, h: i >= 0 ? h[i] : null, onIsland: isl, wet, ok };
     placement.push(rec);
     if (!ok) issues.push({ kind: reg, id: e.id, msg: `placed on ${isl || 'water'} (expected ${e.island})` });
+    if (e.inWater && !wet) issues.push({ kind: reg, id: e.id, msg: 'flagged as standing in water but placed on land' });
     return rec;
   };
   for (const s of SETTLEMENTS) check('settlement', s);
